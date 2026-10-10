@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fonctionnalités N.O.X. — Alexy Andrieu</title>
+
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="../../../index.html">ALEXY ANDRIEU</a>
+
+        <nav>
+            <a href="../index.html">N.O.X.</a>
+            <a href="../../../index.html#projets">Projets</a>
+            <a href="../../../index.html#apropos">À propos</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="features-hero">
+
+            <p class="eyebrow">N.O.X. · FONCTIONNALITÉS</p>
+
+            <h1>
+                Sous le<br>
+                capot.
+            </h1>
+
+            <p class="features-intro">
+                N.O.X. est construit comme un ensemble de capacités
+                conçues, prototypées et testées séparément avant
+                leur intégration au système principal.
+            </p>
+
+            <a class="features-back" href="../index.html">
+                ← RETOUR AU CASE STUDY
+            </a>
+
+        </section>
+
+
+        <!-- SOMMAIRE -->
+
+        <section class="features-section" id="sommaire">
+
+            <p class="eyebrow">00 — SOMMAIRE</p>
+
+            <h2>
+                Explorer le système.
+            </h2>
+
+            <nav class="features-index">
+
+                <a href="#voix">
+                    <span>01</span>
+                    <strong>VOIX & AUDIO</strong>
+                    <small>FUNCTIONAL</small>
+                </a>
+
+                <a href="#contexte">
+                    <span>02</span>
+                    <strong>CONTEXTE & ROUTAGE</strong>
+                    <small>FUNCTIONAL</small>
+                </a>
+
+                <a href="#memoire">
+                    <span>03</span>
+                    <strong>MÉMOIRE</strong>
+                    <small>FUNCTIONAL / EXPERIMENTAL</small>
+                </a>
+
+                <a href="#personnalite">
+                    <span>04</span>
+                    <strong>PERSONNALITÉ & ÉTAT</strong>
+                    <small>ACTIVE</small>
+                </a>
+
+                <a href="#kiroshi">
+                    <span>05</span>
+                    <strong>PERCEPTION / KIROSHI</strong>
+                    <small>RESEARCH</small>
+                </a>
+
+                <a href="#visuel">
+                    <span>06</span>
+                    <strong>PRÉSENCE VISUELLE</strong>
+                    <small>ACTIVE</small>
+                </a>
+
+                <a href="#stream">
+                    <span>07</span>
+                    <strong>STREAM & INTERACTION</strong>
+                    <small>ACTIVE</small>
+                </a>
+
+            </nav>
+
+        </section>
+
+
+        <!-- 01 -->
+
+        <section class="features-section" id="voix">
+
+            <p class="eyebrow">01 — VOIX & AUDIO</p>
+
+            <div class="feature-heading">
+
+                <h2>
+                    Comment donner une voix
+                    à N.O.X. sans bloquer le système ?
+                </h2>
+
+                <span class="module-status functional">FUNCTIONAL</span>
+
+            </div>
+
+            <p class="feature-description">
+                La chaîne vocale couvre l'écoute microphone,
+                la transcription, la génération de réponse et
+                la synthèse vocale. La génération et la lecture
+                audio sont découplées afin de préserver la fluidité
+                du pipeline.
+            </p>
+
+            <div class="voice-demo">
+
+            <div class="voice-demo-top">
+                <span>ARCHITECTURE FONCTIONNELLE</span>
+                <small>PIPELINE VOCAL · N.O.X.</small>
+            </div>
+
+            <div class="voice-pipeline">
+
+                <div class="voice-step">
+                    <span>01</span>
+                    <small>ENTRÉE</small>
+                    <strong>MICROPHONE</strong>
+                    <p>Capture de la voix.</p>
+                </div>
+
+                <div class="voice-connector">→</div>
+
+                <div class="voice-step">
+                    <span>02</span>
+                    <small>PERCEPTION</small>
+                    <strong>TRANSCRIPTION</strong>
+                    <p>Audio transformé en texte exploitable.</p>
+                </div>
+
+                <div class="voice-connector">→</div>
+
+                <div class="voice-step">
+                    <span>03</span>
+                    <small>GÉNÉRATION</small>
+                    <strong>LLM</strong>
+                    <p>Production de la réponse.</p>
+                </div>
+
+                <div class="voice-connector">→</div>
+
+                <div class="voice-step">
+                    <span>04</span>
+                    <small>SYNTHÈSE</small>
+                    <strong>TTS</strong>
+                    <p>Réponse transformée en audio.</p>
+                </div>
+
+                <div class="voice-connector">→</div>
+
+                <div class="voice-step voice-output">
+                    <span>05</span>
+                    <small>SORTIE</small>
+                    <strong>VOIX</strong>
+                    <p>Lecture de la réponse.</p>
+                </div>
+
+            </div>
+
+            <div class="voice-problem">
+
+                <div class="voice-problem-copy">
+                    <span>PROBLÈME</span>
+
+                    <h3>
+                        Générer une réponse ne doit pas
+                        immobiliser le reste du système.
+                    </h3>
+                </div>
+
+                <div class="voice-split">
+
+                    <div class="voice-thread">
+                        <span>PIPELINE PRINCIPAL</span>
+                        <strong>CONTINUE</strong>
+                        <small>
+                            Le système peut poursuivre son activité.
+                        </small>
+                    </div>
+
+                    <div class="voice-thread">
+                        <span>LECTURE AUDIO</span>
+                        <strong>ASYNCHRONE</strong>
+                        <small>
+                            La voix est jouée séparément.
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="voice-principle">
+                <span>PRINCIPE DE CONCEPTION</span>
+                <strong>
+                    Découpler la génération et la lecture pour préserver la fluidité.
+                </strong>
+            </div>
+
+        </div>
+
+        </section>
+
+
+        <!-- 02 -->
+
+        <section class="features-section" id="contexte">
+
+            <p class="eyebrow">02 — CONTEXTE & ROUTAGE</p>
+
+            <div class="feature-heading">
+
+                <h2>
+                    Comment N.O.X. sait-il
+                    qu'on lui parle ?
+                </h2>
+
+                <span class="module-status functional">FUNCTIONAL</span>
+
+            </div>
+
+            <p class="feature-description">
+                Le routage contextuel distingue une sollicitation
+                directe, une information à propos de N.O.X. et
+                une activité simplement observée. Une perception
+                peut ainsi enrichir le contexte sans provoquer
+                automatiquement une réponse.
+            </p>
+            <div class="routing-demo">
+
+                <div class="conversation-state">
+
+    <div class="conversation-state-top">
+        <span>ÉTAT CONVERSATIONNEL</span>
+        <small>PASSIF ↔ ACTIF</small>
+    </div>
+
+    <div class="conversation-state-flow">
+
+        <div class="conversation-mode">
+            <small>ÉTAT PAR DÉFAUT</small>
+            <strong>PASSIF</strong>
+            <p>
+                N.O.X. partage l'environnement, contextualise les signaux
+                disponibles et peut choisir de rester silencieux.
+            </p>
+        </div>
+
+        <div class="conversation-transition">
+            <span>« Nox ? »</span>
+            <b>→</b>
+            <small>ADRESSAGE</small>
+        </div>
+
+        <div class="conversation-mode active-mode">
+            <small>ÉCHANGE ENGAGÉ</small>
+            <strong>ACTIF</strong>
+            <p>
+                N.O.X. suit la continuité de l'échange sans exiger
+                un nouvel adressage explicite à chaque tour.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="conversation-return">
+        <span>PASSIF</span>
+        <b>→</b>
+        <span>ADRESSAGE</span>
+        <b>→</b>
+        <strong>CONVERSATION ACTIVE</strong>
+        <b>→</b>
+        <span>FIN / RUPTURE</span>
+        <b>→</b>
+        <span>PASSIF</span>
+    </div>
+
+    <p class="conversation-state-note">
+        L'état conversationnel complète le routage : classifier un signal
+        et déterminer si N.O.X. participe déjà à un échange sont deux
+        problèmes distincts.
+    </p>
+
+</div>
+
+    <div class="routing-demo-top">
+        <span>SIMULATION PÉDAGOGIQUE</span>
+        <small>ROUTAGE CONTEXTUEL · N.O.X.</small>
+    </div>
+
+    <div class="routing-samples">
+
+        <button class="routing-sample active" data-route="NOX">
+            « Nox, tu en penses quoi ? »
+        </button>
+
+        <button class="routing-sample" data-route="ABOUT">
+            « Nox parle mieux qu'avant. »
+        </button>
+
+        <button class="routing-sample" data-route="AMBIENT">
+            « Il fait un peu froid ici. »
+        </button>
+
+    </div>
+
+    <div class="routing-flow">
+
+        <div class="routing-node routing-input active">
+            <span>01</span>
+            <small>SIGNAL REÇU</small>
+            <strong id="routing-signal">
+                « Nox, tu en penses quoi ? »
+            </strong>
+        </div>
+
+        <div class="routing-arrow">↓</div>
+
+        <div class="routing-node routing-router active">
+            <span>02</span>
+            <small>ROUTAGE CONTEXTUEL</small>
+            <strong>CLASSIFICATION</strong>
+        </div>
+
+        <div class="routing-arrow">↓</div>
+
+        <div class="routing-branches">
+
+            <div class="routing-branch active" data-branch="NOX">
+                <span>NOX</span>
+                <small>ADRESSAGE DIRECT</small>
+            </div>
+
+            <div class="routing-branch" data-branch="ABOUT">
+                <span>ABOUT</span>
+                <small>À PROPOS DE N.O.X.</small>
+            </div>
+
+            <div class="routing-branch" data-branch="AMBIENT">
+                <span>AMBIENT</span>
+                <small>CONTEXTE AMBIANT</small>
+            </div>
+
+        </div>
+
+        <div class="routing-arrow">↓</div>
+
+        <div class="routing-result">
+            <span>DÉCISION</span>
+            <strong id="routing-result">INTERVENTION</strong>
+            <small id="routing-explanation">
+                La sollicitation est adressée directement à N.O.X.
+            </small>
+        </div>
+
+    </div>
+
+    <p class="routing-note">
+        Cette visualisation simplifie le fonctionnement du routeur
+        afin d'en expliquer le principe. Elle ne représente pas
+        l'exécution live du runtime.
+    </p>
+
+</div>
+
+        </section>
+
+
+        <!-- 03 -->
+
+        <section class="features-section" id="memoire">
+
+            <p class="eyebrow">03 — MÉMOIRE</p>
+
+            <div class="feature-heading">
+
+                <h2>
+                    Comment conserver une continuité
+                    sans tout envoyer au modèle ?
+                </h2>
+
+                <span class="module-status functional">
+                    FUNCTIONAL / EXPERIMENTAL
+                </span>
+
+            </div>
+
+            <p class="feature-description">
+                N.O.X. combine mémoire persistante et récupération
+                documentaire contextuelle afin de retrouver
+                uniquement les informations susceptibles d'être
+                utiles à l'interaction en cours.
+            </p>
+            
+            <div class="memory-demo">
+
+    <div class="memory-demo-top">
+        <span>ARCHITECTURE MÉMOIRE</span>
+        <small>CONTINUITÉ · PERSISTANCE · RÉCUPÉRATION</small>
+    </div>
+
+    <div class="memory-question">
+        <span>PROBLÈME DE CONCEPTION</span>
+        <h3>
+            Se souvenir d'une information, d'une situation
+            et d'une relation ne répond pas au même besoin.
+        </h3>
+    </div>
+
+    <div class="memory-layers">
+
+        <div class="memory-layer" data-memory="WORK">
+            <span>01</span>
+            <small>IMMÉDIAT</small>
+            <strong>MÉMOIRE DE TRAVAIL</strong>
+            <p>
+                Les informations nécessaires pour comprendre
+                ce qui se passe maintenant.
+            </p>
+        </div>
+
+        <div class="memory-layer" data-memory="SESSION">
+            <span>02</span>
+            <small>COURT TERME</small>
+            <strong>MÉMOIRE DE SESSION</strong>
+            <p>
+                La continuité récente de la conversation
+                et du contexte observé.
+            </p>
+        </div>
+
+        <div class="memory-layer" data-memory="RELATION">
+            <span>03</span>
+            <small>LONG TERME</small>
+            <strong>MÉMOIRE RELATIONNELLE</strong>
+            <p>
+                Préférences, repères partagés et informations
+                utiles à la continuité avec Alex.
+            </p>
+        </div>
+
+        <div class="memory-layer" data-memory="LIBRARY">
+            <span>04</span>
+            <small>LONG TERME</small>
+            <strong>BIBLIOTHÈQUE DOCUMENTAIRE</strong>
+            <p>
+                Documentation, archives et connaissances
+                récupérées uniquement lorsqu'elles sont utiles.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="memory-explorer">
+
+        <div class="memory-explorer-title">
+            <span>EXPLORER LE ROUTAGE MÉMOIRE</span>
+            <small>SIMULATION PÉDAGOGIQUE</small>
+        </div>
+
+        <div class="memory-samples">
+
+            <button class="memory-sample" data-memory-target="WORK">
+                « Non, celui de gauche. »
+            </button>
+
+            <button class="memory-sample active" data-memory-target="RELATION">
+                « Nox, appelle-moi Alex. »
+            </button>
+
+            <button class="memory-sample" data-memory-target="SESSION">
+                « Il fait un peu froid ici. »
+            </button>
+
+            <button class="memory-sample" data-memory-target="LIBRARY">
+                « Comment fonctionne Kiroshi ? »
+            </button>
+
+        </div>
+
+        <div class="memory-path">
+
+            <div class="memory-path-input">
+                <small>INFORMATION</small>
+                <strong id="memory-input">
+                    « Nox, appelle-moi Alex. »
+                </strong>
+            </div>
+
+            <div class="memory-path-arrow">→</div>
+
+            <div class="memory-path-decision">
+                <small>DESTINATION UTILE</small>
+                <strong id="memory-destination">
+                    MÉMOIRE RELATIONNELLE
+                </strong>
+            </div>
+
+            <div class="memory-path-arrow">→</div>
+
+            <div class="memory-path-output">
+                <small>EFFET</small>
+                <strong id="memory-effect">
+                    REPÈRE DURABLE
+                </strong>
+            </div>
+
+        </div>
+
+        <p id="memory-explanation" class="memory-explanation">
+            Une préférence d'adressage peut devenir un repère durable
+            réutilisable dans de futures interactions.
+        </p>
+
+    </div>
+
+
+    <div class="memory-retrieval">
+
+        <div>
+            <span>RÉCUPÉRATION CIBLÉE</span>
+
+            <h3>
+                Tout mémoriser ne signifie pas
+                tout remettre dans le contexte.
+            </h3>
+        </div>
+
+        <div class="memory-retrieval-flow">
+            <span>MÉMOIRES</span>
+            <b>→</b>
+            <span>PERTINENCE</span>
+            <b>→</b>
+            <strong>CONTEXTE UTILE</strong>
+            <b>→</b>
+            <span>N.O.X.</span>
+        </div>
+
+    </div>
+
+    <p class="memory-note">
+        Cette visualisation simplifie plusieurs mécanismes mémoire
+        de N.O.X. pour en expliquer les rôles. Les fonctions
+        relationnelles avancées restent un axe de conception
+        et de prototypage.
+    </p>
+
+</div>
+        </section>
+
+
+        <!-- 04 -->
+
+        <section class="features-section" id="personnalite">
+
+            <p class="eyebrow">04 — PERSONNALITÉ & ÉTAT</p>
+
+            <div class="feature-heading">
+
+                <h2>
+                    Comment transformer une personnalité
+                    en comportement exploitable ?
+                </h2>
+
+                <span class="module-status active">ACTIVE</span>
+
+            </div>
+
+            <p class="feature-description">
+                La personnalité de N.O.X. est progressivement
+                formalisée en règles, états et paramètres persistants
+                plutôt qu'en une simple collection d'instructions
+                ajoutées à un prompt.
+            </p>
+
+                    <div class="personality-demo">
+
+            <div class="personality-demo-top">
+                <span>MODÈLE COMPORTEMENTAL</span>
+                <small>PERSONNALITÉ · ÉTAT · EXPRESSION</small>
+            </div>
+
+            <div class="personality-problem">
+                <span>PROBLÈME DE CONCEPTION</span>
+                <h3>
+                    Décrire une personnalité ne suffit pas
+                    à produire un comportement.
+                </h3>
+            </div>
+
+            <div class="personality-transform">
+
+                <div class="personality-source">
+                    <small>INTENTION</small>
+                    <strong>PERSONNALITÉ</strong>
+
+                    <div class="personality-traits">
+                        <span>CURIEUX</span>
+                        <span>TAQUIN</span>
+                        <span>OBSERVATEUR</span>
+                        <span>NON INTRUSIF</span>
+                    </div>
+
+                    <p>
+                        Une direction de personnage définit une identité,
+                        mais reste trop abstraite pour piloter seule le système.
+                    </p>
+                </div>
+
+                <div class="personality-arrow">→</div>
+
+                <div class="personality-rules">
+                    <small>FORMALISATION</small>
+                    <strong>PRINCIPES COMPORTEMENTAUX</strong>
+
+                    <div class="personality-rule">
+                        <span>01</span>
+                        <p>Interaction rare, impact fort.</p>
+                    </div>
+
+                    <div class="personality-rule">
+                        <span>02</span>
+                        <p>Le silence est une réponse valide.</p>
+                    </div>
+
+                    <div class="personality-rule">
+                        <span>03</span>
+                        <p>Adapter l'intervention au contexte.</p>
+                    </div>
+
+                    <div class="personality-rule">
+                        <span>04</span>
+                        <p>Traiter davantage que ce qui est verbalisé.</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="state-module">
+
+                <div class="state-module-head">
+                    <div>
+                        <small>PROTOTYPE SÉPARÉ</small>
+                        <strong>ÉTAT INTERNE V0</strong>
+                    </div>
+
+                    <span>NON ENCORE GREFFÉ AU RUNTIME PRINCIPAL</span>
+                </div>
+
+                <p class="state-intro">
+                    Un même principe comportemental peut produire une réponse
+                    différente selon l'état courant de N.O.X.
+                </p>
+
+                <div class="state-equation">
+
+                    <div>
+                        <small>PERSONNALITÉ</small>
+                        <strong>QUI EST N.O.X. ?</strong>
+                    </div>
+
+                    <b>+</b>
+
+                    <div>
+                        <small>CONTEXTE</small>
+                        <strong>QUE SE PASSE-T-IL ?</strong>
+                    </div>
+
+                    <b>+</b>
+
+                    <div class="state-highlight">
+                        <small>ÉTAT INTERNE</small>
+                        <strong>DANS QUEL ÉTAT ?</strong>
+                    </div>
+
+                    <b>→</b>
+
+                    <div>
+                        <small>EXPRESSION</small>
+                        <strong>COMMENT INTERVENIR ?</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="personality-example">
+
+                <div class="personality-example-head">
+                    <span>CONSÉQUENCE DE CONCEPTION</span>
+                </div>
+
+                <div class="personality-example-grid">
+
+                    <div>
+                        <small>PERSONNAGE ÉCRIT</small>
+                        <strong>
+                            « N.O.X. est sarcastique. »
+                        </strong>
+                        <p>
+                            Description générale difficile à contrôler
+                            directement.
+                        </p>
+                    </div>
+
+                    <div class="personality-example-arrow">→</div>
+
+                    <div>
+                        <small>SYSTÈME COMPORTEMENTAL</small>
+                        <strong>
+                            Quand intervenir ? Combien dire ?
+                            Quel ton employer ? Quand se taire ?
+                        </strong>
+                        <p>
+                            La personnalité devient un ensemble de décisions
+                            contextualisées.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="personality-principle">
+                <small>PRINCIPE</small>
+                <strong>
+                    La personnalité n'est pas une liste d'adjectifs.
+                    C'est une contrainte sur les décisions du système.
+                </strong>
+            </div>
+
+        </div>
+
+        </section>
+
+
+        <!-- 05 -->
+
+        <section class="features-section" id="kiroshi">
+
+            <p class="eyebrow">05 — PERCEPTION / KIROSHI</p>
+
+            <div class="feature-heading">
+
+                <h2>
+                    Comment faire comprendre à N.O.X.
+                        une activité numérique sans tout lui montrer ?
+                </h2>
+
+                <span class="module-status research">RESEARCH</span>
+
+            </div>
+
+            <p class="feature-description">
+                Kiroshi explore une couche de perception sémantique
+                capable de traduire différentes sources locales
+                en événements compacts avant de transmettre
+                uniquement le contexte utile à N.O.X.
+            </p>
+
+            <div class="kiroshi-teaser">
+
+            <div class="kiroshi-teaser-top">
+                <div>
+                    <span>SOUS-PROJET · PERCEPTION SÉMANTIQUE</span>
+                    <small>RESEARCH / PROTOTYPING</small>
+                </div>
+
+                <strong>KIROSHI</strong>
+            </div>
+
+            <div class="kiroshi-teaser-core">
+
+                <div class="kiroshi-teaser-copy">
+                    
+                    <p>
+                        Kiroshi explore une autre approche de la perception :
+                        transformer l'activité numérique en informations
+                        sémantiques compactes avant de les transmettre à N.O.X.
+                    </p>
+                </div>
+
+                <div class="kiroshi-mini-architecture">
+
+                    <div>
+                        <small>ACTIVITÉ</small>
+                        <strong>NUMÉRIQUE</strong>
+                    </div>
+
+                    <b>→</b>
+
+                    <div class="kiroshi-mini-core">
+                        <small>PERCEPTION</small>
+                        <strong>KIROSHI</strong>
+                    </div>
+
+                    <b>→</b>
+
+                    <div>
+                        <small>CONTEXTE</small>
+                        <strong>SÉMANTIQUE</strong>
+                    </div>
+
+                    <b>→</b>
+
+                    <div>
+                        <small>INTERPRÉTATION</small>
+                        <strong>N.O.X.</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="kiroshi-teaser-bottom">
+
+                <p>
+                    On ne donne pas des yeux à N.O.X.
+                    <strong>On lui construit un système nerveux numérique.</strong>
+                </p>
+
+                <a class="kiroshi-teaser-link" href="../../kiroshi/index.html">
+                    <span>EXPLORER KIROSHI</span>
+                    <strong>→</strong>
+                </a>
+
+            </div>
+
+        </div>
+
+        </section>
+
+
+        <!-- 06 -->
+
+        <section class="features-section" id="visuel">
+
+            <p class="eyebrow">06 — PRÉSENCE VISUELLE</p>
+
+            <div class="feature-heading">
+
+                <h2>
+                    Comment rendre perceptible
+                    une présence qui peut rester silencieuse ?
+                </h2>
+
+                <span class="module-status active">ACTIVE</span>
+
+            </div>
+
+            <p class="feature-description">
+                L'identité visuelle cherche à représenter les états
+                et l'activité de N.O.X. sans lui imposer un visage
+                ou une interface conversationnelle classique.
+            </p>
+
+        </section>
+
+
+        <!-- 07 -->
+
+        <section class="features-section" id="stream">
+
+            <p class="eyebrow">07 — STREAM & INTERACTION</p>
+
+            <div class="feature-heading">
+
+                <h2>
+                    Comment intégrer N.O.X.
+                    à un environnement vivant ?
+                </h2>
+
+                <span class="module-status active">ACTIVE</span>
+
+            </div>
+
+            <p class="feature-description">
+                Le stream constitue l'environnement final dans lequel
+                voix, contexte, perception et présence visuelle doivent
+                fonctionner ensemble sans transformer N.O.X. en simple
+                chatbot affiché à l'écran.
+            </p>
+
+        </section>
+
+    </main>
+
+<script src="features.js"></script>
+</body>
+</html>
