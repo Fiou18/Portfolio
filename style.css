@@ -4235,16 +4235,21 @@ h1 {
     }
 
     .kiroshi-cycle {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 24px;
+    min-height: 0;
+    height: auto;
     }
 
     .kiroshi-cycle b {
         transform: rotate(90deg);
-        align-self: center;
+        align-self: flex-start;
+        margin-left: 24px;
     }
-}
+    }
 /* =========================================================
    07 — ÉTAT ACTUEL
    ========================================================= */
