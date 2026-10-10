@@ -4411,3 +4411,1380 @@ h1 {
         font-size: clamp(2.8rem, 14vw, 4.8rem);
     }
 }
+
+/* =========================================================
+   CASE STUDY 03 — PRÉSENCE VISUELLE
+   ========================================================= */
+
+.presence-case {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.presence-hero {
+    padding: 120px 0 110px;
+    border-bottom: 1px solid #292934;
+}
+
+.presence-hero-title {
+    margin-top: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: end;
+}
+
+.presence-hero h1 {
+    margin: 0;
+
+    font-size: clamp(4rem, 10vw, 8.5rem);
+    line-height: 0.82;
+    letter-spacing: -6px;
+}
+
+.presence-subtitle {
+    margin: 28px 0 0;
+
+    color: #a970ff;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.presence-status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.presence-status span {
+    padding: 6px 9px;
+
+    border: 1px solid #393944;
+    border-radius: 4px;
+
+    color: #858591;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.presence-manifesto {
+    max-width: 950px;
+    margin-top: 110px;
+}
+
+.presence-manifesto p {
+    max-width: 650px;
+    margin: 0;
+
+    color: #aaaab5;
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    line-height: 1.5;
+}
+
+.presence-manifesto strong {
+    display: block;
+
+    margin-top: 55px;
+
+    color: #f2f2f5;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.05;
+}
+
+
+/* =========================================================
+   COPY
+   ========================================================= */
+
+.presence-copy {
+    max-width: 950px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.presence-copy p {
+    margin: 0;
+
+    color: #aaaab5;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.presence-section-intro {
+    max-width: 720px !important;
+    margin-bottom: 0;
+
+    color: #aaaab5 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.8 !important;
+}
+
+
+/* =========================================================
+   PRINCIPLES
+   ========================================================= */
+
+.presence-principle {
+    max-width: 950px;
+    margin-top: 80px;
+    padding: 30px 0 30px 30px;
+
+    border-left: 2px solid #a970ff;
+}
+
+.presence-principle span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #a970ff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presence-principle strong {
+    display: block;
+
+    max-width: 850px;
+
+    color: #f2f2f5;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   ARTIFACTS
+   ========================================================= */
+
+.presence-artifact-grid {
+    margin-top: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.presence-artifact {
+    margin: 0;
+}
+
+.presence-artifact.placeholder {
+    min-height: 520px;
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(169, 112, 255, 0.08),
+            transparent 38%
+        ),
+        #0b0b10;
+
+    border: 1px solid #292934;
+    border-radius: 6px;
+}
+
+.presence-artifact.placeholder > div {
+    margin: auto;
+
+    color: #555561;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.presence-artifact figcaption {
+    padding-top: 20px;
+
+    border-top: 1px solid #292934;
+
+    color: #666672;
+    font-size: 0.7rem;
+}
+
+.presence-wide-artifact {
+    margin-top: 80px;
+    min-height: 560px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(169, 112, 255, 0.09),
+            transparent 35%
+        ),
+        #0b0b10;
+
+    border: 1px solid #292934;
+    border-radius: 6px;
+}
+
+.presence-wide-artifact div {
+    color: #f2f2f5;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presence-wide-artifact span {
+    margin-top: 8px;
+
+    color: #666672;
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   02 — QUESTION SHIFT
+   ========================================================= */
+
+.presence-question-shift {
+    margin-top: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.presence-old-question,
+.presence-new-question {
+    min-height: 220px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #111117;
+    border: 1px solid #292934;
+    border-radius: 6px;
+}
+
+.presence-old-question {
+    opacity: 0.55;
+}
+
+.presence-new-question {
+    border-color: #a970ff;
+}
+
+.presence-question-shift small {
+    color: #666672;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+}
+
+.presence-question-shift strong {
+    max-width: 420px;
+
+    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    line-height: 1.15;
+}
+
+.presence-new-question strong {
+    color: #a970ff;
+}
+
+.presence-question-shift > b {
+    color: #a970ff;
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   04 — CONVERGENCE
+   ========================================================= */
+
+.presence-convergence-grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 80px;
+    align-items: center;
+
+    margin-top: 70px;
+}
+
+.presence-convergence-copy p {
+    color: #aaaab5;
+    line-height: 1.8;
+}
+
+.presence-convergence-copy p + p {
+    margin-top: 30px;
+}
+
+.presence-core-reveal {
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(169, 112, 255, 0.12),
+            rgba(9, 9, 13, 0) 45%
+        );
+
+    border: 1px solid #292934;
+    border-radius: 50%;
+}
+
+.presence-core-reveal span,
+.presence-core-reveal small {
+    color: #666672;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+}
+
+.presence-core-reveal strong {
+    margin: 15px 0;
+
+    color: #a970ff;
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
+    letter-spacing: 2px;
+}
+
+.presence-big-statement {
+    max-width: none !important;
+    margin-top: 100px !important;
+
+    color: #f2f2f5 !important;
+    font-size: clamp(3rem, 7vw, 6.5rem) !important;
+    font-weight: bold;
+    line-height: 0.95 !important;
+    letter-spacing: -3px;
+}
+
+
+/* =========================================================
+   05 — BLENDER / ITERATION
+   ========================================================= */
+
+.presence-iteration-flow {
+    margin-top: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 14px;
+    align-items: stretch;
+}
+
+.presence-iteration-flow > div {
+    min-height: 180px;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #111117;
+    border: 1px solid #292934;
+    border-radius: 5px;
+}
+
+.presence-iteration-flow > b {
+    align-self: center;
+
+    color: #a970ff;
+}
+
+.presence-iteration-flow small {
+    color: #666672;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+}
+
+.presence-iteration-flow strong {
+    margin-top: auto;
+
+    font-size: 1.05rem;
+}
+
+.presence-iteration-flow span {
+    margin-top: 5px;
+
+    color: #666672;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+}
+
+.presence-iteration-flow .presence-torture {
+    border-color: #a970ff;
+}
+
+.presence-iteration-flow .presence-torture strong,
+.presence-iteration-flow .presence-torture span {
+    color: #a970ff;
+}
+
+.presence-video-placeholder {
+    min-height: 600px;
+    margin-top: 30px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(169, 112, 255, 0.08),
+            transparent 32%
+        ),
+        #08080c;
+
+    border: 1px solid #292934;
+    border-radius: 6px;
+
+    text-align: center;
+}
+
+.presence-video-placeholder span {
+    color: #a970ff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presence-video-placeholder strong {
+    margin-top: 15px;
+
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.presence-video-placeholder small {
+    margin-top: 12px;
+
+    color: #666672;
+}
+
+.presence-idle-principle {
+    margin-top: 100px;
+}
+
+
+/* =========================================================
+   06 — STATES
+   ========================================================= */
+
+.presence-state-grid {
+    margin-top: 80px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.presence-state-grid > div {
+    min-height: 300px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #111117;
+    border: 1px solid #292934;
+    border-radius: 5px;
+}
+
+.presence-state-grid small {
+    color: #666672;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+}
+
+.presence-state-grid strong {
+    margin-top: auto;
+
+    font-size: 1.2rem;
+}
+
+.presence-state-grid span {
+    margin-top: 8px;
+
+    color: #666672;
+    font-size: 0.7rem;
+}
+
+.presence-state-grid > div:nth-child(2),
+.presence-state-grid > div:nth-child(3),
+.presence-state-grid > div:nth-child(4) {
+    position: relative;
+    overflow: hidden;
+}
+
+.presence-state-grid > div:nth-child(2)::before,
+.presence-state-grid > div:nth-child(3)::before,
+.presence-state-grid > div:nth-child(4)::before {
+    content: "";
+
+    position: absolute;
+    inset: auto -40% -45% -40%;
+    height: 70%;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(169, 112, 255, 0.10),
+        transparent 65%
+    );
+
+    pointer-events: none;
+}
+
+.presence-disclaimer {
+    max-width: 700px !important;
+    margin: 35px 0 0 !important;
+
+    color: #555561 !important;
+    font-size: 0.75rem !important;
+}
+
+
+/* =========================================================
+   07 — ENVIRONMENT
+   ========================================================= */
+
+.presence-tool-split {
+    margin-top: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.presence-tool-split > div {
+    min-height: 280px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #111117;
+    border: 1px solid #292934;
+    border-radius: 6px;
+}
+
+.presence-tool-split > b {
+    color: #a970ff;
+    font-size: 2rem;
+}
+
+.presence-tool-split small {
+    color: #a970ff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presence-tool-split strong {
+    margin-top: auto;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.presence-tool-split p {
+    max-width: 400px;
+    margin: 15px 0 0;
+
+    color: #858591;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   08 — PRODUCTION STACK
+   ========================================================= */
+
+.presence-production-stack {
+    max-width: 850px;
+    margin: 80px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.presence-production-stack > div:not(.presence-production-arrow) {
+    min-height: 150px;
+    padding: 28px;
+
+    display: grid;
+    grid-template-columns: 140px 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 10px 25px;
+    align-items: center;
+
+    background: #111117;
+    border: 1px solid #292934;
+    border-radius: 6px;
+}
+
+.presence-production-stack small {
+    grid-row: 1 / 3;
+
+    color: #666672;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+}
+
+.presence-production-stack strong {
+    font-size: 1.5rem;
+}
+
+.presence-production-stack span {
+    color: #666672;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+}
+
+.presence-production-stack b {
+    grid-column: 3;
+    grid-row: 1 / 3;
+
+    color: #858591;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+}
+
+.presence-production-stack .presence-production-active {
+    border-color: #393944;
+}
+
+.presence-production-stack .presence-production-future {
+    border-color: #a970ff;
+}
+
+.presence-production-stack .presence-production-future strong,
+.presence-production-stack .presence-production-future b {
+    color: #a970ff;
+}
+
+.presence-production-arrow {
+    padding: 10px;
+
+    color: #a970ff;
+    text-align: center;
+}
+
+.presence-future-note {
+    max-width: 850px;
+    margin: 60px auto 0;
+    padding-top: 25px;
+
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 25px;
+
+    border-top: 1px solid #292934;
+}
+
+.presence-future-note span {
+    color: #a970ff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presence-future-note p {
+    max-width: 600px;
+    margin: 0;
+
+    color: #aaaab5;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.presence-final {
+    min-height: 700px;
+    padding: 140px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-top: 1px solid #292934;
+}
+
+.presence-final > span {
+    color: #a970ff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.presence-final h2 {
+    max-width: 1000px;
+    margin: 35px 0 0;
+
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 0.98;
+    letter-spacing: -3px;
+}
+
+.presence-final > strong {
+    margin-top: 80px;
+
+    color: #aaaab5;
+    font-size: clamp(1.5rem, 3vw, 2.7rem);
+    line-height: 1.2;
+}
+
+.presence-final a {
+    margin-top: 100px;
+
+    color: #666672;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.presence-final a:hover {
+    color: #a970ff;
+}
+
+
+/* =========================================================
+   MOBILE — PRÉSENCE VISUELLE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .presence-hero {
+        padding: 85px 0 70px;
+    }
+
+    .presence-hero-title {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .presence-hero h1 {
+        font-size: clamp(3.3rem, 17vw, 5rem);
+        line-height: 0.86;
+        letter-spacing: -3px;
+    }
+
+    .presence-status {
+        justify-content: flex-start;
+    }
+
+    .presence-manifesto {
+        margin-top: 80px;
+    }
+
+    .presence-manifesto strong {
+        margin-top: 35px;
+    }
+
+
+    /* COPY */
+
+    .presence-copy {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    /* ARTIFACTS */
+
+    .presence-artifact-grid {
+        grid-template-columns: 1fr;
+        margin-top: 55px;
+    }
+
+    .presence-artifact.placeholder {
+        min-height: 420px;
+    }
+
+    .presence-wide-artifact {
+        min-height: 430px;
+        margin-top: 55px;
+        padding: 24px;
+    }
+
+
+    /* QUESTION SHIFT */
+
+    .presence-question-shift {
+        margin-top: 70px;
+
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .presence-question-shift > b {
+        transform: rotate(90deg);
+        justify-self: start;
+        margin-left: 30px;
+    }
+
+    .presence-old-question,
+    .presence-new-question {
+        min-height: 180px;
+        padding: 24px;
+    }
+
+
+    /* CONVERGENCE */
+
+    .presence-convergence-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+
+        margin-top: 50px;
+    }
+
+    .presence-core-reveal {
+        width: min(100%, 430px);
+        margin: auto;
+    }
+
+    .presence-big-statement {
+        margin-top: 70px !important;
+
+        font-size: clamp(2.8rem, 13vw, 4.5rem) !important;
+        letter-spacing: -2px;
+    }
+
+
+    /* ITERATION */
+
+    .presence-iteration-flow {
+        grid-template-columns: 1fr;
+        gap: 15px;
+
+        margin-top: 55px;
+    }
+
+    .presence-iteration-flow > div {
+        min-height: 150px;
+    }
+
+    .presence-iteration-flow > b {
+        justify-self: start;
+        margin-left: 25px;
+
+        transform: rotate(90deg);
+    }
+
+    .presence-video-placeholder {
+        min-height: 430px;
+        padding: 25px;
+    }
+
+
+    /* STATES */
+
+    .presence-state-grid {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 55px;
+    }
+
+    .presence-state-grid > div {
+        min-height: 220px;
+    }
+
+
+    /* TOOL SPLIT */
+
+    .presence-tool-split {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        margin-top: 55px;
+    }
+
+    .presence-tool-split > div {
+        min-height: 230px;
+    }
+
+    .presence-tool-split > b {
+        margin-left: 25px;
+    }
+
+
+    /* PRODUCTION STACK */
+
+    .presence-production-stack {
+        margin-top: 55px;
+    }
+
+    .presence-production-stack > div:not(.presence-production-arrow) {
+        min-height: 180px;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 12px;
+    }
+
+    .presence-production-stack small,
+    .presence-production-stack b {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .presence-production-stack b {
+        margin-top: 12px;
+    }
+
+    .presence-future-note {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+
+    /* FINAL */
+
+    .presence-final {
+        min-height: 600px;
+        padding: 100px 0;
+    }
+
+    .presence-final h2 {
+        letter-spacing: -2px;
+    }
+
+    .presence-final > strong {
+        margin-top: 55px;
+    }
+
+    .presence-final a {
+        margin-top: 75px;
+    }
+}
+/* =========================================================
+   06 — STATE DESIGN SHEET
+   ========================================================= */
+
+.presence-state-sheet {
+    min-height: 650px;
+    margin: 80px 0 0;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(169, 112, 255, 0.08),
+            transparent 35%
+        ),
+        #0b0b10;
+
+    border: 1px solid #292934;
+    border-radius: 6px;
+}
+
+.presence-state-sheet > div {
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    text-align: center;
+}
+
+.presence-state-sheet span {
+    color: #a970ff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presence-state-sheet strong {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.presence-state-sheet figcaption {
+    padding-top: 25px;
+
+    border-top: 1px solid #292934;
+
+    color: #666672;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.presence-direction-note {
+    max-width: 850px;
+    margin-top: 45px;
+    padding-top: 25px;
+
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 35px;
+
+    border-top: 1px solid #292934;
+}
+
+.presence-direction-note span {
+    color: #a970ff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presence-direction-note p {
+    margin: 0;
+
+    color: #aaaab5;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 750px) {
+
+    .presence-state-sheet {
+        min-height: 430px;
+        margin-top: 55px;
+        padding: 24px;
+    }
+
+    .presence-direction-note {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+/* =========================================================
+   PRESENCE — CONCEPT ART SHEETS
+   ========================================================= */
+
+.presence-artifact-sheet {
+    overflow: hidden;
+    padding: 0;
+    background: #0b0b10;
+    border: 1px solid #292934;
+    border-radius: 6px;
+}
+
+.presence-artifact-sheet img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.presence-artifact-sheet figcaption {
+    padding: 24px 26px 28px;
+    border-top: 1px solid #292934;
+}
+
+.presence-artifact-sheet figcaption span {
+    display: block;
+    margin-bottom: 10px;
+    color: #a970ff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.presence-artifact-sheet figcaption strong {
+    display: block;
+    color: #f2f2f5;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.presence-artifact-sheet figcaption p {
+    margin: 12px 0 0;
+    color: #777784;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+.presence-eclipse-artifacts {
+    display: grid;
+    gap: 60px;
+    margin-top: 80px;
+}
+/* =========================================================
+   04B — SINGULARITÉ VIVANTE
+   ========================================================= */
+
+.presence-singularity-artifacts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 70px;
+    margin-top: 80px;
+}
+
+.presence-singularity-artifacts .presence-artifact img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 750px) {
+    .presence-singularity-artifacts {
+        gap: 45px;
+        margin-top: 55px;
+    }
+}
+.presence-artifact figcaption {
+    padding: 24px 4px 0;
+}
+
+.presence-artifact figcaption span {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 1.8px;
+
+    color: #a970ff;
+}
+
+.presence-artifact figcaption strong {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 1rem;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+}
+
+.presence-artifact figcaption p {
+    margin: 0;
+
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: #92929f;
+}
+.presence-origin-item > video,
+.presence-origin-item > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: center;
+    background: #09090d;
+}
+.presence-origin-item figcaption {
+    padding: 22px 4px 0;
+}
+
+.presence-origin-item figcaption span {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 1.8px;
+
+    color: #a970ff;
+}
+
+.presence-origin-item figcaption strong {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 1.05rem;
+    line-height: 1.35;
+    letter-spacing: 0.4px;
+
+    color: #f2f2f5;
+}
+
+.presence-origin-item figcaption p {
+    margin: 0;
+
+    max-width: 720px;
+
+    font-size: 0.9rem;
+    line-height: 1.65;
+
+    color: #92929f;
+}
+.presence-origin-transition {
+    margin-top: 55px;
+    padding: 28px 0 0;
+    border-top: 1px solid #292934;
+}
+
+.presence-origin-transition span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 1.8px;
+    color: #a970ff;
+}
+
+.presence-origin-transition p {
+    margin: 0;
+    max-width: 650px;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: #f2f2f5;
+}
+
+.presence-blender-progress {
+    margin-top: 90px;
+}
+
+.presence-blender-progress .presence-origin-heading {
+    margin-bottom: 45px;
+}
+
+.presence-blender-progress .presence-origin-heading > span {
+    display: block;
+    margin-bottom: 14px;
+
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 1.8px;
+    color: #a970ff;
+}
+
+.presence-blender-progress .presence-origin-heading h3 {
+    margin: 0 0 20px;
+
+    font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+    line-height: 1.15;
+    color: #f2f2f5;
+}
+
+.presence-blender-progress .presence-origin-heading p {
+    margin: 0;
+    max-width: 800px;
+
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #92929f;
+}
+.presence-bezier-note {
+    margin-top: 28px;
+    padding-left: 18px;
+    border-left: 1px solid #a970ff;
+}
+
+.presence-bezier-note p {
+    margin: 0;
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+    font-style: italic;
+    letter-spacing: 0.3px;
+
+    color: #777784;
+}
+
+.presence-current-core {
+    margin-top: 110px;
+}
+
+.presence-current-heading {
+    margin-bottom: 50px;
+}
+
+.presence-current-heading > span {
+    display: block;
+    margin-bottom: 14px;
+
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 1.8px;
+
+    color: #a970ff;
+}
+
+.presence-current-heading h3 {
+    margin: 0 0 22px;
+
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    line-height: 1.12;
+
+    color: #f2f2f5;
+}
+
+.presence-current-heading p {
+    margin: 0;
+    max-width: 800px;
+
+    font-size: 0.95rem;
+    line-height: 1.75;
+
+    color: #92929f;
+}
+
+.presence-current-artifact {
+    margin: 0;
+}
+
+.presence-current-artifact video {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    background: #09090d;
+}
+
+.presence-current-artifact figcaption {
+    padding: 24px 4px 0;
+}
+
+.presence-current-artifact figcaption span {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 1.8px;
+
+    color: #a970ff;
+}
+
+.presence-current-artifact figcaption strong {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 1.05rem;
+    line-height: 1.35;
+
+    color: #f2f2f5;
+}
+
+.presence-current-artifact figcaption p {
+    margin: 0;
+    max-width: 720px;
+
+    font-size: 0.9rem;
+    line-height: 1.65;
+
+    color: #92929f;
+}
