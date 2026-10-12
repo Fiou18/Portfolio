@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laboratoire — Alexy Andrieu</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header>
+        <p>NOXLAB</p>
+
+        <nav>
+            <a href="../index.html#projets">Projets</a>
+            <a href="index.html">Lab</a>
+            <a href="../index.html#approche">Approche</a>
+            <a href="../index.html#apropos">À propos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lab-hero">
+
+            <p class="eyebrow">LABORATOIRE DE DÉVELOPPEMENT</p>
+
+            <h1>La chaufferie.</h1>
+
+            <p class="lab-hero-lead">
+                Derrière les prototypes visibles se trouvent des hypothèses,
+                des mesures, des erreurs et des décisions.
+            </p>
+
+            <p class="lab-hero-text">
+                Ce laboratoire rassemble une sélection d'expériences ayant
+                réellement influencé la conception des projets du NoxLab.
+                Un résultat négatif peut être une conclusion.
+                Une solution fonctionnelle peut être rejetée.
+            </p>
+
+        </section>
+        <section class="lab-index">
+
+            <div class="lab-index-heading">
+                <div>
+                    <p class="eyebrow">EXPÉRIENCES SÉLECTIONNÉES</p>
+                    <h2>Ce qui a résisté au test.</h2>
+                </div>
+
+                <p>
+                    Chaque entrée part d'un problème réellement rencontré.
+                    Le résultat présenté est celui qui a orienté la décision suivante,
+                    qu'il confirme ou invalide l'hypothèse de départ.
+                </p>
+            </div>
+
+        </section>
+
+        <article class="lab-entry">
+
+            <div class="lab-entry-meta">
+                <span class="lab-entry-number">EXP. 01</span>
+                <span class="lab-entry-category">ARCHITECTURE · VALIDATION</span>
+            </div>
+
+            <div class="lab-entry-main">
+                <div>
+                    <p class="eyebrow">SHADOW MODE</p>
+                    <h3>Tester sans avoir le droit d'agir.</h3>
+                </div>
+
+                <p class="lab-entry-summary">
+                    Comment observer le comportement d'un nouveau système
+                    dans les conditions réelles de N.O.X. sans risquer
+                    de modifier le comportement de la version stable ?
+                </p>
+            </div>
+
+            <div class="lab-entry-status">
+                <span>PRINCIPE CONSERVÉ</span>
+                <strong>UTILISÉ EN DÉVELOPPEMENT</strong>
+            </div>
+            <details class="lab-details">
+
+                <summary>
+                    <span>OUVRIR LE JOURNAL DE TEST</span>
+                    <strong>↓</strong>
+                </summary>
+
+                <div class="lab-details-content">
+
+                    
+                     <div class="lab-protocol">
+
+    <div class="lab-protocol-step">
+        <span>01 · PROBLÈME</span>
+        <h4>Tester sans perturber le système stable.</h4>
+        <p>
+            Une nouvelle fonctionnalité devait être évaluée dans les
+            conditions réelles de N.O.X. Mais l'activer directement
+            signifiait lui permettre de modifier son comportement
+            avant même de savoir si elle fonctionnait correctement.
+        
+            </div>
+
+                <div class="lab-protocol-step">
+                    <span>02 · HYPOTHÈSE</span>
+                    <h4>Observer avant d'autoriser.</h4>
+                    <p>
+                        Le nouveau système reçoit les mêmes informations que s'il
+                        était actif et calcule ce qu'il aurait fait. Sa décision
+                        est enregistrée, mais n'a aucun effet sur N.O.X.
+                    </p>
+                </div>
+
+                <div class="lab-protocol-step">
+                    <span>03 · TEST</span>
+                    <h4>Comparer le comportement fantôme au comportement réel.</h4>
+                    <p>
+                        Le prototype peut fonctionner pendant une utilisation
+                        normale. Ses décisions deviennent observables et comparables
+                        sans modifier le chemin stable.
+                    </p>
+                </div>
+
+                                <div class="lab-protocol-step">
+                    <span>04 · DÉCISION</span>
+                    <h4>Le prototype devient une méthode de validation.</h4>
+                    <p>
+                        Le Shadow Mode n'est plus seulement une fonctionnalité
+                        expérimentale. Le principe est conservé pour tester de
+                        nouveaux systèmes avant de leur donner le droit d'influencer
+                        N.O.X.
+                    </p>
+                </div>
+
+            </div> <!-- FIN .lab-protocol -->
+
+            <div class="lab-evidence">
+                <div class="lab-evidence-heading">
+                    <div>
+                        <span>PREUVE EXPÉRIMENTALE</span>
+                        <h4>Le Shadow observe. Le système stable décide.</h4>
+                    </div>
+                    <strong>23.09.2026 · 39 S</strong>
+                </div>
+
+                <div class="lab-video">
+                    <video controls preload="metadata">
+                        <source src="../assets/videos/shadow_mode_test.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge la lecture vidéo.
+                    </video>
+                </div>
+
+                <div class="lab-evidence-grid">
+                    <div>
+                        <small>PROTOCOLE</small>
+                        <p>
+                            Le routeur Shadow reçoit les mêmes échanges que le système actif,
+                            mais sa décision ne contrôle pas N.O.X.
+                        </p>
+                    </div>
+
+                    <div>
+                        <small>OBSERVATION</small>
+                        <p>
+                            Deux itérations classent l'entrée PASSIF tandis que la continuité
+                            conversationnelle maintient l'échange et fait répondre N.O.X.
+                        </p>
+                    </div>
+
+                    <div>
+                        <small>CONCLUSION</small>
+                        <p>
+                            Le désaccord reste observable sans modifier le comportement
+                            de la version stable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </p>
+
+                </div>
+
+            </details>
+
+        </article>
+            <article class="lab-entry">
+
+        <div class="lab-entry-meta">
+            <span class="lab-entry-number">EXP. 02</span>
+            <span class="lab-entry-category">COÛT · INSTRUMENTATION</span>
+        </div>
+
+        <div class="lab-entry-main">
+            <div>
+                <p class="eyebrow">CROQUETTES</p>
+                <h3>Mesurer avant d'optimiser.</h3>
+            </div>
+
+            <p class="lab-entry-summary">
+                Combien coûte réellement l'écoute passive de N.O.X.,
+                et quelle partie du système consomme sans apporter
+                de comportement utile en production ?
+            </p>
+        </div>
+
+        <div class="lab-entry-status">
+            <span>OPTIMISATION MESURÉE</span>
+            <strong>−65 % TOKENS IN</strong>
+        </div>
+
+        <details class="lab-details">
+            <summary>
+                <span>OUVRIR LE JOURNAL DE TEST</span>
+                <strong>↓</strong>
+            </summary>
+
+            <div class="lab-details-content">
+
+                <div class="lab-protocol">
+
+                    <div class="lab-protocol-step">
+                        <span>01 · MESURE</span>
+                        <h4>Compter avant de modifier.</h4>
+                        <p>
+                            La télémétrie Croquettes mesure les appels et les tokens
+                            consommés par chaque composant pendant une écoute passive.
+                            Sur un scénario passif de 5 phrases, le compteur augmente de
+10 appels, 2 631 tokens IN et 84 tokens OUT.
+                        </p>
+                    </div>
+
+                    <div class="lab-protocol-step">
+                        <span>02 · DIAGNOSTIC</span>
+                        <h4>Le prototype continue de coûter après avoir servi.</h4>
+                        <p>
+                            <p>
+                                Sur cette mesure, le Shadow représente à lui seul 5 appels
+                                et 1 723 tokens IN. Il reste utile comme méthode de validation,
+                                mais son exécution permanente n'est plus nécessaire.
+                            </p>
+                        </p>
+                    </div>
+
+                    <div class="lab-protocol-step">
+                        <span>03 · MODIFICATION</span>
+                        <h4>Retirer l'exécution, conserver l'outil.</h4>
+                        <p>
+                            L'appel runtime du Shadow est désactivé sans supprimer
+                            son code. Le routeur stable reste inchangé afin d'isoler
+                            l'effet de cette seule modification.
+                        </p>
+                    </div>
+
+                    <div class="lab-protocol-step">
+                        <span>04 · CONTRÔLE</span>
+                        <h4>Rejouer un scénario de contrôle.</h4>
+                    <p>
+                        Un second scénario passif de 5 phrases est exécuté Shadow OFF.
+                        Les 5 restent classées PASSIF :
+                        5 appels, 920 tokens IN et 30 tokens OUT.
+                    </p>
+                    </div>
+
+                </div>
+
+                <div class="lab-evidence">
+                    <div class="lab-evidence-heading">
+                        <div>
+                            <span>RÉSULTAT MESURÉ</span>
+                            <h4>Shadow ON → OFF : coût mesuré du scénario passif.</h4>
+                        </div>
+                        <strong>24.09.2026</strong>
+                    </div>
+
+                    <div class="lab-evidence-grid">
+                        <div>
+                            <small>APPELS</small>
+                            <p>10 → 5<br><strong>−50 %</strong></p>
+                        </div>
+
+                        <div>
+                            <small>TOKENS IN</small>
+                            <p>2 631 → 920<br><strong>−65,0 %</strong></p>
+                        </div>
+
+                        <div>
+                            <small>CONTRÔLE OFF</small>
+                            <p>5 / 5<br><strong>PASSIF</strong></p>
+                        </div>
+                    </div>
+                    <div class="lab-raw-evidence">
+                        <div class="lab-raw-heading">
+                            <span>EXTRAIT BRUT · SESSION DU 24.09.2026</span>
+
+                            <button class="lab-raw-toggle" type="button" id="croquettes-toggle">
+                                SHADOW OFF
+                            </button>
+                        </div>
+
+                        <pre><code id="croquettes-log">(.venv) PS C:\Users\alexy\Desktop\Nox> python nox.py
+🎤 Micro sélectionné : Microphone (2- Trust GXT Microphone) (index 12)
+Nox est réveillé.
+Nox écoute... Parle quand tu veux.
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+Toi : Je vais ouvrir le fichier Python.
+⏱️ Transcription : 0.93 s
+🍖 CROQUETTES | ADRESSAGE | IN 177 | OUT 6
+🍖 TOTAL | 1 appels | IN 177 | OUT 6
+🧭 Adressage : PASSIF (1.83 s)
+👂 Écoute passive : Je vais ouvrir le fichier Python.
+Nox écoute... Parle quand tu veux.
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+Toi : Là, je vais regarder ce qu'on a modifié tout à l'heure.
+⏱️ Transcription : 0.72 s
+🍖 CROQUETTES | ADRESSAGE | IN 187 | OUT 6
+🍖 TOTAL | 2 appels | IN 364 | OUT 12
+🧭 Adressage : PASSIF (1.87 s)
+👂 Écoute passive : Là, je vais regarder ce qu'on a modifié tout à l'heure.
+Nox écoute... Parle quand tu veux.
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+Toi : Je pense que cette partie du code est un peu longue.
+⏱️ Transcription : 0.90 s
+🍖 CROQUETTES | ADRESSAGE | IN 182 | OUT 6
+🍖 TOTAL | 3 appels | IN 546 | OUT 18
+🧭 Adressage : PASSIF (3.14 s)
+👂 Écoute passive : Je pense que cette partie du code est un peu longue.
+Nox écoute... Parle quand tu veux.
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+Toi : Je pense que cette partie du code est un peu longue, je pense que je vais aller fumer une clope après ça.
+⏱️ Transcription : 0.74 s
+🍖 CROQUETTES | ADRESSAGE | IN 196 | OUT 6
+🍖 TOTAL | 4 appels | IN 742 | OUT 24
+🧭 Adressage : PASSIF (1.58 s)
+👂 Écoute passive : Je pense que cette partie du code est un peu longue, je pense que je vais aller fumer une clope après ça.
+Nox écoute... Parle quand tu veux.
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+Toi : Bon, je vais continuer à travailler.
+⏱️ Transcription : 1.04 s
+🍖 CROQUETTES | ADRESSAGE | IN 178 | OUT 6
+🍖 TOTAL | 5 appels | IN 920 | OUT 30
+🧭 Adressage : PASSIF (2.68 s)
+👂 Écoute passive : Bon, je vais continuer à travailler.
+Nox écoute... Parle quand tu veux.</code></pre>
+
+            </div>
+        </details>
+
+        </article>
+
+                <article class="lab-entry">
+
+            <div class="lab-entry-meta">
+                <span class="lab-entry-number">EXP. 03</span>
+                <span class="lab-entry-category">LATENCE · INSTRUMENTATION</span>
+            </div>
+
+            <div class="lab-entry-main">
+                <div>
+                    <p class="eyebrow">PREMIER MORCEAU</p>
+                    <h3>Une mesure exacte peut répondre à la mauvaise question.</h3>
+                </div>
+
+                <p class="lab-entry-summary">
+                    L'instrumentation annonçait une attente inter-phrase
+                    de 0,000 seconde. Pourtant, à l'écoute,
+                    une coupure restait perceptible. Où commençait réellement
+                    le délai ressenti ?
+                </p>
+            </div>
+
+            <div class="lab-entry-status">
+                <span>MESURE INVALIDÉE</span>
+                <strong>MESURE REQUALIFIÉE</strong>
+            </div>
+
+            <details class="lab-details">
+            <summary>
+                <span>OUVRIR LE JOURNAL DE TEST</span>
+                <strong>↓</strong>
+            </summary>
+
+            <div class="lab-details-content">
+
+                <div class="lab-protocol">
+
+                    <div class="lab-protocol-step">
+                        <span>01 · OBSERVATION</span>
+                        <h4>La mesure annonce zéro. L'oreille entend encore une coupure.</h4>
+                        <p>
+                            L'instrumentation affiche plusieurs attentes inter-phrase à 0.000 s.
+                            Pourtant, l'enregistrement conserve des silences perceptibles entre
+                            certaines phrases.
+                        </p>
+                    </div>
+
+                    <div class="lab-protocol-step">
+                        <span>02 · HYPOTHÈSE</span>
+                        <h4>La mesure ne couvre pas le délai réellement perçu.</h4>
+                        <p>
+                            Si l'attente technique est réellement nulle, la coupure perçue
+                            doit être produite ailleurs dans la chaîne audio.
+                            Le délai mesuré et le silence entendu ne décrivent donc pas
+                            nécessairement le même phénomène.
+                        </p>
+                    </div>
+
+                    <div class="lab-protocol-step">
+                        <span>03 · DIAGNOSTIC</span>
+                        <h4>La coupure vient du découpage TTS.</h4>
+                        <p>
+                            Chaque phrase est générée par un appel TTS distinct.
+                            L'attente technique entre deux lectures peut donc être nulle
+                            tandis que l'audio produit conserve une rupture perceptible.
+                        </p>
+                    </div>
+
+                    <div class="lab-protocol-step">
+                        <span>04 · DÉCISION</span>
+                        <h4>Mesurer l'expérience, pas seulement l'événement technique.</h4>
+                        <p>
+                            Le 0.000 s reste une mesure valide de l'attente technique,
+                            mais cesse d'être utilisé comme preuve de fluidité.
+                            L'enregistrement audio devient nécessaire pour confronter
+                            la métrique technique à l'expérience réellement perçue.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="lab-evidence">
+                    <div class="lab-evidence-heading">
+                        <div>
+                            <span>CONCLUSION EXPÉRIMENTALE</span>
+                            <h4>Une mesure exacte peut mesurer la mauvaise chose.</h4>
+                        </div>
+                        <strong>23.09.2026</strong>
+                    </div>
+
+                    <div class="lab-evidence-grid">
+                        <div>
+                            <small>MESURE AFFICHÉE</small>
+                            <p>
+                                <strong>0,000 s</strong><br>
+                                d'attente technique
+                            </p>
+                        </div>
+
+                        <div>
+                            <small>ANOMALIE</small>
+                            <p>
+                                Une coupure reste perceptible
+                                dans l'audio réel.
+                            </p>
+                        </div>
+
+                        <div>
+                            <small>CAUSE</small>
+                            <p>
+                                Le découpage en appels TTS distincts introduit
+                                une rupture perceptible que cette métrique ne mesure pas.
+                            </p>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="lab-raw-evidence">
+                        <div class="lab-raw-heading">
+                            <span>EXTRAIT BRUT · SESSION DU 23.09.2026</span>
+                            <strong>MESURE TECHNIQUE</strong>
+                        </div>
+
+                        <pre><code>⚙️ Génération TTS : Absolument pas.
+                    ⚡ Premier morceau TTS : 0.47 s
+
+                    ⚙️ Génération TTS : Elle est déjà parfaitement proportionnée.
+                    ⚡ Premier morceau TTS : 0.50 s
+
+                    🔊 Lecture TTS : Absolument pas.
+                    ⏸️ Attente technique inter-phrase : 0.000 s
+
+                    🔊 Lecture TTS : Elle est déjà parfaitement proportionnée.
+                    ⏸️ Attente technique inter-phrase : 0.000 s</code></pre>
+                    </div>
+                    <div class="lab-audio-measure">
+                        <span>ANALYSE DE L'ENREGISTREMENT</span>
+                        <p>
+                            Silences perceptibles relevés dans la zone de réponse :
+                            <strong>≈ 0,85 s</strong> ·
+                            <strong>≈ 0,36 s</strong> ·
+                            <strong>≈ 1,20 s</strong> ·
+                            <strong>≈ 0,28 s</strong>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </details>
+
+        </article>
+                <article class="lab-entry">
+
+            <div class="lab-entry-meta">
+                <span class="lab-entry-number">EXP. 04</span>
+                <span class="lab-entry-category">AUDIO · ARCHITECTURE</span>
+            </div>
+
+            <div class="lab-entry-main">
+                <div>
+                    <p class="eyebrow">FILE AUDIO</p>
+                    <h3>Vide maintenant ne veut pas dire terminé.</h3>
+                </div>
+
+                <p class="lab-entry-summary">
+                    Le lecteur audio pouvait s'arrêter alors que le générateur
+                    produisait encore les morceaux suivants. Le problème ne venait
+                    pas du contenu de la file, mais de ce que son état était censé signifier.
+                </p>
+            </div>
+
+            <div class="lab-entry-status">
+                <span>CONDITION DE FIN INVALIDÉE</span>
+                <strong>FIN DE PRODUCTION EXPLICITE</strong>
+            </div>
+            <details class="lab-details">
+                <summary>
+                    <span>OUVRIR LE JOURNAL DE TEST</span>
+                    <strong>↓</strong>
+                </summary>
+
+                <div class="lab-details-content">
+
+                    <div class="lab-protocol">
+
+                        <div class="lab-protocol-step">
+                            <span>01 · SYMPTÔME</span>
+                            <h4>Le lecteur s'arrête avant la fin.</h4>
+                            <p>
+                                Dans le pipeline audio, le consommateur peut rencontrer
+                                une file temporairement vide alors que le générateur
+                                produira encore des morceaux quelques instants plus tard.
+                            </p>
+                        </div>
+
+                        <div class="lab-protocol-step">
+                            <span>02 · ERREUR</span>
+                            <h4>Confondre état temporaire et état final.</h4>
+                            <p>
+                                Une file vide est interprétée comme la fin de la production.
+                                Le lecteur quitte alors sa boucle alors que de nouvelles
+                                données peuvent encore arriver.
+                            </p>
+                        </div>
+
+                        <div class="lab-protocol-step">
+                            <span>03 · DIAGNOSTIC</span>
+                            <h4>La file ne connaît pas l'état de ses producteurs.</h4>
+                            <p>
+                                Une file vide indique seulement qu'aucun résultat n'est
+                                disponible à cet instant. Les threads TTS peuvent encore
+                                produire des morceaux après cette observation.
+                            </p>
+                        </div>
+
+                        <div class="lab-protocol-step">
+                            <span>04 · DÉCISION</span>
+                            <h4>Attendre les producteurs avant de déclarer la fin.</h4>
+                            <p>
+                                Les threads TTS lancés sont conservés puis attendus avec
+                                <code>join()</code>. Ce n'est qu'après leur terminaison que
+                                <code>fin_reception</code> peut signaler la fin réelle de la production.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="lab-evidence">
+                        <div class="lab-evidence-heading">
+                            <div>
+                                <span>PRINCIPE RETENU</span>
+                                <h4>Vide maintenant ≠ production terminée.</h4>
+                            </div>
+                            <strong>PIPELINE AUDIO</strong>
+                        </div>
+
+                        <div class="lab-evidence-grid">
+                            <div>
+                                <small>AVANT</small>
+                                <p>
+                                    File vide<br>
+                                    <strong>→ arrêt</strong>
+                                </p>
+                            </div>
+
+                            <div>
+                                <small>PROBLÈME</small>
+                                <p>
+                                    De nouvelles données peuvent
+                                    encore être produites.
+                                </p>
+                            </div>
+
+                            <div>
+                                <small>APRÈS</small>
+                                <p>
+                                    Producteurs terminés<br>
+                                    <strong>→ arrêt</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lab-raw-evidence">
+                        <div class="lab-raw-heading">
+                            <span>EXTRAIT BRUT · CONDITION DE FIN ORIGINALE</span>
+                            <strong>BUG REPRODUIT</strong>
+                        </div>
+                        <pre><code>if (
+                        fin_reception.is_set()
+                        and not audio_en_attente
+                        and file_audio_pret.empty()
+                    ):
+                        break</code></pre>
+                    </div>
+                    <div class="lab-raw-evidence">
+                        <div class="lab-raw-heading">
+                            <span>EXTRAIT BRUT · CORRECTION APPLIQUÉE</span>
+                            <strong>APRÈS DIAGNOSTIC</strong>
+                        </div>
+                        <pre><code>if phrase is None:
+                        file_tts.task_done()
+
+                        for producteur in producteurs:
+                            producteur.join()
+
+                        fin_reception.set()
+                        break</code></pre>
+                    </div>
+
+                </div>
+            </details>
+
+        </article>
+
+    </main>
+<script>
+const croquettesToggle = document.getElementById("croquettes-toggle");
+const croquettesLog = document.getElementById("croquettes-log");
+
+const shadowOffLog = croquettesLog.textContent;
+
+const shadowOnLog = `🍖 CROQUETTES | ROUTAGE_SHADOW | IN 328 | OUT 46
+🍖 TOTAL | 12 appels | IN 4688 | OUT 356
+👻 Routage V2 [SHADOW] : NOX (1.90 s)
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+Toi : Je vais ouvrir le fichier Python.
+⏱️ Transcription : 0.68 s
+🍖 CROQUETTES | ADRESSAGE | IN 177 | OUT 30
+🍖 TOTAL | 13 appels | IN 4865 | OUT 386
+🧭 Adressage : PASSIF (1.93 s)
+👂 Écoute passive : Je vais ouvrir le fichier Python.
+
+🍖 CROQUETTES | ROUTAGE_SHADOW | IN 340 | OUT 6
+🍖 TOTAL | 14 appels | IN 5205 | OUT 392
+👻 Routage V2 [SHADOW] : PASSIF (2.26 s)
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+Toi : Là, je vais regarder ce qu'on a modifié tout à l'heure.
+⏱️ Transcription : 0.75 s
+🍖 CROQUETTES | ADRESSAGE | IN 187 | OUT 6
+🍖 TOTAL | 15 appels | IN 5392 | OUT 398
+🧭 Adressage : PASSIF (1.42 s)
+👂 Écoute passive : Là, je vais regarder ce qu'on a modifié tout à l'heure.
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+Toi : Je pense que cette partie du code est un peu longue.
+⏱️ Transcription : 0.85 s
+🍖 CROQUETTES | ROUTAGE_SHADOW | IN 345 | OUT 6
+🍖 TOTAL | 16 appels | IN 5737 | OUT 404
+👻 Routage V2 [SHADOW] : PASSIF (1.18 s)
+🍖 CROQUETTES | ADRESSAGE | IN 182 | OUT 6
+🍖 TOTAL | 17 appels | IN 5919 | OUT 410
+🧭 Adressage : PASSIF (1.66 s)
+👂 Écoute passive : Je pense que cette partie du code est un peu longue.
+
+Nox écoute... Parle quand tu veux.
+
+🍖 CROQUETTES | ROUTAGE_SHADOW | IN 350 | OUT 6
+🍖 TOTAL | 18 appels | IN 6269 | OUT 416
+👻 Routage V2 [SHADOW] : PASSIF (9.94 s)
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+
+Toi : Je pense que je vais aller fumer une clope après ça.
+⏱️ Transcription : 0.77 s
+🍖 CROQUETTES | ADRESSAGE | IN 184 | OUT 6
+🍖 TOTAL | 19 appels | IN 6453 | OUT 422
+🧭 Adressage : PASSIF (1.53 s)
+👂 Écoute passive : Je pense que je vais aller fumer une clope après ça.
+
+🍖 CROQUETTES | ROUTAGE_SHADOW | IN 347 | OUT 6
+🍖 TOTAL | 20 appels | IN 6800 | OUT 428
+👻 Routage V2 [SHADOW] : PASSIF (1.93 s)
+
+🎙️ Je t'entends...
+✅ Fin de phrase détectée.
+Toi : Bon, je vais continuer à travailler.
+⏱️ Transcription : 0.64 s
+🍖 CROQUETTES | ROUTAGE_SHADOW | IN 341 | OUT 6
+🍖 TOTAL | 21 appels | IN 7141 | OUT 434
+👻 Routage V2 [SHADOW] : PASSIF (1.40 s)
+🍖 CROQUETTES | ADRESSAGE | IN 178 | OUT 6
+🍖 TOTAL | 22 appels | IN 7319 | OUT 440
+🧭 Adressage : PASSIF (1.93 s)
+👂 Écoute passive : Bon, je vais continuer à travailler.`;
+
+croquettesToggle.addEventListener("click", () => {
+    const shadowIsOff = croquettesToggle.textContent.trim() === "SHADOW OFF";
+
+    croquettesToggle.textContent = shadowIsOff
+        ? "SHADOW ON"
+        : "SHADOW OFF";
+
+    croquettesLog.textContent = shadowIsOff
+        ? shadowOnLog
+        : shadowOffLog;
+});
+</script>
+</body>
+
+</html>

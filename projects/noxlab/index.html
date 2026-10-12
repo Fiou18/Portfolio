@@ -142,7 +142,7 @@
             <div class="presence-artifact-grid">
 
                 <figure class="presence-artifact presence-artifact-sheet">
-                    <img
+                    <img class="zoomable"
                         src="../../assets/presence/NOX_Ghost_Concept.png"
                         alt="Première exploration anthropomorphique de N.O.X., sous la forme d'un petit compagnon."
                     >
@@ -159,7 +159,7 @@
                 </figure>
 
                 <figure class="presence-artifact presence-artifact-sheet">
-                    <img
+                    <img class="zoomable"
                         src="../../assets/presence/NOX_galactique_Concept.png"
                         alt="Seconde exploration anthropomorphique de N.O.X., sous une forme galactique et humanoïde."
                     >
@@ -249,7 +249,7 @@
 
 
             <figure class="presence-wide-artifact presence-artifact-sheet">
-                <img
+                <img class="zoomable"
                     src="../../assets/presence/N.O.X _ Présences bioluminescentes.png"
                     alt="Planche de recherche visuelle comparant quatre formes possibles pour N.O.X. : le Germe, le Neural, l'Éclipse et l'Anomalie."
                 >
@@ -298,7 +298,7 @@
     <div class="presence-eclipse-artifacts">
 
         <figure class="presence-wide-artifact presence-artifact-sheet">
-            <img
+            <img class="zoomable"
                 src="../../assets/presence/eclipse-v1.png"
                 alt="Planche d'exploration de l'Éclipse présentant quatre variantes : minimaliste, organique, abyssale et instable."
             >
@@ -314,7 +314,7 @@
         </figure>
 
         <figure class="presence-wide-artifact presence-artifact-sheet">
-            <img
+            <img class="zoomable"
                 src="../../assets/presence/eclipse-v2.png"
                 alt="Planche Éclipse V2 développant la matière, les variantes et plusieurs états d'animation de N.O.X."
             >
@@ -365,7 +365,7 @@
     <div class="presence-singularity-artifacts">
 
         <figure class="presence-artifact">
-            <img
+            <img class="zoomable"
                 src="../../assets/presence/NOX_singularite_vivante.png"
                 alt="Planche de recherche de N.O.X. autour du concept de singularité vivante"
             >
@@ -381,7 +381,7 @@
         </figure>
 
         <figure class="presence-artifact">
-            <img
+            <img class="zoomable"
                 src="../../assets/presence/NOX_croquettes.png"
                 alt="Planche de recherche montrant l'interaction de N.O.X. avec une croquette"
             >
@@ -817,6 +817,46 @@
         </section>
 
     </main>
+    <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="image-lightbox-close" type="button" aria-label="Fermer">×</button>
+    <img src="" alt="">
+</div>
+
+<script>
+    const lightbox = document.getElementById("imageLightbox");
+    const lightboxImage = lightbox.querySelector("img");
+    const lightboxClose = lightbox.querySelector(".image-lightbox-close");
+
+    document.querySelectorAll(".zoomable").forEach(image => {
+        image.addEventListener("click", () => {
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+            lightbox.classList.add("is-open");
+            lightbox.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+            closeLightbox();
+        }
+    });
+</script>
 
 </body>
 </html>
