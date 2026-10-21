@@ -137,11 +137,62 @@
   </section>
 
   <section id="contact" class="v2-contact">
-    <p class="eyebrow">CONTACT</p>
-    <h2>Un problème à explorer,<br>une idée à tester ?</h2>
-    <p>Je cherche des situations où un prototype rapide peut permettre de décider avant de construire trop tôt.</p>
-    <span class="v2-contact-pending">Coordonnées de contact à renseigner avant publication.</span>
+    <div class="v2-contact-intro">
+      <p class="eyebrow">CONTACT</p>
+      <h2>Un problème à explorer,<br>une idée à tester ?</h2>
+      <p>
+        Décrivez-moi simplement le contexte, le besoin ou l'idée. L'objectif n'est pas d'arriver
+        avec un cahier des charges parfait : quelques lignes suffisent pour démarrer une discussion.
+      </p>
+    </div>
+
+    <form class="v2-contact-form" id="contact-form" novalidate>
+      <div class="v2-form-grid">
+        <label class="v2-field">
+          <span>Nom / prénom</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Votre nom" required>
+        </label>
+
+        <label class="v2-field">
+          <span>Adresse e-mail</span>
+          <input type="email" name="email" autocomplete="email" placeholder="vous@entreprise.fr" required>
+        </label>
+      </div>
+
+      <label class="v2-field">
+        <span>Objet</span>
+        <input type="text" name="subject" placeholder="Ex. Prototype rapide pour tester une idée" required>
+      </label>
+
+      <label class="v2-field">
+        <span>Message</span>
+        <textarea name="message" rows="7" placeholder="Contexte, problème rencontré, idée à tester…" required></textarea>
+      </label>
+
+      <div class="v2-form-footer">
+        <p class="v2-form-note">Aucune pièce jointe nécessaire pour un premier contact.</p>
+        <button class="v2-button primary v2-submit" type="submit">Envoyer le message →</button>
+      </div>
+
+      <p class="v2-form-status" id="contact-status" role="status" aria-live="polite"></p>
+    </form>
   </section>
 </main>
+<script>
+  const contactForm = document.getElementById('contact-form');
+  const contactStatus = document.getElementById('contact-status');
+
+  contactForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    contactStatus.textContent =
+      "Formulaire prêt : l'adresse de réception sera branchée avant la mise en ligne définitive.";
+  });
+</script>
 </body>
 </html>
