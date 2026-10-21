@@ -1,551 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Kiroshi — Perception sémantique | Alexy Andrieu</title>
-
-    <link rel="stylesheet" href="../../style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiroshi / Netwatch — Télémétrie temps réel | Alexy Andrieu</title><link rel="stylesheet" href="../../style.css">
 </head>
-
-<body>
-
-    <header class="site-header">
-        <a href="../../index.html" class="logo">NOXLAB</a>
-
-        <nav>
-            <a href="../../index.html#projects">Projets</a>
-            <a href="../../index.html#approach">Approche</a>
-            <a href="../../index.html#about">À propos</a>
-        </nav>
-    </header>
-
-
-    <main class="kiroshi-case">
-
-        <!-- =====================================================
-             HERO
-             ===================================================== -->
-
-        <section class="kiroshi-case-hero">
-
-            <p class="eyebrow">CASE STUDY · 02</p>
-
-            <div class="kiroshi-case-title">
-
-                <div>
-                    <h1>KIROSHI</h1>
-                    <p class="kiroshi-case-subtitle">
-                        Perception sémantique de l'activité numérique
-                    </p>
-                </div>
-
-                <div class="kiroshi-case-status">
-                    <span>RESEARCH</span>
-                    <span>ARCHITECTURE</span>
-                    <span>NON GREFFÉ</span>
-                </div>
-
-            </div>
-
-            <div class="kiroshi-case-manifesto">
-
-                <p>
-                    Comment faire comprendre à N.O.X.
-                    une activité numérique sans tout lui montrer ?
-                </p>
-
-                <strong>
-                    On ne donne pas des yeux à N.O.X.<br>
-                    On lui construit un système nerveux numérique.
-                </strong>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             01 — PROBLÈME
-             ===================================================== -->
-
-        <section class="case-section kiroshi-problem">
-
-            <p class="eyebrow">01 — LE PROBLÈME</p>
-
-            <h2>
-                Voir plus ne signifie pas
-                comprendre mieux.
-            </h2>
-
-            <div class="case-copy">
-
-                <p>
-                    Une activité numérique produit déjà une grande quantité
-                    d'informations : état applicatif, événements, paramètres,
-                    logs, interface, image et son.
-                </p>
-
-                <p>
-                    Envoyer continuellement cette matière brute à une IA
-                    reviendrait souvent à lui faire redécouvrir une information
-                    que le logiciel connaît déjà.
-                </p>
-
-            </div>
-
-            <div class="kiroshi-principle">
-                <span>PRINCIPE</span>
-                <strong>
-                    Ne jamais faire redécouvrir visuellement à un modèle
-                    une information qu'une source structurée connaît déjà.
-                </strong>
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             02 — CHANGEMENT DE QUESTION
-             ===================================================== -->
-
-        <section class="case-section kiroshi-evolution">
-
-            <p class="eyebrow">02 — CHANGEMENT DE QUESTION</p>
-
-            <h2>
-                Le problème n'était pas
-                de donner des yeux à N.O.X.
-            </h2>
-
-            <div class="kiroshi-question-shift">
-
-                <div class="kiroshi-old-question">
-                    <small>QUESTION INITIALE</small>
-
-                    <strong>
-                        Comment permettre à N.O.X.
-                        de voir ce qui se passe ?
-                    </strong>
-
-                    <span>PERCEPTION ÉCRAN</span>
-                </div>
-
-                <div class="kiroshi-shift-arrow">→</div>
-
-                <div class="kiroshi-new-question">
-                    <small>QUESTION ACTUELLE</small>
-
-                    <strong>
-                        Quelles informations N.O.X.
-                        doit-il connaître pour comprendre la situation ?
-                    </strong>
-
-                    <span>PERCEPTION SÉMANTIQUE</span>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             03 — MIDDLEWARE FIOU
-             ===================================================== -->
-
-        <section class="case-section kiroshi-discovery">
-
-            <p class="eyebrow">03 — UNE EXPÉRIENCE RÉVÉLATRICE</p>
-
-            <h2>
-                Le premier adaptateur Kiroshi
-                était accidentellement humain.
-            </h2>
-
-            <div class="kiroshi-fiou">
-
-                <div class="kiroshi-fiou-head">
-                    <span>KIROSHI 0.0</span>
-                    <strong>MIDDLEWARE FIOU™</strong>
-                    <small>EXPÉRIENCE RÉTROSPECTIVE</small>
-                </div>
-
-                <div class="kiroshi-fiou-flow">
-
-                    <div>
-                        <small>01</small>
-                        <strong>JEU</strong>
-                        <p>Une situation complexe existe dans l'environnement.</p>
-                    </div>
-
-                    <b>→</b>
-
-                    <div class="kiroshi-fiou-human">
-                        <small>02</small>
-                        <strong>ALEX</strong>
-                        <p>
-                            Observe, sélectionne et transmet manuellement
-                            les informations qu'il juge pertinentes.
-                        </p>
-                    </div>
-
-                    <b>→</b>
-
-                    <div>
-                        <small>03</small>
-                        <strong>IA EXTERNE</strong>
-                        <p>
-                            Raisonne uniquement à partir du contexte
-                            qui lui a été transmis.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="kiroshi-fiou-result">
-
-                    <span>OBSERVATION</span>
-
-                    <p>
-                        Une erreur, une question ou une mauvaise proposition
-                        révèle directement une information absente,
-                        ambiguë ou obsolète.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <p class="kiroshi-disclaimer">
-                Cette expérience n'utilisait pas Kiroshi automatiquement.
-                Elle a été reconnue après coup comme un prototype conceptuel
-                du rôle qu'un adaptateur pourrait remplir.
-            </p>
-
-        </section>
-
-
-        <!-- =====================================================
-             04 — ARCHITECTURE ACTUELLE
-             ===================================================== -->
-
-        <section class="case-section kiroshi-architecture">
-
-            <p class="eyebrow">04 — ARCHITECTURE ACTUELLE</p>
-
-            <h2>
-                Beaucoup observer localement.
-                Peu transmettre.
-            </h2>
-
-            <div class="kiroshi-architecture-flow">
-
-                <div class="kiroshi-sources">
-
-                    <small>SOURCES</small>
-
-                    <span>JEU</span>
-                    <span>BLENDER</span>
-                    <span>UNREAL ENGINE</span>
-                    <span>VS CODE</span>
-                    <span>SYSTÈME</span>
-
-                </div>
-
-                <b>→</b>
-
-                <div class="kiroshi-adapters">
-                    <small>ACQUISITION</small>
-                    <strong>ADAPTATEURS</strong>
-                    <p>
-                        Récupérer les faits disponibles
-                        dans chaque environnement.
-                    </p>
-                </div>
-
-                <b>→</b>
-
-                <div class="kiroshi-core">
-                    <small>TRADUCTION</small>
-                    <strong>KIROSHI CORE</strong>
-                    <p>
-                        Normaliser les informations
-                        dans un langage commun.
-                    </p>
-                </div>
-
-                <b>→</b>
-
-                <div class="kiroshi-events">
-                    <small>SORTIE</small>
-                    <strong>ÉVÉNEMENTS SÉMANTIQUES</strong>
-                    <p>
-                        Transmettre uniquement
-                        le contexte utile.
-                    </p>
-                </div>
-
-                <b>→</b>
-
-                <div class="kiroshi-nox">
-                    <small>INTERPRÉTATION</small>
-                    <strong>N.O.X.</strong>
-                </div>
-
-            </div>
-
-            <div class="kiroshi-responsibilities">
-
-                <div>
-                    <span>CAPTEUR / ADAPTATEUR</span>
-                    <strong>Récupère le fait.</strong>
-                </div>
-
-                <div>
-                    <span>KIROSHI</span>
-                    <strong>Traduit le fait.</strong>
-                </div>
-
-                <div>
-                    <span>N.O.X.</span>
-                    <strong>Interprète le fait.</strong>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             05 — MODALITÉS
-             ===================================================== -->
-
-        <section class="case-section kiroshi-modalities">
-
-            <p class="eyebrow">05 — CHOISIR LE BON SENS</p>
-
-            <h2>
-                Toutes les sources
-                ne se valent pas.
-            </h2>
-
-            <div class="kiroshi-modalities-flow">
-
-                <div class="kiroshi-structured">
-                    <small>PRIORITAIRE</small>
-                    <strong>DONNÉES STRUCTURÉES</strong>
-                    <p>
-                        État applicatif · API · scripting · logs · événements
-                    </p>
-                </div>
-
-                <div class="kiroshi-sufficiency">
-                    <span>CONTEXTE SUFFISANT ?</span>
-
-                    <div>
-                        <strong>OUI</strong>
-                        <b>→</b>
-                        <span>TRADUIRE</span>
-                    </div>
-
-                    <div>
-                        <strong>NON</strong>
-                        <b>→</b>
-                        <span>COMPLÉTER</span>
-                    </div>
-                </div>
-
-                <div class="kiroshi-complements">
-
-                    <div>
-                        <small>AUDIO</small>
-                        <strong>DAREDEVIL</strong>
-                        <p>Ouïe complémentaire ciblée.</p>
-                    </div>
-
-                    <div>
-                        <small>VISUEL</small>
-                        <strong>VISION / OCR</strong>
-                        <p>Compléter les trous de contexte.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="kiroshi-daredevil-principle">
-                <span>DAREDEVIL</span>
-
-                <strong>
-                    Les données structurées décrivent prioritairement
-                    la situation ; Daredevil écoute lorsque le son peut
-                    raconter ce qu'elles ne disent pas.
-                </strong>
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             06 — BENCHMARK
-             ===================================================== -->
-
-        <section class="case-section kiroshi-benchmark">
-
-            <p class="eyebrow">06 — PROUVER AVANT DE GREFFER</p>
-
-            <h2>
-                Kiroshi doit fonctionner
-                avant d'avoir besoin de N.O.X.
-            </h2>
-
-            <div class="kiroshi-benchmark-flow">
-
-                <div>
-                    <small>01</small>
-                    <strong>ACTIVITÉ</strong>
-                    <p>Utiliser normalement l'application.</p>
-                </div>
-
-                <b>→</b>
-
-                <div>
-                    <small>02</small>
-                    <strong>KIROSHI SEUL</strong>
-                    <p>Produire un flux sémantique autonome.</p>
-                </div>
-
-                <b>→</b>
-
-                <div>
-                    <small>03</small>
-                    <strong>OBSERVATEUR EXTERNE</strong>
-                    <p>
-                        Ne lui fournir que la sortie de Kiroshi.
-                    </p>
-                </div>
-
-                <b>→</b>
-
-                <div>
-                    <small>04</small>
-                    <strong>TORTURE</strong>
-                    <p>
-                        Toute incompréhension révèle
-                        une information manquante.
-                    </p>
-                </div>
-
-                <b>→</b>
-
-                <div>
-                    <small>05</small>
-                    <strong>ITÉRER</strong>
-                    <p>Enrichir l'adaptateur et recommencer.</p>
-                </div>
-
-            </div>
-
-            <div class="kiroshi-cycle">
-                CONCEPTION
-                <b>→</b>
-                PROTOTYPE ISOLÉ
-                <b>→</b>
-                TEST
-                <b>→</b>
-                DOCUMENTATION
-                <b>→</b>
-                GREFFE SI VALIDÉ
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             07 — LIMITES
-             ===================================================== -->
-
-        <section class="case-section kiroshi-status">
-
-            <p class="eyebrow">07 — ÉTAT ACTUEL</p>
-
-            <h2>
-                Une architecture à prouver,
-                pas une fonctionnalité terminée.
-            </h2>
-
-            <div class="kiroshi-status-grid">
-
-                <div>
-                    <small>DOCUMENTÉ</small>
-                    <strong>ARCHITECTURE</strong>
-                    <p>
-                        Séparation adaptateurs / Kiroshi / N.O.X.
-                        et format événementiel candidat.
-                    </p>
-                </div>
-
-                <div>
-                    <small>À PROTOTYPER</small>
-                    <strong>ADAPTATEURS</strong>
-                    <p>
-                        Premières sources applicatives
-                        et production réelle d'événements.
-                    </p>
-                </div>
-
-                <div>
-                    <small>À BENCHMARKER</small>
-                    <strong>FLUX AUTONOME</strong>
-                    <p>
-                        Vérifier qu'une situation peut être reconstruite
-                        depuis Kiroshi seul.
-                    </p>
-                </div>
-
-                <div>
-                    <small>DIRECTION</small>
-                    <strong>DAREDEVIL</strong>
-                    <p>
-                        Tester l'audio comme modalité complémentaire
-                        plutôt que comme perception continue.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             FINAL
-             ===================================================== -->
-
-        <section class="kiroshi-final">
-
-            <span>KIROSHI</span>
-
-            <h2>
-                Le minimum de signaux.<br>
-                Le maximum de contexte utile.
-            </h2>
-
-            <p>
-                Kiroshi ne cherche pas à reproduire toute l'activité
-                numérique pour N.O.X. Il cherche à lui fournir
-                suffisamment de faits structurés pour qu'il puisse
-                reconstruire correctement la situation.
-            </p>
-
-            <a href="../nox/features/index.html">
-                ← RETOUR AUX FONCTIONNALITÉS N.O.X.
-            </a>
-
-        </section>
-
-    </main>
-
-</body>
-</html>
+<body class="portfolio-v2 case-v2">
+<header class="site-header"><a class="logo" href="../../index.html">ALEXY ANDRIEU</a><nav><a href="../index.html">Projets</a><a href="../../index.html#approche">Approche</a><a href="../../index.html#contact">Contact</a></nav></header>
+<main>
+<section class="case-v2-hero">
+  <p class="eyebrow">ÉTUDE DE CAS · 02</p>
+  <h1>KIROSHI</h1>
+  <p class="case-v2-subtitle">Télémétrie et perception temps réel</p>
+  <p class="case-v2-question">Peut-on donner à un agent une perception exploitable d'un jeu en lisant directement son état interne plutôt qu'en lui envoyant constamment des images ?</p>
+  <div class="case-v2-status"><span>R&D</span><span>UE4SS</span><span>LUA</span><span>PYTHON</span></div>
+  <div class="telemetry-proof"><span>HP <strong>209 / 262</strong></span><span>STAMINA <strong>134 / 134</strong></span><span>LEGION <strong>165 / 201</strong></span></div>
+  <div class="evidence-placeholder video"><small>PREUVE À AJOUTER · VIDÉO YOUTUBE</small><strong>Lies of P + télémétrie synchronisée</strong><p>Le jeu tourne pendant que les variations remontent en direct.</p></div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">01 — LE PROBLÈME</p>
+  <h2>Voir tout est souvent la manière la plus coûteuse de comprendre peu.</h2>
+  <div class="case-copy">
+    <p>Un flux vidéo contient énormément d'informations inutiles pour une décision ponctuelle. Pourtant le jeu possède déjà un état structuré : points de vie, stamina, Legion, acteurs, événements.</p>
+    <p>L'enjeu devient donc de récupérer les bons faits, de les compacter et de laisser N.O.X. interpréter plutôt que de lui faire redécouvrir chaque information visuellement.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">02 — INVESTIGATION</p>
+  <h2>Explorer un système inconnu jusqu'à trouver la primitive utile.</h2>
+  <div class="timeline-v2">
+    <div><span>01</span><strong>UE4SS / Lua</strong><p>Accès aux structures Unreal réelles du jeu.</p></div>
+    <div><span>02</span><strong>Pawn / Controller / StatComponent</strong><p>Repérage des composants pertinents.</p></div>
+    <div><span>03</span><strong>StatGaugeList / StatList</strong><p>Identification des types HP, stamina et Legion.</p></div>
+    <div><span>04</span><strong>Validation visuelle</strong><p>Comparaison des valeurs internes avec l'interface du jeu.</p></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">03 — DU POLLING À L'ÉVÉNEMENT</p>
+  <h2>La première solution fonctionnait.<br>Elle gelait aussi le jeu.</h2>
+  <div class="case-copy">
+    <p>Une première tentative interroge périodiquement les statistiques. Le signal existe, mais le coût de cette observation agressive rend l'approche inutilisable.</p>
+    <p>La recherche se déplace vers un signal natif. Le hook <code>LCharacter:OnStatChanged(StatType, Delta, OldValue)</code> permet finalement au jeu de signaler lui-même les changements lorsqu'ils arrivent.</p>
+  </div>
+  <div class="decision-v2">
+    <div><small>REJETÉ</small><strong>Polling périodique</strong><p>Observation continue, coût excessif, gel du jeu.</p></div>
+    <div><small>RETENU</small><strong>Événement natif</strong><p>Signal ciblé, instantané, avec provenance de l'acteur.</p></div>
+  </div>
+  <div class="evidence-placeholder"><small>PREUVES À GREFFER</small><strong>Logs du gel · signature OnStatChanged · sources acteur · variations live</strong></div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">04 — ARCHITECTURE</p>
+  <h2>Du jeu jusqu'à un flux indépendant.</h2>
+  <div class="architecture-flow">
+    <div><small>JEU</small><strong>Lies of P</strong></div><b>→</b>
+    <div><small>CAPTEUR</small><strong>UE4SS / Lua</strong></div><b>→</b>
+    <div><small>TRANSPORT</small><strong>Logs / bridge</strong></div><b>→</b>
+    <div><small>STRUCTURATION</small><strong>Python</strong></div><b>→</b>
+    <div><small>CONSOMMATEUR</small><strong>N.O.X.</strong></div>
+  </div>
+  <p class="architecture-note"><strong>Kiroshi établit et compacte les faits ; N.O.X. les interprète.</strong></p>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">05 — VALIDATION TERRAIN</p>
+  <h2>Transporter un combat réel jusqu'à Python.</h2>
+  <div class="case-copy">
+    <p>Un combat contre <code>BP_Police_C</code> sert de scénario non préparé. Le bridge suit les variations du joueur et de l'ennemi, les consommations de Legion, la stamina et les sources de dégâts jusqu'à la mort du joueur.</p>
+    <p>La valeur du test n'est pas de reconnaître un combat en vidéo : c'est de prouver que le capteur et le consommateur sont découplés et que les événements peuvent quitter le jeu.</p>
+  </div>
+  <div class="evidence-placeholder video"><small>PREUVE À AJOUTER · VIDÉO YOUTUBE</small><strong>Combat + terminal Python synchronisé</strong></div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">06 — PROCHAIN VERROU</p>
+  <h2>Les micro-événements sont encore trop bavards.</h2>
+  <div class="architecture-flow compact">
+    <div><strong>Événements bruts</strong></div><b>→</b><div><strong>Classification locale</strong></div><b>→</b><div><strong>Agrégation temporelle</strong></div><b>→</b><div><strong>Séquence sémantique</strong></div>
+  </div>
+  <p class="architecture-note">Le prochain test doit comparer le flux brut et une séquence condensée sur la même scène de jeu.</p>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">07 — LIMITES</p>
+  <div class="limits-grid">
+    <div><strong>Dépendance au jeu</strong><p>Structures internes, moteur et mises à jour peuvent casser l'adaptateur.</p></div>
+    <div><strong>Sémantique incomplète</strong><p>Les dialogues, zones, inventaires et interactions ne sont pas encore tous captés proprement.</p></div>
+  </div>
+</section>
+
+<section class="case-v2-final">
+  <span>CE QUE LE PROJET DÉMONTRE</span>
+  <h2>Investigation technique · reverse engineering orienté prototype · réduction de données · interfaces entre systèmes.</h2>
+  <a href="../nox-desktop/index.html">Projet suivant : N.O.X. Desktop →</a>
+</section>
+</main>
+</body></html>
