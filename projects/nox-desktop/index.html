@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N.O.X. Desktop — Présence visuelle temps réel | Alexy Andrieu</title><link rel="stylesheet" href="../../style.css">
+</head>
+<body class="portfolio-v2 case-v2">
+<header class="site-header"><a class="logo" href="../../index.html">ALEXY ANDRIEU</a><nav><a href="../index.html">Projets</a><a href="../../index.html#approche">Approche</a><a href="../../index.html#contact">Contact</a></nav></header>
+<main>
+<section class="case-v2-hero">
+  <p class="eyebrow">ÉTUDE DE CAS · 03</p>
+  <h1>N.O.X.<br>DESKTOP</h1>
+  <p class="case-v2-subtitle">Présence visuelle et interaction temps réel</p>
+  <p class="case-v2-question">Comment rendre l'état d'un agent perceptible à l'écran sans simplement afficher du texte ou des indicateurs techniques ?</p>
+  <div class="case-v2-status"><span>PROTOTYPE</span><span>UNREAL</span><span>NIAGARA</span><span>OBS</span></div>
+  <div class="evidence-placeholder video"><small>PREUVE À AJOUTER · VIDÉO YOUTUBE</small><strong>N.O.X. en overlay desktop</strong><p>Transparence · mouvement · réaction visible à un événement réel.</p></div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">01 — INTENTION</p>
+  <h2>Une présence plutôt qu'une interface.</h2>
+  <div class="case-copy">
+    <p>N.O.X. n'a pas besoin d'afficher des jauges pour être lisible. Le projet cherche à traduire son activité en mouvement, matière, densité, rythme et comportement.</p>
+    <p>Le principe de design est volontairement contraignant : peu d'éléments, pas de visage fixe, pas de dashboard permanent. Le noyau doit continuer d'exister même lorsqu'il ne parle pas.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">02 — DU CONCEPT AU CORPS</p>
+  <h2>Blender fixe l'identité.<br>Unreal prend le relais quand le besoin devient comportemental.</h2>
+  <div class="timeline-v2">
+    <div><span>01</span><strong>Concept art</strong><p>Éclipse, singularité noire, matière orbitale.</p></div>
+    <div><span>02</span><strong>Blender</strong><p>Noyau palpitant, forme et mouvement.</p></div>
+    <div><span>03</span><strong>Unreal Engine</strong><p>Mesh, matériau, Niagara, paramètres temps réel.</p></div>
+    <div><span>04</span><strong>Desktop / OBS</strong><p>Overlay transparent et composition dans un environnement réel.</p></div>
+  </div>
+  <div class="evidence-placeholder"><small>PREUVES À GREFFER</small><strong>Concept → Blender → Unreal → overlay final</strong></div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">03 — DE VISUALIZER À COMPORTEMENT</p>
+  <h2>Faire réagir à la musique sans piloter directement chaque particule par le beat.</h2>
+  <div class="case-copy">
+    <p>Une première version relie directement l'énergie audio aux effets. Elle fonctionne, mais ressemble trop à un visualizer déterministe.</p>
+    <p>La chaîne est alors reformulée : l'audio alimente un état musical, puis cet état produit des intentions visuelles. La réaction n'est plus « un beat = un effet » mais l'expression d'un état qui possède une inertie.</p>
+  </div>
+  <div class="architecture-flow">
+    <div><small>PERCEPTION</small><strong>Audio</strong></div><b>→</b>
+    <div><small>ÉTAT</small><strong>Activation · Momentum · ImpactMemory</strong></div><b>→</b>
+    <div><small>INTENTION</small><strong>BeltBreathing · OrbitTension</strong></div><b>→</b>
+    <div><small>RENDU</small><strong>Niagara</strong></div>
+  </div>
+  <div class="evidence-placeholder video"><small>PREUVE À AJOUTER · VIDÉO YOUTUBE</small><strong>Réactivité musicale / BeltBreathing</strong></div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">04 — RGBA TEMPS RÉEL</p>
+  <h2>Le beauty pass ne suffisait pas.</h2>
+  <div class="case-copy">
+    <p>Une SceneCapture en FinalColorLDR est testée pour récupérer N.O.X. avec transparence. Le résultat est rejeté : fond opaque, bruit et éléments parasites.</p>
+    <p>La solution retenue sépare couleur et opacité : le RGB vient du vrai GameViewport, tandis qu'un masque HDR fournit l'alpha. Les deux sont recomposés côté GPU avant l'envoi Spout.</p>
+  </div>
+  <div class="decision-v2">
+    <div><small>REJETÉ</small><strong>SceneCapture beauty pass</strong><p>Rendu différent du viewport et transparence insuffisante.</p></div>
+    <div><small>RETENU</small><strong>GameViewport RGB + masque alpha</strong><p>Flux RGBA cohérent avec le rendu final.</p></div>
+  </div>
+  <div class="evidence-placeholder"><small>PREUVES À GREFFER</small><strong>Avant / après · sender NOX_RGBA · capture OBS transparente</strong></div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">05 — DU RENDU À LA PRÉSENCE DESKTOP</p>
+  <h2>Unreal tourne hors écran.<br>N.O.X. reste au-dessus du bureau.</h2>
+  <div class="timeline-v2">
+    <div><span>V0.1</span><strong>Overlay fonctionnel</strong><p>Runtime packagé et affichage transparent.</p></div>
+    <div><span>V0.2</span><strong>Moteur déplacé hors écran</strong><p>GameViewport conservé actif, overlay always-on-top.</p></div>
+    <div><span>V0.3</span><strong>Click-through contrôlable</strong><p>Le desktop reste utilisable ; l'interaction est volontaire.</p></div>
+  </div>
+  <div class="evidence-placeholder video"><small>PREUVE À AJOUTER · VIDÉO YOUTUBE</small><strong>Overlay desktop + clic à travers + retour interaction</strong></div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">06 — LIMITES</p>
+  <div class="limits-grid">
+    <div><strong>Orchestration</strong><p>Certains comportements sont encore déclenchés ou testés isolément. La greffe avec le core doit être consolidée.</p></div>
+    <div><strong>Optimisation</strong><p>Le coût GPU et l'endurance n'ont pas encore été étudiés comme contraintes de production.</p></div>
+  </div>
+</section>
+
+<section class="case-v2-final">
+  <span>CE QUE LE PROJET DÉMONTRE</span>
+  <h2>Prototypage visuel · pipeline GPU temps réel · intégration Unreal / OBS / desktop · design comportemental.</h2>
+  <a href="../index.html">← Retour aux projets</a>
+</section>
+</main>
+</body></html>
