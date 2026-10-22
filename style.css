@@ -6570,3 +6570,23 @@ header {
   .nox-axis-grid{grid-template-columns:1fr}
   .nox-axis{min-height:0}
 }
+
+
+/* =========================================================
+   N.O.X. ARCHITECTURE THEMES — PERCEPTION / COGNITION / PRESENCE
+   ========================================================= */
+.case-v2{--axis:#a970ff;--axis-rgb:169,112,255}
+.case-v2.axis-perception{--axis:#16c9ff;--axis-rgb:22,201,255}
+.case-v2.axis-cognition{--axis:#ff4cdd;--axis-rgb:255,76,221}
+.case-v2.axis-presence{--axis:#a94cff;--axis-rgb:169,76,255}
+.case-v2 .case-v2-hero{position:relative}
+.case-v2 .case-v2-hero:before{content:"";position:absolute;z-index:-1;inset:7% -12% 5%;background:radial-gradient(circle at 18% 42%,rgba(var(--axis-rgb),.13),transparent 35%);pointer-events:none}
+.case-v2 .case-v2-hero h1{text-shadow:0 0 36px rgba(var(--axis-rgb),.14)}
+.case-v2 .case-v2-subtitle,.case-v2 .eyebrow,.case-v2 .case-principle span,.case-v2 .hypothesis-grid span,.case-v2 .architecture-flow>b,.case-v2 .result-strip small,.case-v2 .decision-v2 small,.case-v2 .timeline-v2 span,.case-v2 .evidence-placeholder small,.case-v2 .case-v2-final>span{color:var(--axis)}
+.case-v2 .case-v2-status span{border-color:rgba(var(--axis-rgb),.28)}
+.case-v2 .case-v2-status span:first-child{color:var(--axis);border-color:rgba(var(--axis-rgb),.7);background:rgba(var(--axis-rgb),.06);box-shadow:0 0 18px rgba(var(--axis-rgb),.06)}
+.case-v2 .evidence-placeholder{border-color:rgba(var(--axis-rgb),.42);background:linear-gradient(135deg,rgba(var(--axis-rgb),.065),transparent 48%)}
+.case-v2 .architecture-flow>div,.case-v2 .timeline-v2>div,.case-v2 .hypothesis-grid article,.case-v2 .limits-grid>div,.case-v2 .result-strip>div,.case-v2 .decision-v2>div{box-shadow:inset 0 1px rgba(var(--axis-rgb),.08)}
+.case-v2 .case-principle,.case-v2 .architecture-note,.case-v2 .case-v2-final{border-color:rgba(var(--axis-rgb),.22)}
+.case-v2 .case-v2-final a:hover{color:var(--axis)}
+.case-v2 code{color:var(--axis)}
