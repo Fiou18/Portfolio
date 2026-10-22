@@ -1,134 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kiroshi / Netwatch — Télémétrie temps réel | Alexy Andrieu</title><link rel="stylesheet" href="../../style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIROSHI — PERCEPTION | Alexy Andrieu</title>
+<link rel="stylesheet" href="../../style.css">
+
+<style>
+:root{--axis:#a94cff}
+body.axis-perception{--axis:#16c9ff}body.axis-cognition{--axis:#ff4cdd}body.axis-presence{--axis:#a94cff}
+.v3-case{max-width:1200px;margin:auto;padding:0 32px}.v3-back{display:inline-block;margin-top:42px;color:#777783;text-decoration:none;font-size:.72rem;font-weight:700;letter-spacing:2px}.v3-back:hover{color:var(--axis)}
+.v3-hero{min-height:620px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid #292934}.v3-axis{color:var(--axis);font-size:.72rem;font-weight:700;letter-spacing:4px}.v3-hero h1{margin:16px 0 12px;font-size:clamp(4rem,10vw,8rem);line-height:.88}.v3-lead{max-width:820px;margin:0;color:#aaaab5;font-size:clamp(1.25rem,2.4vw,2rem);line-height:1.35}
+.v3-experience,.v3-section{padding:90px 0;border-bottom:1px solid #292934}.v3-experience-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:end}.v3-experience h2,.v3-section h2{margin:12px 0 0;font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.02}.v3-copy{max-width:720px;color:#aaaab5;font-size:1.05rem;line-height:1.8}
+.v3-stage{margin-top:55px;min-height:360px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:#0b0b10;border:1px solid var(--axis);border-radius:8px;box-shadow:0 0 55px color-mix(in srgb,var(--axis) 10%,transparent)}.v3-stage-top{display:flex;justify-content:space-between;gap:20px;color:#666672;font-size:.65rem;font-weight:700;letter-spacing:2px}.v3-stage-top strong{color:var(--axis)}.v3-stage-center{padding:60px 20px;text-align:center}.v3-stage-center strong{display:block;font-size:clamp(1.4rem,3vw,2.5rem)}.v3-stage-center p{max-width:650px;margin:15px auto 0;color:#777783}.v3-flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}.v3-flow span{padding:9px 11px;border:1px solid #292934;border-radius:4px;color:#858591;font-size:.65rem;font-weight:700;letter-spacing:1px}.v3-flow b{color:var(--axis)}
+.v3-grid{margin-top:45px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.v3-card{min-height:180px;padding:25px;background:#111117;border:1px solid #292934;border-radius:6px}.v3-card span{color:var(--axis);font-size:.62rem;font-weight:700;letter-spacing:2px}.v3-card h3{margin:28px 0 10px;font-size:1.25rem}.v3-card p{margin:0;color:#858591;line-height:1.65;font-size:.88rem}
+.v3-method{margin-top:45px;padding:25px 0;display:flex;flex-wrap:wrap;gap:14px;align-items:center;border-top:1px solid #292934;border-bottom:1px solid #292934;color:#858591;font-size:.67rem;font-weight:700;letter-spacing:1.5px}.v3-method b{color:var(--axis)}.v3-final{padding:100px 0 120px}.v3-final span{color:var(--axis);font-size:.7rem;font-weight:700;letter-spacing:3px}.v3-final h2{max-width:1000px;margin:18px 0 40px;font-size:clamp(2rem,4.5vw,4rem);line-height:1.08}.v3-final a{color:#f2f2f5;text-decoration:none;border-bottom:1px solid var(--axis);padding-bottom:4px}
+@media(max-width:750px){.v3-case{padding:0 20px}.v3-hero{min-height:520px}.v3-experience,.v3-section{padding:65px 0}.v3-experience-head{grid-template-columns:1fr;gap:20px}.v3-stage{min-height:320px;padding:20px}.v3-grid{grid-template-columns:1fr}.v3-flow{justify-content:flex-start}.v3-stage-top{flex-direction:column}}
+</style>
 </head>
-<body class="portfolio-v2 case-v2 axis-perception">
-<header class="site-header"><a class="logo" href="../../index.html">ALEXY ANDRIEU</a><nav><a href="../index.html">Projets</a><a href="../../index.html#approche">Approche</a><a href="../../index.html#contact">Contact</a></nav></header>
-<main>
-<section class="case-v2-hero">
-  <p class="eyebrow">ÉTUDE DE CAS · 02</p>
-  <h1>KIROSHI</h1>
-  <p class="case-v2-subtitle">Télémétrie et perception temps réel</p>
-  <p class="case-v2-question">Peut-on donner à un agent une perception exploitable d'un jeu en lisant directement son état interne plutôt qu'en lui envoyant constamment des images ?</p>
-  <div class="case-v2-status"><span>R&D</span><span>UE4SS</span><span>LUA</span><span>PYTHON</span></div>
-  <div class="telemetry-proof"><span>HP <strong>209 / 262</strong></span><span>STAMINA <strong>134 / 134</strong></span><span>LEGION <strong>165 / 201</strong></span></div>
-  <div class="evidence-placeholder video"><small>PREUVE À AJOUTER · VIDÉO YOUTUBE</small><strong>Lies of P + télémétrie synchronisée</strong><p>Le jeu tourne pendant que les variations remontent en direct.</p></div>
+<body class="portfolio-v2 axis-perception">
+<header class="site-header"><a class="logo" href="../../index.html">ALEXY ANDRIEU</a><nav><a href="../../experiments/nox-system-map/index.html">System Map</a><a href="../../index.html#approche">Approche</a><a href="../../index.html#contact">Contact</a></nav></header>
+<main class="v3-case">
+<a class="v3-back" href="../../experiments/nox-system-map/index.html">← RETOUR À N.O.X.</a>
+<section class="v3-hero">
+<p class="v3-axis">PERCEPTION · ÉTUDE DE CAS</p>
+<h1>KIROSHI</h1>
+<p class="v3-lead">Que doit savoir N.O.X. pour comprendre ce qui vient de se passer ?</p>
 </section>
 
-<section class="case-section kiroshi-axis-context">
-  <p class="eyebrow">DANS LE SYSTÈME N.O.X.</p>
-  <div class="axis-locator"><strong>PERCEPTION · KIROSHI</strong><span>COGNITION · N.O.X. CORE</span><span>PRÉSENCE · N.O.X. DESKTOP</span><span>ACTION · CONCEPT</span></div>
-  <p>Kiroshi est l'axe Perception de N.O.X. Son rôle n'est pas d'interpréter la situation à la place du Core : il récupère des faits disponibles dans l'environnement, les normalise et transmet le minimum de contexte utile.</p>
+<section class="v3-experience">
+<div class="v3-experience-head"><div><p class="v3-axis">01 · ESSAYER</p><h2>Voir tout est souvent la manière la plus coûteuse de comprendre peu.</h2></div><p class="v3-copy">UE4SS capte le signal brut. Kiroshi le transforme en information sémantique exploitable par le contexte de N.O.X.</p></div>
+<div class="v3-stage">
+<div class="v3-stage-top"><span>EXPÉRIENCE INTERACTIVE V3</span><strong>KIROSHI · EXPÉRIENCE À BRANCHER</strong></div>
+<div class="v3-stage-center"><strong>Zone interactive prête.</strong><p>La structure est en place. Le module réel sera branché ici sans reconstruire la page.</p></div>
+<div class="v3-flow"><span>COMBAT</span><b>→</b><span>SOIN</span><b>→</b><span>LOOT</span><b>→</b><span>DIALOGUE</span></div>
+</div>
 </section>
 
-<section class="case-section">
-  <p class="eyebrow">01 — LE PROBLÈME</p>
-  <h2>Voir tout est souvent la manière la plus coûteuse de comprendre peu.</h2>
-  <div class="case-copy">
-    <p>Un flux vidéo contient énormément d'informations inutiles pour une décision ponctuelle. Pourtant le jeu possède déjà un état structuré : points de vie, stamina, Legion, acteurs, événements.</p>
-    <p>L'enjeu devient donc de récupérer les bons faits, de les compacter et de laisser N.O.X. interpréter plutôt que de lui faire redécouvrir chaque information visuellement.</p>
-  </div>
-  <div class="case-principle"><span>PRINCIPE</span><strong>Ne pas faire redécouvrir visuellement à un modèle une information qu'une source structurée connaît déjà.</strong></div>
+<section class="v3-section">
+<p class="v3-axis">02 · POURQUOI ÇA FAIT ÇA ?</p>
+<h2>De l'expérience visible au problème de conception.</h2>
+<p class="v3-copy">UE4SS capte le signal brut. Kiroshi le transforme en information sémantique exploitable par le contexte de N.O.X.</p>
+<div class="v3-grid"><article class="v3-card"><span>01 · COULISSE</span><h3>UE4SS / Lua et structures Unreal</h3><p>Section prête à recevoir la preuve, le test ou le détail technique correspondant.</p></article>
+<article class="v3-card"><span>02 · COULISSE</span><h3>OnStatChanged plutôt que polling</h3><p>Section prête à recevoir la preuve, le test ou le détail technique correspondant.</p></article>
+<article class="v3-card"><span>03 · COULISSE</span><h3>Bridge vers Python</h3><p>Section prête à recevoir la preuve, le test ou le détail technique correspondant.</p></article>
+<article class="v3-card"><span>04 · COULISSE</span><h3>Classification et agrégation sémantique</h3><p>Section prête à recevoir la preuve, le test ou le détail technique correspondant.</p></article></div>
 </section>
 
-<section class="case-section kiroshi-question">
-  <p class="eyebrow">02 — CHANGEMENT DE QUESTION</p>
-  <h2>Le problème n'était pas de donner des yeux à N.O.X.</h2>
-  <div class="question-shift-v2">
-    <div><small>QUESTION INITIALE</small><strong>Comment permettre à N.O.X. de voir ce qui se passe ?</strong><span>PERCEPTION ÉCRAN</span></div>
-    <b>→</b>
-    <div><small>QUESTION RETENUE</small><strong>Quelles informations N.O.X. doit-il connaître pour reconstruire la situation ?</strong><span>PERCEPTION SÉMANTIQUE</span></div>
-  </div>
+<section class="v3-section">
+<p class="v3-axis">03 · COULISSES</p>
+<h2>Montrer les décisions, y compris celles qui ont été rejetées.</h2>
+<p class="v3-copy">Cette zone accueillera les preuves sélectionnées de la V2 : architecture, essais, mesures, captures et décisions techniques. L'objectif reste de montrer ce qui a été testé et pourquoi une piste a été retenue plutôt que d'empiler les technologies.</p>
 </section>
 
-<section class="case-section">
-  <p class="eyebrow">03 — INVESTIGATION</p>
-  <h2>Explorer un système inconnu jusqu'à trouver la primitive utile.</h2>
-  <div class="timeline-v2">
-    <div><span>01</span><strong>UE4SS / Lua</strong><p>Accès aux structures Unreal réelles du jeu.</p></div>
-    <div><span>02</span><strong>Pawn / Controller / StatComponent</strong><p>Repérage des composants pertinents.</p></div>
-    <div><span>03</span><strong>StatGaugeList / StatList</strong><p>Identification des types HP, stamina et Legion.</p></div>
-    <div><span>04</span><strong>Validation visuelle</strong><p>Comparaison des valeurs internes avec l'interface du jeu.</p></div>
-  </div>
+<section class="v3-section">
+<p class="v3-axis">04 · MÉTHODE</p>
+<h2>Le projet comme trace d'une manière de concevoir.</h2>
+<div class="v3-method"><span>PROBLÈME</span><b>→</b><span>HYPOTHÈSE</span><b>→</b><span>PROTOTYPE</span><b>→</b><span>TEST</span><b>→</b><span>DOCUMENTATION</span><b>→</b><span>INTÉGRATION</span></div>
 </section>
 
-<section class="case-section">
-  <p class="eyebrow">04 — DU POLLING À L'ÉVÉNEMENT</p>
-  <h2>La première solution fonctionnait.<br>Elle gelait aussi le jeu.</h2>
-  <div class="case-copy">
-    <p>Une première tentative interroge périodiquement les statistiques. Le signal existe, mais le coût de cette observation agressive rend l'approche inutilisable.</p>
-    <p>La recherche se déplace vers un signal natif. Le hook <code>LCharacter:OnStatChanged(StatType, Delta, OldValue)</code> permet finalement au jeu de signaler lui-même les changements lorsqu'ils arrivent.</p>
-  </div>
-  <div class="decision-v2">
-    <div><small>REJETÉ</small><strong>Polling périodique</strong><p>Observation continue, coût excessif, gel du jeu.</p></div>
-    <div><small>RETENU</small><strong>Événement natif</strong><p>Signal ciblé, instantané, avec provenance de l'acteur.</p></div>
-  </div>
-  <div class="kiroshi-proof-strip"><span><small>SIGNAL</small><strong>OnStatChanged</strong></span><span><small>VALEURS</small><strong>HP · STAMINA · LEGION</strong></span><span><small>PROVENANCE</small><strong>JOUEUR · ACTEUR</strong></span></div>
+<section class="v3-section">
+<p class="v3-axis">05 · PREUVES & LIMITES</p>
+<h2>Ce qui fonctionne, ce qui reste expérimental.</h2>
+<p class="v3-copy">Emplacement réservé aux vidéos, captures, mesures et limites réelles. Aucun résultat ne sera simulé pour remplir la page : les preuves seront ajoutées au fur et à mesure qu'elles existent.</p>
 </section>
 
-<section class="case-section">
-  <p class="eyebrow">05 — ARCHITECTURE</p>
-  <h2>Du jeu jusqu'à un flux indépendant.</h2>
-  <div class="architecture-flow">
-    <div><small>JEU</small><strong>Lies of P</strong></div><b>→</b>
-    <div><small>CAPTEUR</small><strong>UE4SS / Lua</strong></div><b>→</b>
-    <div><small>TRANSPORT</small><strong>Logs / bridge</strong></div><b>→</b>
-    <div><small>STRUCTURATION</small><strong>Python</strong></div><b>→</b>
-    <div><small>CONSOMMATEUR</small><strong>N.O.X.</strong></div>
-  </div>
-  <div class="kiroshi-responsibility-v2"><div><small>CAPTEUR / ADAPTATEUR</small><strong>Récupère le fait.</strong></div><div><small>KIROSHI</small><strong>Traduit et compacte le fait.</strong></div><div><small>N.O.X. CORE</small><strong>Interprète le fait.</strong></div></div>
-</section>
-
-<section class="case-section">
-  <p class="eyebrow">06 — VALIDATION TERRAIN</p>
-  <h2>Transporter un combat réel jusqu'à Python.</h2>
-  <div class="case-copy">
-    <p>Un combat contre <code>BP_Police_C</code> sert de scénario non préparé. Le bridge suit les variations du joueur et de l'ennemi, les consommations de Legion, la stamina et les sources de dégâts jusqu'à la mort du joueur.</p>
-    <p>La valeur du test n'est pas de reconnaître un combat en vidéo : c'est de prouver que le capteur et le consommateur sont découplés et que les événements peuvent quitter le jeu.</p>
-  </div>
-  <div class="evidence-placeholder video"><small>PREUVE À AJOUTER · VIDÉO YOUTUBE</small><strong>Combat + terminal Python synchronisé</strong></div>
-</section>
-
-<section class="case-section">
-  <p class="eyebrow">07 — PROCHAIN VERROU</p>
-  <h2>Les micro-événements sont encore trop bavards.</h2>
-  <div class="architecture-flow compact">
-    <div><strong>Événements bruts</strong></div><b>→</b><div><strong>Classification locale</strong></div><b>→</b><div><strong>Agrégation temporelle</strong></div><b>→</b><div><strong>Séquence sémantique</strong></div>
-  </div>
-  <p class="architecture-note">Le prochain test doit comparer le flux brut et une séquence condensée sur la même scène de jeu.</p>
-</section>
-
-<section class="case-section">
-  <p class="eyebrow">08 — STRATÉGIE DE PERCEPTION</p>
-  <h2>Choisir la source la moins coûteuse qui décrit correctement le fait.</h2>
-  <div class="perception-priority">
-    <div><small>PRIORITAIRE</small><strong>DONNÉES STRUCTURÉES</strong><p>État applicatif · API · scripting · événements · logs.</p></div>
-    <b>→</b><div><small>SI INSUFFISANT</small><strong>AUDIO CIBLÉ</strong><p>Compléter ce que l'état interne ne raconte pas.</p></div>
-    <b>→</b><div><small>SI NÉCESSAIRE</small><strong>VISION / OCR</strong><p>Combler les informations qui n'existent sous aucune forme structurée exploitable.</p></div>
-  </div>
-</section>
-
-<section class="case-section">
-  <p class="eyebrow">09 — MÉTHODE</p>
-  <h2>Prouver le flux avant de l'intégrer à N.O.X.</h2>
-  <p class="core-method-intro">Kiroshi doit pouvoir produire un contexte exploitable indépendamment du Core. Toute incompréhension d'un observateur externe devient alors un signal sur une information absente, ambiguë ou mal structurée.</p>
-  <div class="core-method-mini"><span>PROBLÈME</span><b>→</b><span>HYPOTHÈSE</span><b>→</b><span>PROTOTYPE</span><b>→</b><span>TEST</span><b>→</b><span>DOCUMENTATION</span><b>→</b><span>INTÉGRATION</span></div>
-</section>
-
-<section class="case-section">
-  <p class="eyebrow">10 — LIMITES</p>
-  <div class="limits-grid">
-    <div><strong>Dépendance au jeu</strong><p>Structures internes, moteur et mises à jour peuvent casser l'adaptateur.</p></div>
-    <div><strong>Sémantique incomplète</strong><p>Les dialogues, zones, inventaires et interactions ne sont pas encore tous captés proprement.</p></div>
-  </div>
-</section>
-
-<section class="case-v2-final">
-  <span>CE QUE LE PROJET DÉMONTRE</span>
-  <h2>Investigation technique · reverse engineering orienté prototype · réduction de données · interfaces entre systèmes.</h2>
-  <a href="../nox-desktop/index.html">Projet suivant : N.O.X. Desktop →</a>
+<section class="v3-final">
+<span>CE QUE KIROSHI DÉMONTRE</span>
+<h2>Investigation technique · reverse engineering orienté prototype · réduction de données · interfaces entre systèmes.</h2>
+<a href="../nox-desktop/index.html">Projet suivant : N.O.X. Desktop →</a>
 </section>
 </main>
-</body></html>
+</body>
+</html>
