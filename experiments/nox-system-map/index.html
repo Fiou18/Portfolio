@@ -25,6 +25,21 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 .links line{stroke-width:3;opacity:.28;filter:drop-shadow(0 0 4px currentColor);transition:opacity .22s ease,stroke-width .22s ease,filter .22s ease;stroke-dasharray:10 10}
 .links line.active{opacity:1;stroke-width:5;filter:drop-shadow(0 0 12px currentColor);animation:axisFlow .65s linear infinite}
 @keyframes axisFlow{to{stroke-dashoffset:-20}}
+.core.axis-pulse{animation:corePulse .42s cubic-bezier(.2,.8,.2,1)}
+.core.axis-pulse:after{animation:coreWave .5s ease-out}
+@keyframes corePulse{
+  0%,100%{transform:translate(-50%,-50%) scale(1)}
+  38%{transform:translate(-50%,-50%) scale(1.075);box-shadow:0 0 42px var(--core-accent),0 0 135px color-mix(in srgb,var(--core-accent) 72%,transparent)}
+}
+@keyframes coreWave{
+  0%{opacity:.8;transform:scaleY(.7) rotate(-34deg) scale(.72)}
+  100%{opacity:0;transform:scaleY(.7) rotate(-34deg) scale(1.42)}
+}
+.links line.click-wave{animation:axisBurst .42s ease-out}
+@keyframes axisBurst{
+  0%{opacity:1;stroke-width:8;stroke-dashoffset:0}
+  100%{opacity:.45;stroke-width:3;stroke-dashoffset:-36}
+}
 .core{--core-accent:var(--violet)}
 .core.hover-axis{border-color:var(--core-accent);box-shadow:0 0 30px var(--core-accent),0 0 105px color-mix(in srgb,var(--core-accent) 58%,transparent)}
 .core.hover-axis:before,.core.hover-axis:after{border-color:color-mix(in srgb,var(--core-accent) 58%,transparent);box-shadow:0 0 20px var(--core-accent)}
@@ -281,8 +296,21 @@ document.querySelectorAll(".card").forEach(card=>{
   card.addEventListener("blur",deactivate);
   card.addEventListener("click",e=>{
     if(e.target.closest("a"))return;
-    card.classList.toggle("flipped");
-    card.setAttribute("aria-pressed",card.classList.contains("flipped"));
+    const willFlip=!card.classList.contains("flipped");
+    core?.style.setProperty("--core-accent",axisColors[axis]);
+    core?.classList.remove("axis-pulse");
+    line?.classList.remove("click-wave");
+    void core?.offsetWidth;
+    core?.classList.add("axis-pulse");
+    line?.classList.add("click-wave");
+    window.setTimeout(()=>{
+      card.classList.toggle("flipped",willFlip);
+      card.setAttribute("aria-pressed",willFlip);
+    },140);
+    window.setTimeout(()=>{
+      core?.classList.remove("axis-pulse");
+      line?.classList.remove("click-wave");
+    },520);
   });
 });
 </script>
