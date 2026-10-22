@@ -1091,6 +1091,13 @@ h1 {
     transform: scale(1.8);
 }
 
+/* Home V3: N.O.X. légèrement plus présent sur desktop uniquement. */
+@media (min-width: 851px) {
+    .portfolio-v3-home .hero-visual video {
+        transform: scale(1.98);
+    }
+}
+
 /* =========================
    N.O.X. — FEATURES GATEWAY
    ========================= */
