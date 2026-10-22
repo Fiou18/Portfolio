@@ -13,18 +13,23 @@
   <p class="case-v2-subtitle">Cognition, mémoire et décision</p>
   <p class="case-v2-question">Comment donner à N.O.X. une continuité interne et lui permettre de décider quoi retenir, comment répondre et quand se taire ?</p>
   <div class="case-v2-status"><span>PROJET ACTIF</span><span>PYTHON</span><span>IA / LLM</span><span>VOIX</span></div>
-  <div class="evidence-placeholder video">
-    <small>PREUVE À AJOUTER · VIDÉO YOUTUBE</small>
-    <strong>Interaction réelle avec N.O.X.</strong>
-    <p>Parole → réaction → changement d'état → silence ou intervention.</p>
+  <div class="core-hero-proof">
+    <video autoplay muted loop playsinline><source src="../../assets/nox-core-alpha.webm" type="video/webm"></video>
+    <div><small>PREUVE · RUNTIME</small><strong>N.O.X. en fonctionnement</strong><p>Une présence vocale et visuelle construite autour du Core, de son contexte et de ses décisions d'intervention.</p></div>
   </div>
+</section>
+
+<section class="case-section core-axis-context">
+  <p class="eyebrow">DANS LE SYSTÈME N.O.X.</p>
+  <div class="axis-locator"><span>PERCEPTION · KIROSHI</span><strong>COGNITION · N.O.X. CORE</strong><span>PRÉSENCE · N.O.X. DESKTOP</span><span>ACTION · CONCEPT</span></div>
+  <p>N.O.X. est le système parent. Cette étude de cas isole son axe Cognition : l'endroit où les informations reçues deviennent contexte, mémoire, arbitrage et décision.</p>
 </section>
 
 <section class="case-section">
   <p class="eyebrow">01 — LE PROBLÈME</p>
   <h2>Un modèle répond.<br>Un agent doit aussi savoir décider.</h2>
   <div class="case-copy">
-    <p>N.O.X. est le projet global. Cette étude de cas isole son noyau cognitif : la couche qui reçoit du contexte, maintient une continuité et arbitre une réaction même lorsque rien n'est explicitement demandé.</p>
+    <p>Un assistant conversationnel classique attend une sollicitation puis produit une réponse. N.O.X. doit fonctionner autrement : il partage une activité dans laquelle tout ce qui se passe ne mérite pas nécessairement une intervention.</p>
     <p>La difficulté n'est pas d'ajouter une personnalité. Elle est de coordonner contexte, mémoire, état interne, routage et permission afin que la réponse — y compris le silence — résulte d'une décision du système.</p>
   </div>
   <div class="case-principle"><span>PRINCIPE</span><strong>Percevoir ≠ comprendre ≠ être autorisé à parler ≠ agir.</strong></div>
@@ -37,7 +42,7 @@
     <article><span>01</span><h3>Le silence est une sortie valide.</h3><p>Comprendre une phrase ne crée pas d'obligation d'intervenir.</p></article>
     <article><span>02</span><h3>Le routage doit être contextuel.</h3><p>Adressage direct, mention à propos de N.O.X. et écoute passive ne sont pas équivalents.</p></article>
     <article><span>03</span><h3>La continuité demande plusieurs mémoires.</h3><p>Conversation courte, souvenirs durables et bibliothèque documentaire remplissent des rôles différents.</p></article>
-    <article><span>04</span><h3>L'état interne doit survivre au redémarrage.</h3><p>Curiosité, attention et préférences deviennent des variables persistantes plutôt qu'un simple effet de prompt.</p></article>
+    <article><span>04</span><h3>L'état interne doit survivre au redémarrage.</h3><p>Attention, préférences et paramètres deviennent des variables persistantes plutôt qu'un simple effet de prompt.</p></article>
   </div>
 </section>
 
@@ -49,7 +54,7 @@
     <div><small>CONTEXTE</small><strong>Mémoire · bibliothèque · état</strong></div><b>→</b>
     <div><small>ARBITRAGE</small><strong>Routage · permission · silence</strong></div><b>→</b>
     <div><small>MODÈLE</small><strong>Interprétation / réponse</strong></div><b>→</b>
-    <div><small>SORTIES</small><strong>Voix · desktop · actions</strong></div>
+    <div><small>SORTIES</small><strong>Voix · présence · sorties</strong></div>
   </div>
 </section>
 
@@ -64,7 +69,7 @@
     <div><small>RÉSULTAT MESURÉ</small><strong>−65 % de tokens IN</strong><span>sur l'écoute passive contrôlée après modification isolée.</span></div>
     <div><small>LEÇON</small><strong>Une architecture qui fonctionne peut être retirée.</strong><span>Si son coût n'est plus justifié.</span></div>
   </div>
-  <div class="evidence-placeholder"><small>PREUVES À GREFFER</small><strong>Benchmark Shadow ON/OFF · logs de routage · coût avant/après</strong></div>
+  <div class="core-method-mini"><span>PROBLÈME</span><b>→</b><span>HYPOTHÈSE</span><b>→</b><span>PROTOTYPE</span><b>→</b><span>TEST</span><b>→</b><span>DOCUMENTATION</span><b>→</b><span>INTÉGRATION</span></div>
 </section>
 
 <section class="case-section">
@@ -74,7 +79,13 @@
     <p>Une erreur d'adressage peut devenir une erreur de mémoire. Le système sépare donc progressivement provenance, souvenir durable, contexte conversationnel borné et bibliothèque documentaire longue.</p>
     <p>L'état interne suit la même logique : il existe hors du prompt et persiste sur disque. L'objectif est de faire dépendre les réactions d'un état réel du système, pas seulement de la formulation du dernier message.</p>
   </div>
-  <div class="evidence-placeholder"><small>PREUVES À GREFFER</small><strong>Bibliothèque Runtime · persistance JSON · test de redémarrage · fenêtre de contexte</strong></div>
+  <div class="core-memory-grid">
+    <article><small>CONTEXTE COURT</small><strong>Conversation active</strong><p>Conserver ce qui est nécessaire à l'échange immédiat sans transporter tout l'historique.</p></article>
+    <article><small>MÉMOIRE DURABLE</small><strong>Informations retenues</strong><p>Préserver uniquement ce qui mérite de participer à la continuité future.</p></article>
+    <article><small>BIBLIOTHÈQUE</small><strong>Connaissance récupérable</strong><p>Ne récupérer que la matière documentaire utile au contexte.</p></article>
+    <article><small>ÉTAT PERSISTANT</small><strong>Paramètres hors prompt</strong><p>Conserver les réglages utiles entre deux exécutions du système.</p></article>
+  </div>
+  <div class="case-principle core-ai-note"><span>IA COMME OUTIL DE PRODUCTION</span><strong>Accélérer la production de matière sans déléguer la décision de conception.</strong><p>Les modèles d'IA participent au code, à l'exploration de pistes et à la résolution technique. Le travail de conception reste de définir le problème, poser les contraintes, choisir quoi tester, évaluer les sorties, rejeter ce qui ne tient pas et décider de ce qui mérite d'être intégré.</p></div>
 </section>
 
 <section class="case-section">
@@ -82,7 +93,7 @@
   <h2>Un système expérimental, pas une autonomie fantasmée.</h2>
   <div class="limits-grid">
     <div><strong>Ce qui fonctionne</strong><p>Core vocal, routage, silence valide, mémoire/bibliothèque, persistance de paramètres et premiers états internes.</p></div>
-    <div><strong>Ce qui reste à consolider</strong><p>Greffe de perceptions externes, arbitrage sur événements réels, endurance et orchestration complète avec le desktop.</p></div>
+    <div><strong>Ce qui reste à consolider</strong><p>Intégration de perceptions externes, arbitrage sur événements réels, endurance et orchestration complète avec N.O.X. Desktop.</p></div>
   </div>
 </section>
 
@@ -92,4 +103,5 @@
   <a href="../kiroshi/index.html">Projet suivant : Kiroshi →</a>
 </section>
 </main>
+<script src="../../script.js"></script>
 </body></html>
