@@ -160,7 +160,7 @@
       </p>
     </div>
 
-    <form class="v2-contact-form" id="contact-form" novalidate>
+    <form class="v2-contact-form" id="contact-form" action="https://formsubmit.co/ajax/alexy.fiou@gmail.com" method="POST" novalidate>
       <div class="v2-form-grid">
         <label class="v2-field">
           <span>Nom / prénom</span>
@@ -197,7 +197,7 @@
   const contactForm = document.getElementById('contact-form');
   const contactStatus = document.getElementById('contact-status');
 
-  contactForm?.addEventListener('submit', (event) => {
+  contactForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     if (!contactForm.checkValidity()) {
@@ -205,8 +205,32 @@
       return;
     }
 
-    contactStatus.textContent =
-      "Formulaire prêt : l'adresse de réception sera branchée avant la mise en ligne définitive.";
+    const submitButton = contactForm.querySelector('.v2-submit');
+    const originalLabel = submitButton.textContent;
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Envoi…';
+    contactStatus.textContent = 'Envoi du message…';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: new FormData(contactForm)
+      });
+
+      if (!response.ok) throw new Error('FormSubmit error');
+
+      contactForm.reset();
+      contactStatus.textContent = 'Message envoyé. Merci — je vous répondrai dès que possible.';
+    } catch (error) {
+      contactStatus.textContent = "L'envoi a échoué. Réessayez dans un instant.";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalLabel;
+    }
   });
 </script>
 </body>
