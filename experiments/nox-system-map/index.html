@@ -22,7 +22,12 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 .core b{font-size:2.1rem;letter-spacing:.18em}
 .core span{display:block;margin-top:7px;font-size:.66rem;color:#d0bddc;letter-spacing:.12em}
 .links{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.links line{stroke-width:3;opacity:.55;filter:drop-shadow(0 0 7px currentColor)}
+.links line{stroke-width:3;opacity:.28;filter:drop-shadow(0 0 4px currentColor);transition:opacity .22s ease,stroke-width .22s ease,filter .22s ease;stroke-dasharray:10 10}
+.links line.active{opacity:1;stroke-width:5;filter:drop-shadow(0 0 12px currentColor);animation:axisFlow .65s linear infinite}
+@keyframes axisFlow{to{stroke-dashoffset:-20}}
+.core{--core-accent:var(--violet)}
+.core.hover-axis{border-color:var(--core-accent);box-shadow:0 0 30px var(--core-accent),0 0 105px color-mix(in srgb,var(--core-accent) 58%,transparent)}
+.core.hover-axis:before,.core.hover-axis:after{border-color:color-mix(in srgb,var(--core-accent) 58%,transparent);box-shadow:0 0 20px var(--core-accent)}
 .card{position:absolute;width:36%;height:245px;display:block;border:0;padding:0;background:none;color:inherit;perspective:1400px;cursor:pointer;z-index:4}
 .card[data-axis=perception]{left:2%;top:14%;--accent:var(--cyan)}
 .card[data-axis=cognition]{right:2%;top:14%;--accent:var(--pink)}
@@ -107,10 +112,10 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <section class="map" aria-label="Architecture interactive de N.O.X.">
 <div class="hint">CLIQUER SUR UNE CARTE POUR LA RETOURNER</div>
 <svg class="links" viewBox="0 0 1000 860" preserveAspectRatio="none" aria-hidden="true">
-<line x1="500" y1="420" x2="220" y2="230" style="stroke:#16c9ff"/>
-<line x1="500" y1="420" x2="780" y2="230" style="stroke:#ff4cdd"/>
-<line x1="500" y1="420" x2="220" y2="610" style="stroke:#a94cff"/>
-<line x1="500" y1="420" x2="780" y2="610" style="stroke:#ffb02e"/>
+<line data-axis="perception" x1="500" y1="420" x2="220" y2="230" style="stroke:#16c9ff"/>
+<line data-axis="cognition" x1="500" y1="420" x2="780" y2="230" style="stroke:#ff4cdd"/>
+<line data-axis="presence" x1="500" y1="420" x2="220" y2="610" style="stroke:#a94cff"/>
+<line data-axis="action" x1="500" y1="420" x2="780" y2="610" style="stroke:#ffb02e"/>
 </svg>
 <div class="core">
 <div>
@@ -255,7 +260,31 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 </div>
 </main>
 <script>
-document.querySelectorAll(".card").forEach(c=>c.addEventListener("click",e=>{if(e.target.closest("a"))return;c.classList.toggle("flipped");c.setAttribute("aria-pressed",c.classList.contains("flipped"))}));
+const core=document.querySelector(".core");
+const axisColors={perception:"#16c9ff",cognition:"#ff4cdd",presence:"#a94cff",action:"#ffb02e"};
+document.querySelectorAll(".card").forEach(card=>{
+  const axis=card.dataset.axis;
+  const line=document.querySelector('.links line[data-axis="'+axis+'"]');
+  const activate=()=>{
+    line?.classList.add("active");
+    core?.classList.add("hover-axis");
+    core?.style.setProperty("--core-accent",axisColors[axis]);
+  };
+  const deactivate=()=>{
+    line?.classList.remove("active");
+    core?.classList.remove("hover-axis");
+    core?.style.removeProperty("--core-accent");
+  };
+  card.addEventListener("mouseenter",activate);
+  card.addEventListener("mouseleave",deactivate);
+  card.addEventListener("focus",activate);
+  card.addEventListener("blur",deactivate);
+  card.addEventListener("click",e=>{
+    if(e.target.closest("a"))return;
+    card.classList.toggle("flipped");
+    card.setAttribute("aria-pressed",card.classList.contains("flipped"));
+  });
+});
 </script>
 </body>
 </html>
