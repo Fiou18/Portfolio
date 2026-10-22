@@ -249,12 +249,13 @@ h1 {
 
 .approach-heading .eyebrow {
     grid-column: 1 / -1;
-    margin-bottom: -20px;
+    margin-bottom: 10px;
 }
 
 .approach-heading h2 {
     margin: 0;
     font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
 }
 
 .approach-intro {
