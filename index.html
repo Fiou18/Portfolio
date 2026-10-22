@@ -3,32 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexy Andrieu — Conception de solutions numériques</title>
-  <meta name="description" content="Portfolio d'Alexy Andrieu — conception, prototypage, IA, temps réel et interaction.">
+  <title>Alexy Andrieu — Concepteur de solutions numériques</title>
+  <meta name="description" content="Portfolio d'Alexy Andrieu — conception de solutions numériques, prototypage, IA, temps réel et interaction.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="portfolio-v2">
+<body class="portfolio-v2 portfolio-v3-home">
 <header class="site-header">
   <a href="index.html" class="logo">ALEXY ANDRIEU</a>
   <nav>
-    <a href="projects/index.html">Projets</a>
-    <a href="#apropos">À propos</a>
+    <a href="#origine">Le labo</a>
     <a href="#approche">Méthode</a>
+    <a href="#apropos">À propos</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
+
 <main>
   <section id="hero" class="v2-hero">
     <div class="hero-text">
       <p class="eyebrow">CONCEPTION · PROTOTYPAGE · EXPÉRIMENTATION</p>
       <h1>Alexy<br>Andrieu</h1>
-      <h2>IA · Temps réel · Interaction</h2>
+      <h2>Concepteur de solutions numériques</h2>
       <p class="v2-lead">
-        Je conçois et prototype des solutions numériques expérimentales à partir d'un problème concret :
-        comprendre, formuler une hypothèse, construire vite, tester et documenter ce qui fonctionne.
+        Je pars d'un problème ou d'une idée encore floue pour concevoir une réponse,
+        construire un prototype, la confronter au réel et documenter ce qu'elle permet d'apprendre.
       </p>
       <div class="v2-actions">
-        <a class="v2-button primary" href="experiments/nox-system-map/index.html">Voir les projets →</a>
+        <a class="v2-button primary" href="#origine">Découvrir le laboratoire →</a>
+        <a class="v2-button" href="#contact">Me contacter</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -38,29 +40,54 @@
     </div>
   </section>
 
+  <section id="origine" class="home-origin">
+    <div class="home-origin-intro">
+      <p class="eyebrow">POURQUOI N.O.X. EXISTE</p>
+      <h2>Au départ, je voulais juste un compagnon de stream.</h2>
+      <p class="home-origin-lead">
+        N.O.X. n'est pas né d'une étude de marché. Je suis un petit streamer et je trouvais simplement
+        cool l'idée d'avoir un compagnon IA capable de participer réellement à mes sessions :
+        comprendre ce qui se passe, savoir quand intervenir et partager l'activité avec moi.
+      </p>
+      <p>
+        Une idée assez simple sur le papier. En essayant de la rendre réelle, elle a fait apparaître
+        quatre familles de problèmes qui sont devenues mon terrain d'expérimentation.
+      </p>
+    </div>
 
+    <div class="home-question-grid" aria-label="Les quatre axes du laboratoire N.O.X.">
+      <article class="home-question perception">
+        <span>01 · PERCEPTION</span>
+        <h3>Comment sait-il ce qui se passe ?</h3>
+        <p>Transformer des signaux numériques en informations utiles plutôt que tout regarder.</p>
+      </article>
+      <article class="home-question cognition">
+        <span>02 · COGNITION</span>
+        <h3>Comment décide-t-il d'intervenir ?</h3>
+        <p>Contexte, mémoire, routage, arbitrage — et parfois le choix de ne rien dire.</p>
+      </article>
+      <article class="home-question presence">
+        <span>03 · PRÉSENCE</span>
+        <h3>Comment peut-il sembler présent ?</h3>
+        <p>Donner une forme perceptible à son état sans lui fabriquer un faux visage humain.</p>
+      </article>
+      <article class="home-question action">
+        <span>04 · ACTION</span>
+        <h3>Jusqu'où peut-il agir ?</h3>
+        <p>Distinguer ce qu'un système sait faire de ce qu'il est réellement autorisé à faire.</p>
+      </article>
+    </div>
 
-  <section id="apropos" class="v2-about">
-    <div class="about-heading"><p class="eyebrow">À PROPOS</p><h2>Apprendre en construisant.</h2></div>
-    <div class="about-grid">
-      <div class="about-main">
-        <p class="about-lead">
-          Je suis en reconversion vers la conception de solutions numériques, avec un intérêt particulier
-          pour les systèmes interactifs, l'IA et le temps réel.
-        </p>
+    <div class="home-lab-entry">
+      <div>
+        <p class="eyebrow">LABORATOIRE INTERACTIF</p>
+        <h2>Ne pas seulement montrer un projet.<br>Faire expérimenter une idée.</h2>
         <p>
-          Je travaille par expérimentation : je pars d'un problème, je cherche les contraintes,
-          je construis une première réponse, puis je confronte cette réponse au réel.
-        </p>
-        <p>
-          N.O.X., Kiroshi et N.O.X. Desktop ne sont pas trois produits à vendre :
-          ce sont trois terrains de preuve de cette manière de concevoir.
+          Perception, cognition, présence, action : entrez dans l'architecture de N.O.X.
+          et découvrez les problèmes en les manipulant avant d'en explorer les coulisses.
         </p>
       </div>
-      <div class="about-side">
-        <div class="about-block"><span class="about-label">POSITIONNEMENT</span><p>Concepteur de solutions numériques · prototypage rapide · POC.</p></div>
-        <div class="about-block"><span class="about-label">ENVIRONNEMENTS</span><div class="about-tags"><span>Python</span><span>Unreal Engine</span><span>Blender</span><span>OBS</span><span>Git</span><span>LLM</span></div></div>
-      </div>
+      <a class="v2-button primary home-lab-button" href="experiments/nox-system-map/index.html">Visiter le labo interactif →</a>
     </div>
   </section>
 
@@ -68,8 +95,8 @@
     <div class="approach-heading">
       <div><p class="eyebrow">MÉTHODE</p><h2>Partir du problème.<br>Pas de l'outil.</h2></div>
       <p class="approach-intro">
-        Une technologie n'est retenue que si elle résout mieux la contrainte observée.
-        Les échecs, les voies abandonnées et les mesures font partie du résultat.
+        Une technologie n'est retenue que si elle répond mieux à la contrainte observée.
+        Les essais, les voies abandonnées et les mesures font partie du résultat.
       </p>
     </div>
     <div class="process">
@@ -82,13 +109,54 @@
     </div>
   </section>
 
+  <section id="apropos" class="v2-about">
+    <div class="about-heading">
+      <p class="eyebrow">À PROPOS</p>
+      <h2>Du terrain au prototype.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-main">
+        <p class="about-lead">
+          Je suis en reconversion vers la conception de solutions numériques après plus de dix ans
+          dans le commerce et des environnements opérationnels.
+        </p>
+        <p>
+          Cette première carrière m'a appris une chose très concrète : une solution n'a de valeur
+          que si elle répond réellement au besoin de la personne qui doit l'utiliser.
+          Aujourd'hui, j'applique cette culture du terrain à des systèmes interactifs, à l'IA
+          et au temps réel.
+        </p>
+        <p>
+          J'apprends en construisant. Je pars d'une question, j'identifie les contraintes,
+          je prototype une réponse puis je la teste jusqu'à comprendre ce qui mérite de rester.
+          N.O.X. et les expériences qui l'entourent sont mon principal laboratoire pour développer
+          et démontrer cette manière de travailler.
+        </p>
+      </div>
+      <div class="about-side">
+        <div class="about-block">
+          <span class="about-label">POSITIONNEMENT</span>
+          <p>Concepteur de solutions numériques · prototypage rapide · POC.</p>
+        </div>
+        <div class="about-block">
+          <span class="about-label">PARCOURS</span>
+          <p>+10 ans de commerce et d'opérationnel · reconversion vers la conception numérique.</p>
+        </div>
+        <div class="about-block">
+          <span class="about-label">ENVIRONNEMENTS</span>
+          <div class="about-tags"><span>Python</span><span>Unreal Engine</span><span>Blender</span><span>OBS</span><span>Git</span><span>LLM</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="v2-contact">
     <div class="v2-contact-intro">
       <p class="eyebrow">CONTACT</p>
       <h2>Un problème à explorer,<br>une idée à tester ?</h2>
       <p>
-        Décrivez-moi simplement le contexte, le besoin ou l'idée. L'objectif n'est pas d'arriver
-        avec un cahier des charges parfait : quelques lignes suffisent pour démarrer une discussion.
+        Vous avez une idée numérique, une incertitude à lever ou un concept qui mérite d'être confronté au réel ?
+        Quelques lignes suffisent pour commencer : le cadrage fait partie du travail.
       </p>
     </div>
 
@@ -124,6 +192,7 @@
     </form>
   </section>
 </main>
+
 <script>
   const contactForm = document.getElementById('contact-form');
   const contactStatus = document.getElementById('contact-status');
