@@ -14,6 +14,8 @@ body.axis-perception{--axis:#16c9ff}body.axis-cognition{--axis:#ff4cdd}body.axis
 .v3-stage{margin-top:55px;min-height:360px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:#0b0b10;border:1px solid var(--axis);border-radius:8px;box-shadow:0 0 55px color-mix(in srgb,var(--axis) 10%,transparent)}.v3-stage-top{display:flex;justify-content:space-between;gap:20px;color:#666672;font-size:.65rem;font-weight:700;letter-spacing:2px}.v3-stage-top strong{color:var(--axis)}.v3-stage-center{padding:60px 20px;text-align:center}.v3-stage-center strong{display:block;font-size:clamp(1.4rem,3vw,2.5rem)}.v3-stage-center p{max-width:650px;margin:15px auto 0;color:#777783}.v3-flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}.v3-flow span{padding:9px 11px;border:1px solid #292934;border-radius:4px;color:#858591;font-size:.65rem;font-weight:700;letter-spacing:1px}.v3-flow b{color:var(--axis)}
 .v3-grid{margin-top:45px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.v3-card{min-height:180px;padding:25px;background:#111117;border:1px solid #292934;border-radius:6px}.v3-card span{color:var(--axis);font-size:.62rem;font-weight:700;letter-spacing:2px}.v3-card h3{margin:28px 0 10px;font-size:1.25rem}.v3-card p{margin:0;color:#858591;line-height:1.65;font-size:.88rem}
 .v3-method{margin-top:45px;padding:25px 0;display:flex;flex-wrap:wrap;gap:14px;align-items:center;border-top:1px solid #292934;border-bottom:1px solid #292934;color:#858591;font-size:.67rem;font-weight:700;letter-spacing:1.5px}.v3-method b{color:var(--axis)}.v3-final{padding:100px 0 120px}.v3-final span{color:var(--axis);font-size:.7rem;font-weight:700;letter-spacing:3px}.v3-final h2{max-width:1000px;margin:18px 0 40px;font-size:clamp(2rem,4.5vw,4rem);line-height:1.08}.v3-final a{color:#f2f2f5;text-decoration:none;border-bottom:1px solid var(--axis);padding-bottom:4px}
+.presence-v3-story{margin-top:55px;display:grid;gap:70px}.presence-v3-step{padding-top:35px;border-top:1px solid #292934}.presence-v3-copy{max-width:760px;margin-bottom:28px}.presence-v3-copy span{color:var(--axis);font-size:.65rem;font-weight:700;letter-spacing:2px}.presence-v3-copy h3{margin:12px 0;font-size:clamp(1.8rem,3.5vw,3rem);line-height:1.05}.presence-v3-copy p{margin:0;color:#92929d;line-height:1.75}.presence-v3-media{display:grid;gap:14px}.presence-v3-media.duo{grid-template-columns:repeat(2,1fr)}.presence-v3-media.trio{grid-template-columns:repeat(3,1fr)}.presence-v3-media figure,.presence-v3-wide,.presence-v3-core{margin:0;background:#0b0b10;border:1px solid #292934;border-radius:6px;overflow:hidden}.presence-v3-media img,.presence-v3-media video,.presence-v3-wide img,.presence-v3-core video{display:block;width:100%;height:auto}.presence-v3-media figcaption,.presence-v3-wide figcaption,.presence-v3-core figcaption{padding:12px 14px;color:#777783;font-size:.62rem;font-weight:700;letter-spacing:1.5px}.presence-v3-step.current{border-color:var(--axis)}.presence-v3-core{max-width:780px;box-shadow:0 0 55px color-mix(in srgb,var(--axis) 10%,transparent)}
+@media(max-width:750px){.presence-v3-media.duo,.presence-v3-media.trio{grid-template-columns:1fr}.presence-v3-story{gap:50px}}
 @media(max-width:750px){.v3-case{padding:0 20px}.v3-hero{min-height:520px}.v3-experience,.v3-section{padding:65px 0}.v3-experience-head{grid-template-columns:1fr;gap:20px}.v3-stage{min-height:320px;padding:20px}.v3-grid{grid-template-columns:1fr}.v3-flow{justify-content:flex-start}.v3-stage-top{flex-direction:column}}
 </style>
 </head>
@@ -40,10 +42,37 @@ body.axis-perception{--axis:#16c9ff}body.axis-cognition{--axis:#ff4cdd}body.axis
 <p class="v3-axis">02 · POURQUOI ÇA FAIT ÇA ?</p>
 <h2>De l'expérience visible au problème de conception.</h2>
 <p class="v3-copy">La présence n'est pas une animation préenregistrée : son comportement visuel est piloté en temps réel par ce qu'il perçoit.</p>
-<div class="v3-grid"><article class="v3-card"><span>01 · COULISSE</span><h3>Direction artistique : singularité noire + lumière</h3><p>Section prête à recevoir la preuve, le test ou le détail technique correspondant.</p></article>
-<article class="v3-card"><span>02 · COULISSE</span><h3>Activation · Momentum · ImpactMemory</h3><p>Section prête à recevoir la preuve, le test ou le détail technique correspondant.</p></article>
-<article class="v3-card"><span>03 · COULISSE</span><h3>BeltBreathing · OrbitTension</h3><p>Section prête à recevoir la preuve, le test ou le détail technique correspondant.</p></article>
-<article class="v3-card"><span>04 · COULISSE</span><h3>Unreal · Niagara · Spout · OBS</h3><p>Section prête à recevoir la preuve, le test ou le détail technique correspondant.</p></article></div>
+<div class="presence-v3-story">
+<article class="presence-v3-step">
+<div class="presence-v3-copy"><span>01 · PREMIÈRES HYPOTHÈSES</span><h3>D'abord, lui donner une apparence.</h3><p>Les premières recherches rendent N.O.X. immédiatement lisible comme compagnon, mais imposent un visage et une silhouette trop littéraux. La question change : non plus « à quoi ressemble N.O.X. ? », mais « comment sait-on qu'il est là ? ».</p></div>
+<div class="presence-v3-media duo"><figure><img src="../../assets/presence/NOX_Ghost_Concept.png" alt="Première exploration anthropomorphique de N.O.X."><figcaption>V1 · Une présence trop familière</figcaption></figure><figure><img src="../../assets/presence/NOX_galactique_Concept.png" alt="Exploration galactique de N.O.X."><figcaption>V2 · Encore trop humanoïde</figcaption></figure></div>
+</article>
+
+<article class="presence-v3-step">
+<div class="presence-v3-copy"><span>02 · EXPLORER LA FORME</span><h3>Quatre formes. Une même présence.</h3><p>Germe, Neural, Éclipse et Anomalie explorent quatre manières d'exister sans visage ni corps humain. L'Éclipse devient la direction retenue.</p></div>
+<figure class="presence-v3-wide"><img src="../../assets/presence/N.O.X _ Présences bioluminescentes.png" alt="Recherche comparant quatre formes possibles pour N.O.X."><figcaption>GERME · NEURAL · ÉCLIPSE · ANOMALIE</figcaption></figure>
+</article>
+
+<article class="presence-v3-step">
+<div class="presence-v3-copy"><span>03 · DIRECTION RETENUE</span><h3>Faire vivre l'Éclipse.</h3><p>La forme est ensuite déclinée pour explorer matière, densité, instabilité et mouvement. Le problème n'est plus de dessiner N.O.X., mais de faire de son absence de visage une présence.</p></div>
+<div class="presence-v3-media duo"><figure><img src="../../assets/presence/eclipse-v1.png" alt="Exploration Éclipse V1"><figcaption>ÉCLIPSE · V1</figcaption></figure><figure><img src="../../assets/presence/eclipse-v2.png" alt="Exploration Éclipse V2"><figcaption>ÉCLIPSE · V2</figcaption></figure></div>
+</article>
+
+<article class="presence-v3-step">
+<div class="presence-v3-copy"><span>04 · SINGULARITÉ VIVANTE</span><h3>La forme devient un système.</h3><p>Matière, particules, orbites et interactions commencent à devenir les composants d'un même langage visuel. Une simple « croquette » permet déjà d'imaginer attraction, capture, absorption et retour au calme.</p></div>
+<div class="presence-v3-media duo"><figure><img src="../../assets/presence/NOX_singularite_vivante.png" alt="Recherche autour de la singularité vivante"><figcaption>MATIÈRE · PARTICULES · MOUVEMENT</figcaption></figure><figure><img src="../../assets/presence/NOX_croquettes.png" alt="Recherche d'interaction de N.O.X. avec une croquette"><figcaption>UNE INTERACTION DEVIENT UN ÉVÉNEMENT VISUEL</figcaption></figure></div>
+</article>
+
+<article class="presence-v3-step">
+<div class="presence-v3-copy"><span>05 · PASSAGE AU MOUVEMENT</span><h3>Avant le noyau, il y avait un cube.</h3><p>Les premiers essais Blender ne cherchent pas encore à fabriquer N.O.X. : ils servent à comprendre la déformation, pousser l'outil jusqu'à sa limite, puis contrôler progressivement les trajectoires.</p></div>
+<div class="presence-v3-media trio"><figure><video autoplay muted loop playsinline><source src="../../assets/blender/2026-09-25 21-01-02.webm" type="video/webm"></video><figcaption>25 SEPT. · PREMIÈRE DÉFORMATION</figcaption></figure><figure><img src="../../assets/blender/Capture d'écran 2026-09-25 210520.png" alt="Premier test de limite dans Blender"><figcaption>4 MIN PLUS TARD · TEST DE LIMITE</figcaption></figure><figure><video autoplay muted loop playsinline><source src="../../assets/blender/2026-09-27 21-28-51.webm" type="video/webm"></video><figcaption>27 SEPT. · TRAJECTOIRES BÉZIER</figcaption></figure></div>
+</article>
+
+<article class="presence-v3-step current">
+<div class="presence-v3-copy"><span>06 · NOYAU ACTUEL</span><h3>Son idle est un mouvement permanent.</h3><p>Les essais convergent vers une forme abstraite en mouvement continu. Ce noyau devient la base de l'identité actuelle et le support des comportements temps réel développés ensuite dans Unreal.</p></div>
+<figure class="presence-v3-core"><video autoplay muted loop playsinline><source src="../../assets/nox-core-alpha.webm" type="video/webm"></video><figcaption>N.O.X. · NOYAU ACTUEL</figcaption></figure>
+</article>
+</div>
 </section>
 
 <section class="v3-section">
