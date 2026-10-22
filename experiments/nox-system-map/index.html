@@ -41,6 +41,26 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
   100%{opacity:.45;stroke-width:3;stroke-dashoffset:-36}
 }
 .core{--core-accent:var(--violet)}
+.core-home{cursor:pointer;text-decoration:none;color:inherit}
+.core-home .home-hint{
+  position:absolute;
+  left:50%;
+  top:calc(100% + 16px);
+  transform:translate(-50%,-4px);
+  width:max-content;
+  font:700 10px/1 var(--mono);
+  letter-spacing:.2em;
+  color:#cbb9da;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .2s ease,transform .2s ease,text-shadow .2s ease
+}
+.core-home:hover .home-hint,.core-home:focus-visible .home-hint{
+  opacity:.82;
+  transform:translate(-50%,0);
+  text-shadow:0 0 10px rgba(169,76,255,.7)
+}
+.core-home:focus-visible{outline:1px solid rgba(169,76,255,.8);outline-offset:7px}
 .core.hover-axis{border-color:var(--core-accent);box-shadow:0 0 30px var(--core-accent),0 0 105px color-mix(in srgb,var(--core-accent) 58%,transparent)}
 .core.hover-axis:before,.core.hover-axis:after{border-color:color-mix(in srgb,var(--core-accent) 58%,transparent);box-shadow:0 0 20px var(--core-accent)}
 .card{position:absolute;width:36%;height:245px;display:block;border:0;padding:0;background:none;color:inherit;perspective:1400px;cursor:pointer;z-index:4}
@@ -132,12 +152,13 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <line data-axis="presence" x1="500" y1="420" x2="220" y2="610" style="stroke:#a94cff"/>
 <line data-axis="action" x1="500" y1="420" x2="780" y2="610" style="stroke:#ffb02e"/>
 </svg>
-<div class="core">
+<a class="core core-home" href="../../index.html" aria-label="Retour à l’accueil">
 <div>
 <b>N.O.X.</b>
 <span>NOYAU CENTRAL<br>CONTEXTE · MÉMOIRE · DÉCISION</span>
 </div>
-</div>
+<span class="home-hint" aria-hidden="true">← ACCUEIL</span>
+</a>
 <button class="card" data-axis="perception" aria-pressed="false">
 <span class="inner">
 <span class="face front">
