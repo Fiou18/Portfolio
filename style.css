@@ -6607,3 +6607,19 @@ header {
 .core-memory-grid article{min-height:180px;padding:28px;background:#111117}.core-memory-grid strong{display:block;margin:28px 0 10px;font-size:1.1rem}.core-memory-grid p{margin:0;color:#858591;line-height:1.65}
 .core-ai-note p{max-width:900px;margin:14px 0 0}
 @media(max-width:750px){.core-hero-proof{grid-template-columns:1fr}.axis-locator{grid-template-columns:1fr 1fr}.core-memory-grid{grid-template-columns:1fr}.core-method-mini{display:flex;flex-wrap:wrap;justify-content:flex-start}.core-method-mini b{transform:none}}
+
+
+/* KIROSHI V2 — perception sémantique + preuves terrain */
+.kiroshi-axis-context>p{max-width:900px;color:#858591;line-height:1.7}
+.kiroshi-question .question-shift-v2{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:18px;margin-top:45px}
+.question-shift-v2>div{padding:28px;border:1px solid #292934;background:#111117}.question-shift-v2>b{align-self:center;color:var(--axis);font-size:1.4rem}
+.question-shift-v2 small,.kiroshi-proof-strip small,.kiroshi-responsibility-v2 small,.perception-priority small{display:block;color:var(--axis);font-size:.68rem;letter-spacing:1.5px}
+.question-shift-v2 strong{display:block;margin:32px 0;font-size:1.2rem;line-height:1.45}.question-shift-v2 span{color:#666672;font-size:.72rem;letter-spacing:1px}
+.kiroshi-proof-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:45px;background:#292934}
+.kiroshi-proof-strip>span{padding:24px;background:#111117}.kiroshi-proof-strip strong{display:block;margin-top:14px;font-size:.9rem}
+.kiroshi-responsibility-v2{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:24px;background:#292934}
+.kiroshi-responsibility-v2>div{padding:24px;background:#111117}.kiroshi-responsibility-v2 strong{display:block;margin-top:14px}
+.perception-priority{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:10px;margin-top:45px}
+.perception-priority>div{padding:28px;border:1px solid #292934;background:#111117}.perception-priority>b{align-self:center;color:var(--axis)}
+.perception-priority strong{display:block;margin:28px 0 10px}.perception-priority p{margin:0;color:#858591;line-height:1.6}
+@media(max-width:750px){.kiroshi-question .question-shift-v2{grid-template-columns:1fr}.question-shift-v2>b{transform:rotate(90deg);justify-self:center}.kiroshi-proof-strip,.kiroshi-responsibility-v2{grid-template-columns:1fr}.perception-priority{grid-template-columns:1fr}.perception-priority>b{transform:rotate(90deg);justify-self:center}}
