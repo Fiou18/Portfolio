@@ -17,6 +17,12 @@
   <div class="evidence-placeholder video"><small>PREUVE À AJOUTER · VIDÉO YOUTUBE</small><strong>Lies of P + télémétrie synchronisée</strong><p>Le jeu tourne pendant que les variations remontent en direct.</p></div>
 </section>
 
+<section class="case-section kiroshi-axis-context">
+  <p class="eyebrow">DANS LE SYSTÈME N.O.X.</p>
+  <div class="axis-locator"><strong>PERCEPTION · KIROSHI</strong><span>COGNITION · N.O.X. CORE</span><span>PRÉSENCE · N.O.X. DESKTOP</span><span>ACTION · CONCEPT</span></div>
+  <p>Kiroshi est l'axe Perception de N.O.X. Son rôle n'est pas d'interpréter la situation à la place du Core : il récupère des faits disponibles dans l'environnement, les normalise et transmet le minimum de contexte utile.</p>
+</section>
+
 <section class="case-section">
   <p class="eyebrow">01 — LE PROBLÈME</p>
   <h2>Voir tout est souvent la manière la plus coûteuse de comprendre peu.</h2>
@@ -24,10 +30,21 @@
     <p>Un flux vidéo contient énormément d'informations inutiles pour une décision ponctuelle. Pourtant le jeu possède déjà un état structuré : points de vie, stamina, Legion, acteurs, événements.</p>
     <p>L'enjeu devient donc de récupérer les bons faits, de les compacter et de laisser N.O.X. interpréter plutôt que de lui faire redécouvrir chaque information visuellement.</p>
   </div>
+  <div class="case-principle"><span>PRINCIPE</span><strong>Ne pas faire redécouvrir visuellement à un modèle une information qu'une source structurée connaît déjà.</strong></div>
+</section>
+
+<section class="case-section kiroshi-question">
+  <p class="eyebrow">02 — CHANGEMENT DE QUESTION</p>
+  <h2>Le problème n'était pas de donner des yeux à N.O.X.</h2>
+  <div class="question-shift-v2">
+    <div><small>QUESTION INITIALE</small><strong>Comment permettre à N.O.X. de voir ce qui se passe ?</strong><span>PERCEPTION ÉCRAN</span></div>
+    <b>→</b>
+    <div><small>QUESTION RETENUE</small><strong>Quelles informations N.O.X. doit-il connaître pour reconstruire la situation ?</strong><span>PERCEPTION SÉMANTIQUE</span></div>
+  </div>
 </section>
 
 <section class="case-section">
-  <p class="eyebrow">02 — INVESTIGATION</p>
+  <p class="eyebrow">03 — INVESTIGATION</p>
   <h2>Explorer un système inconnu jusqu'à trouver la primitive utile.</h2>
   <div class="timeline-v2">
     <div><span>01</span><strong>UE4SS / Lua</strong><p>Accès aux structures Unreal réelles du jeu.</p></div>
@@ -38,7 +55,7 @@
 </section>
 
 <section class="case-section">
-  <p class="eyebrow">03 — DU POLLING À L'ÉVÉNEMENT</p>
+  <p class="eyebrow">04 — DU POLLING À L'ÉVÉNEMENT</p>
   <h2>La première solution fonctionnait.<br>Elle gelait aussi le jeu.</h2>
   <div class="case-copy">
     <p>Une première tentative interroge périodiquement les statistiques. Le signal existe, mais le coût de cette observation agressive rend l'approche inutilisable.</p>
@@ -48,11 +65,11 @@
     <div><small>REJETÉ</small><strong>Polling périodique</strong><p>Observation continue, coût excessif, gel du jeu.</p></div>
     <div><small>RETENU</small><strong>Événement natif</strong><p>Signal ciblé, instantané, avec provenance de l'acteur.</p></div>
   </div>
-  <div class="evidence-placeholder"><small>PREUVES À GREFFER</small><strong>Logs du gel · signature OnStatChanged · sources acteur · variations live</strong></div>
+  <div class="kiroshi-proof-strip"><span><small>SIGNAL</small><strong>OnStatChanged</strong></span><span><small>VALEURS</small><strong>HP · STAMINA · LEGION</strong></span><span><small>PROVENANCE</small><strong>JOUEUR · ACTEUR</strong></span></div>
 </section>
 
 <section class="case-section">
-  <p class="eyebrow">04 — ARCHITECTURE</p>
+  <p class="eyebrow">05 — ARCHITECTURE</p>
   <h2>Du jeu jusqu'à un flux indépendant.</h2>
   <div class="architecture-flow">
     <div><small>JEU</small><strong>Lies of P</strong></div><b>→</b>
@@ -61,11 +78,11 @@
     <div><small>STRUCTURATION</small><strong>Python</strong></div><b>→</b>
     <div><small>CONSOMMATEUR</small><strong>N.O.X.</strong></div>
   </div>
-  <p class="architecture-note"><strong>Kiroshi établit et compacte les faits ; N.O.X. les interprète.</strong></p>
+  <div class="kiroshi-responsibility-v2"><div><small>CAPTEUR / ADAPTATEUR</small><strong>Récupère le fait.</strong></div><div><small>KIROSHI</small><strong>Traduit et compacte le fait.</strong></div><div><small>N.O.X. CORE</small><strong>Interprète le fait.</strong></div></div>
 </section>
 
 <section class="case-section">
-  <p class="eyebrow">05 — VALIDATION TERRAIN</p>
+  <p class="eyebrow">06 — VALIDATION TERRAIN</p>
   <h2>Transporter un combat réel jusqu'à Python.</h2>
   <div class="case-copy">
     <p>Un combat contre <code>BP_Police_C</code> sert de scénario non préparé. Le bridge suit les variations du joueur et de l'ennemi, les consommations de Legion, la stamina et les sources de dégâts jusqu'à la mort du joueur.</p>
@@ -75,7 +92,7 @@
 </section>
 
 <section class="case-section">
-  <p class="eyebrow">06 — PROCHAIN VERROU</p>
+  <p class="eyebrow">07 — PROCHAIN VERROU</p>
   <h2>Les micro-événements sont encore trop bavards.</h2>
   <div class="architecture-flow compact">
     <div><strong>Événements bruts</strong></div><b>→</b><div><strong>Classification locale</strong></div><b>→</b><div><strong>Agrégation temporelle</strong></div><b>→</b><div><strong>Séquence sémantique</strong></div>
@@ -84,7 +101,24 @@
 </section>
 
 <section class="case-section">
-  <p class="eyebrow">07 — LIMITES</p>
+  <p class="eyebrow">08 — STRATÉGIE DE PERCEPTION</p>
+  <h2>Choisir la source la moins coûteuse qui décrit correctement le fait.</h2>
+  <div class="perception-priority">
+    <div><small>PRIORITAIRE</small><strong>DONNÉES STRUCTURÉES</strong><p>État applicatif · API · scripting · événements · logs.</p></div>
+    <b>→</b><div><small>SI INSUFFISANT</small><strong>AUDIO CIBLÉ</strong><p>Compléter ce que l'état interne ne raconte pas.</p></div>
+    <b>→</b><div><small>SI NÉCESSAIRE</small><strong>VISION / OCR</strong><p>Combler les informations qui n'existent sous aucune forme structurée exploitable.</p></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">09 — MÉTHODE</p>
+  <h2>Prouver le flux avant de l'intégrer à N.O.X.</h2>
+  <p class="core-method-intro">Kiroshi doit pouvoir produire un contexte exploitable indépendamment du Core. Toute incompréhension d'un observateur externe devient alors un signal sur une information absente, ambiguë ou mal structurée.</p>
+  <div class="core-method-mini"><span>PROBLÈME</span><b>→</b><span>HYPOTHÈSE</span><b>→</b><span>PROTOTYPE</span><b>→</b><span>TEST</span><b>→</b><span>DOCUMENTATION</span><b>→</b><span>INTÉGRATION</span></div>
+</section>
+
+<section class="case-section">
+  <p class="eyebrow">10 — LIMITES</p>
   <div class="limits-grid">
     <div><strong>Dépendance au jeu</strong><p>Structures internes, moteur et mises à jour peuvent casser l'adaptateur.</p></div>
     <div><strong>Sémantique incomplète</strong><p>Les dialogues, zones, inventaires et interactions ne sont pas encore tous captés proprement.</p></div>
