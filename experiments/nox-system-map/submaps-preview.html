@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>N.O.X. — System Map / Sous-maps Preview</title>
+<title>N.O.X. — Kiroshi Recursive Map Preview</title>
 <style>
 :root{--bg:#03040a;--text:#f7f3ff;--muted:#b9aec7;--violet:#b23cff;--cyan:#16c9ff;--pink:#ff4cdd;--presence:#a94cff;--amber:#ffb02e}
 *{box-sizing:border-box}
@@ -136,8 +136,14 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 .card.flipped .front{visibility:hidden}
 .card.flipped .back{transform:none}}
 
-/* SUBMAP PREVIEW — extension de la DA originale */
-.levelbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 12px;color:#9d8daa;font-size:.58rem;letter-spacing:.16em}.crumb{color:#d8c4e9}.preview-badge{border:1px solid #653487;padding:6px 9px;color:#e262ff}.explore{position:absolute;left:25px;bottom:18px;color:var(--accent);font-size:.63rem;letter-spacing:.08em;text-decoration:none;border:0;background:none;padding:0;cursor:pointer}.explore:hover{text-decoration:underline}.submap{display:none;position:relative;min-height:780px;overflow:hidden;border:1px solid var(--sub);background:radial-gradient(circle at 50% 48%,color-mix(in srgb,var(--sub) 18%,transparent),transparent 24%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),rgba(2,3,9,.8);background-size:auto,42px 42px,42px 42px;box-shadow:inset 0 0 90px #090015}.submap.active{display:block}.submap-head{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:205px;aspect-ratio:1;border:2px solid var(--sub);border-radius:50%;display:grid;place-content:center;text-align:center;background:radial-gradient(circle,#130b1d 0 40%,#030308 70%);box-shadow:0 0 25px var(--sub),0 0 90px color-mix(in srgb,var(--sub) 48%,transparent);z-index:3}.submap-head b{font-size:1.25rem;letter-spacing:.15em;color:var(--sub)}.submap-head small{margin-top:8px;color:#cbb9da;letter-spacing:.1em}.subnode{position:absolute;width:31%;min-height:145px;padding:20px 22px;border:1px solid var(--sub);clip-path:polygon(4% 0,96% 0,100% 12%,100% 88%,96% 100%,4% 100%,0 88%,0 12%);background:linear-gradient(120deg,color-mix(in srgb,var(--sub) 10%,#070712),rgba(4,5,12,.96));box-shadow:inset 0 0 25px color-mix(in srgb,var(--sub) 9%,transparent);z-index:4}.subnode small{display:block;color:var(--sub);font-size:.52rem;letter-spacing:.14em}.subnode strong{display:block;margin:18px 0 7px;font-size:.9rem;letter-spacing:.1em}.subnode span{display:block;color:#b9aec7;font-size:.66rem;line-height:1.4}.n1{left:3%;top:14%}.n2{right:3%;top:14%}.n3{left:3%;bottom:16%}.n4{right:3%;bottom:16%}.subline{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.subline line{stroke:var(--sub);stroke-width:2;opacity:.32;stroke-dasharray:9 9}.backlevel{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);border:1px solid var(--sub);background:#08070e;color:var(--sub);padding:10px 16px;font-size:.6rem;letter-spacing:.16em;cursor:pointer;z-index:6}.backlevel:hover{box-shadow:0 0 16px color-mix(in srgb,var(--sub) 40%,transparent)}.subnote{position:absolute;left:50%;top:22px;transform:translateX(-50%);white-space:nowrap;color:#d8c4e9;font-size:.55rem;letter-spacing:.18em}.level0.hidden{display:none}@media(max-width:900px){.levelbar{margin:10px 4px 12px}.submap{min-height:auto;padding:76px 10px 95px;display:none;flex-direction:column;gap:14px}.submap.active{display:flex}.submap-head{position:relative;left:auto;top:auto;transform:none;width:160px;margin:10px auto 20px;order:-1}.subnode{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:100%;min-height:135px}.subline{display:none}.backlevel{position:relative;left:auto;bottom:auto;transform:none;align-self:center;margin-top:8px}.subnote{top:28px;font-size:.46rem}.explore{left:22px}}
+/* KIROSHI RECURSIVE PREVIEW */
+.previewbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:0 0 12px;font-size:.58rem;letter-spacing:.16em;color:#d8c4e9}.previewbar em{font-style:normal;border:1px solid #653487;padding:6px 9px;color:#e262ff}
+.explore{position:absolute;left:25px;bottom:18px;color:var(--accent);font-size:.63rem;letter-spacing:.08em;border:0;background:none;padding:0;cursor:pointer}.explore:hover{text-decoration:underline}
+.level0.hidden,.loop.hidden{display:none}.kiroshi-map{display:none;--k:#16c9ff}.kiroshi-map.active{display:block}.kiroshi-map.map{border-color:#126c86;background:radial-gradient(circle at 50% 48%,rgba(22,201,255,.18),transparent 23%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),rgba(2,3,9,.8);background-size:auto,42px 42px,42px 42px;box-shadow:inset 0 0 90px #00131a}.kiroshi-map:before{content:"“ PERCEVOIR N'EST PAS ENCORE COMPRENDRE. ”";color:#bfefff}
+.kiroshi-map .core{border-color:var(--k);box-shadow:0 0 24px var(--k),0 0 90px rgba(22,201,255,.48);--core-accent:var(--k)}.kiroshi-map .core:before,.kiroshi-map .core:after{border-color:rgba(22,201,255,.5);box-shadow:0 0 18px #16c9ff}.kiroshi-map .core b{font-size:1.65rem;color:#dff9ff}
+.kiroshi-map .card[data-axis=source]{left:2%;top:14%;--accent:#16c9ff}.kiroshi-map .card[data-axis=semantic]{right:2%;top:14%;--accent:#55ddff}.kiroshi-map .card[data-axis=scene]{left:2%;bottom:15%;--accent:#138fb4}.kiroshi-map .card[data-axis=stimulus]{right:2%;bottom:15%;--accent:#8ceaff}
+.back-level{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:7;border:1px solid #16c9ff;background:#061016;color:#bfefff;padding:9px 14px;font-size:.58rem;letter-spacing:.16em;cursor:pointer}.back-level:hover{box-shadow:0 0 18px rgba(22,201,255,.35)}
+@media(max-width:900px){.previewbar{margin:10px 4px 12px}.explore{left:22px}.kiroshi-map.active{display:flex}.back-level{position:relative;left:auto;bottom:auto;transform:none;align-self:center;margin-top:10px}}
 </style>
 </head>
 <body>
@@ -147,7 +153,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 </div>
 <p class="intro">Observer, apprendre, agir. Quatre axes répondent à quatre questions distinctes et composent un même système.</p>
 </header>
-<div class="levelbar"><span class="crumb" id="crumb">N.O.X. / SYSTEM MAP / LEVEL 0</span><span class="preview-badge">PREVIEW · SOUS-MAPS</span></div>\n<section class="map level0" aria-label="Architecture interactive de N.O.X.">
+<div class="previewbar"><span id="crumb">N.O.X. / SYSTEM MAP / LEVEL 0</span><em>PREVIEW · KIROSHI</em></div>\n<section class="map level0" aria-label="Architecture interactive de N.O.X.">
 <div class="hint">CLIQUER SUR UNE CARTE POUR LA RETOURNER</div>
 <svg class="links" viewBox="0 0 1000 860" preserveAspectRatio="none" aria-hidden="true">
 <line data-axis="perception" x1="500" y1="420" x2="220" y2="230" style="stroke:#16c9ff"/>
@@ -180,7 +186,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <li class="dev">Filtrage et priorisation</li>
 <li class="future">Contexte temps réel</li>
 </ul>
-<button class="explore" data-open="perception">EXPLORER LE SYSTÈME →</button><a class="study" href="../../projects/kiroshi/index.html">ÉTUDE DE CAS →</a>
+<button class="explore" id="open-kiroshi">EXPLORER LE SYSTÈME →</button>
 </span>
 </span>
 </button>
@@ -204,7 +210,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <li class="dev">Arbitrage : répondre / se taire</li>
 <li class="future">Cohérence et continuité</li>
 </ul>
-<button class="explore" data-open="cognition">EXPLORER LE SYSTÈME →</button><a class="study" href="../../projects/nox/index.html">ÉTUDE DE CAS →</a>
+<a class="study" href="../../projects/nox/index.html">ÉTUDE DE CAS →</a>
 </span>
 </span>
 </button>
@@ -226,7 +232,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <li class="dev">Intégration stream / OBS</li>
 <li class="future">Audio réactif</li>
 </ul>
-<button class="explore" data-open="presence">EXPLORER LE SYSTÈME →</button><a class="study" href="../../projects/nox-desktop/index.html">ÉTUDE DE CAS →</a>
+<a class="study" href="../../projects/nox-desktop/index.html">ÉTUDE DE CAS →</a>
 </span>
 </span>
 </button>
@@ -248,7 +254,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <li class="future">Validation utilisateur</li>
 <li class="future">Autonomie bornée et permissions</li>
 </ul>
-<button class="explore" data-open="action">EXPLORER LE SYSTÈME →</button><span class="action-note">CONCEPT · PLUS TARD</span>
+<span class="action-note">CONCEPT · PLUS TARD</span>
 </span>
 </span>
 </button>
@@ -338,9 +344,11 @@ document.querySelectorAll(".card").forEach(card=>{
   });
 });
 
-const level0=document.querySelector(".level0"),loop=document.getElementById("loop"),crumb=document.getElementById("crumb");
-document.querySelectorAll(".explore").forEach(btn=>btn.addEventListener("click",e=>{e.stopPropagation();const axis=btn.dataset.open;const target=document.querySelector(`[data-submap="${axis}"]`);core?.style.setProperty("--core-accent",axisColors[axis]);core?.classList.add("axis-pulse");setTimeout(()=>{document.querySelectorAll(".card").forEach(c=>c.classList.remove("flipped"));level0.classList.add("hidden");loop.style.display="none";target.classList.add("active");crumb.textContent=`N.O.X. / ${axis.toUpperCase()} / LEVEL 1`;window.scrollTo({top:0,behavior:"smooth"});},260)}));
-document.querySelectorAll(".backlevel").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".submap").forEach(m=>m.classList.remove("active"));level0.classList.remove("hidden");loop.style.display="block";crumb.textContent="N.O.X. / SYSTEM MAP / LEVEL 0";window.scrollTo({top:0,behavior:"smooth"});}));
+const level0=document.querySelector(".level0"),kiroshi=document.querySelector(".kiroshi-map"),loop=document.querySelector(".loop"),crumb=document.getElementById("crumb"),openK=document.getElementById("open-kiroshi");
+openK?.addEventListener("click",e=>{e.stopPropagation();core?.style.setProperty("--core-accent","#16c9ff");core?.classList.remove("axis-pulse");void core?.offsetWidth;core?.classList.add("axis-pulse");setTimeout(()=>{level0.classList.add("hidden");loop.classList.add("hidden");kiroshi.classList.add("active");crumb.textContent="N.O.X. / KIROSHI / LEVEL 1";window.scrollTo({top:0,behavior:"smooth"})},300)});
+document.querySelector(".back-level")?.addEventListener("click",()=>{kiroshi.classList.remove("active");level0.classList.remove("hidden");loop.classList.remove("hidden");crumb.textContent="N.O.X. / SYSTEM MAP / LEVEL 0";window.scrollTo({top:0,behavior:"smooth"})});
+const kCore=document.querySelector(".k-core"),kColors={source:"#16c9ff",semantic:"#55ddff",scene:"#138fb4",stimulus:"#8ceaff"};
+document.querySelectorAll(".k-card").forEach(card=>{const axis=card.dataset.axis,line=document.querySelector('.k-links line[data-axis="'+axis+'"]');const on=()=>{line?.classList.add("active");kCore?.classList.add("hover-axis");kCore?.style.setProperty("--core-accent",kColors[axis])};const off=()=>{line?.classList.remove("active");kCore?.classList.remove("hover-axis");kCore?.style.setProperty("--core-accent","#16c9ff")};card.addEventListener("mouseenter",on);card.addEventListener("mouseleave",off);card.addEventListener("focus",on);card.addEventListener("blur",off);card.addEventListener("click",()=>{const flip=!card.classList.contains("flipped");kCore?.style.setProperty("--core-accent",kColors[axis]);kCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave");void kCore?.offsetWidth;kCore?.classList.add("axis-pulse");line?.classList.add("click-wave");setTimeout(()=>{card.classList.toggle("flipped",flip);card.setAttribute("aria-pressed",flip)},140);setTimeout(()=>{kCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave")},520)})});
 </script>
 </body>
 </html>
