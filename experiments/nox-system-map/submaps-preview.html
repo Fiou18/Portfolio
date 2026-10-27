@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>N.O.X. — System Map Preview</title>
+<style>
+:root{--bg:#07070b;--panel:#101017;--line:#333342;--text:#f4f2f7;--muted:#9996a5;--violet:#a970ff;--soft:#1a1525;--ok:#8fd6a2;--wip:#e4c67a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#171020 0,#07070b 38%);color:var(--text);font:14px/1.45 Arial,sans-serif}
+header{padding:22px 28px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#07070be8;backdrop-filter:blur(12px);z-index:5}
+.brand{letter-spacing:5px;font-weight:800}.preview{color:var(--violet);letter-spacing:2px;font-size:11px}.shell{max-width:1450px;margin:auto;padding:36px 28px 80px}
+.hero{text-align:center;padding:42px 0 54px}.hero h1{font-size:clamp(42px,7vw,92px);margin:0;letter-spacing:-4px}.hero p{max-width:760px;margin:18px auto;color:var(--muted);font-size:16px}
+.legend{display:flex;justify-content:center;gap:18px;color:var(--muted);font-size:12px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}.built{background:var(--ok)}.proto{background:var(--violet)}.future{background:var(--wip)}
+.system-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:28px}.system-tabs button{background:#0e0e15;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:10px 15px;cursor:pointer}.system-tabs button.active,.system-tabs button:hover{color:white;border-color:var(--violet);background:var(--soft)}
+.map{display:none}.map.active{display:block}.map-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:18px}.map-head h2{font-size:32px;margin:0}.map-head p{max-width:720px;color:var(--muted);margin:0}
+.canvas{position:relative;min-height:650px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(#0b0b11dd,#0b0b11dd),linear-gradient(90deg,#242432 1px,transparent 1px),linear-gradient(#242432 1px,transparent 1px);background-size:auto,36px 36px,36px 36px;overflow:hidden;padding:42px}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));gap:28px;align-items:center;min-height:560px}.column{display:flex;flex-direction:column;gap:14px;position:relative}.column:not(:last-child)::after{content:"→";position:absolute;right:-22px;top:50%;color:var(--violet);font-size:24px}
+.node{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px;min-height:82px;cursor:pointer;transition:.18s}.node:hover,.node.selected{transform:translateY(-3px);border-color:var(--violet);box-shadow:0 0 25px #a970ff18}.node small{display:block;color:var(--violet);letter-spacing:1.5px;font-size:9px;margin-bottom:6px}.node b{display:block;font-size:14px}.node span{display:block;color:var(--muted);font-size:11px;margin-top:5px}.node[data-state="future"]{border-style:dashed}.node[data-state="built"] small{color:var(--ok)}.node[data-state="future"] small{color:var(--wip)}
+.detail{position:absolute;right:24px;bottom:24px;width:min(420px,calc(100% - 48px));padding:18px;background:#09090ef2;border:1px solid var(--violet);border-radius:12px;display:none;z-index:3}.detail.open{display:block}.detail h3{margin:0 0 8px}.detail p{color:var(--muted);margin:6px 0}.detail code{color:#d6baff}.detail button{float:right;background:none;border:0;color:white;cursor:pointer}
+.audit{margin-top:34px;padding:22px;border:1px solid var(--line);border-radius:14px;background:#0d0d13}.audit h3{margin-top:0}.audit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.audit-grid div{padding:13px;background:#121219;border-radius:9px;color:var(--muted)}.audit-grid b{color:white;display:block;margin-bottom:5px}
+@media(max-width:900px){.flow{grid-template-columns:1fr;min-height:auto}.column:not(:last-child)::after{content:"↓";right:50%;top:auto;bottom:-26px}.canvas{padding:24px}.map-head{display:block}.audit-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand">NOXLAB</div><div class="preview">SYSTEM MAP · PREVIEW ONLY</div></header>
+<main class="shell">
+<section class="hero"><div class="preview">ARCHITECTURE EXPLORER / V0</div><h1>N.O.X.</h1><p>La carte principale devient un point d'entrée. Chaque système possède sa propre sous-map : modules, contrats, frontières et preuves. Cette page est isolée de la version portfolio validée.</p><div class="legend"><span><i class="dot built"></i>greffé / validé</span><span><i class="dot proto"></i>prototype</span><span><i class="dot future"></i>direction</span></div></section>
+<nav class="system-tabs" id="tabs"></nav>
+<section id="maps"></section>
+<section class="audit"><h3>Lecture d'audit</h3><div class="audit-grid"><div><b>Frontière centrale</b>Perception, compréhension, initiative, parole et action restent des autorités distinctes.</div><div><b>Architecture réelle</b>Les cartes privilégient les contrats observables du repo plutôt que les noms de fichiers seuls.</div><div><b>Preview</b>Aucun lien n'est ajouté à <code>Portfolio/index.html</code>. Cette exploration peut être jetée ou remaniée sans toucher au portfolio actuel.</div></div></section>
+</main>
+<script>
+const systems=[
+{key:"kiroshi",name:"PERCEPTION / KIROSHI",desc:"Transformer des signaux de jeu en faits sémantiques exploitables, sans donner à la perception le droit de parler.",cols:[
+[["UE4SS / sources natives","built","Événements moteur, jauges et hooks de gameplay."],["Pawn / adapters natifs","future","Même contrat perceptif depuis une intégration Unreal native."]],
+[["RawGameplayEvent","built","Représentation des événements bruts issus de la source."],["Resolvers","built","Résout les événements ambigus avec les signaux natifs, dont Perfect Guard."]],
+[["Kiroshi Sequencer","built","Agrège les événements en séquences sémantiques."],["Combat Context","built","Maintient le contexte utile d'une scène de combat."],["Scene Settler","built","Condense une fenêtre récente en lecture de scène."]],
+[["PerceptionStimulus","built","Contrat générique transmis au BehaviorLoop."],["PLAYER_DOMINANCE","built","Synthèse relative d'une scène, pas une obligation de réaction."]],
+[["BehaviorLoop","built","Met à jour état/attention et peut produire un candidat."],["InitiativePolicy","built","Autorise ou refuse une intervention. Le silence reste valide."]]]},
+{key:"core",name:"NOX CORE",desc:"Assembler identité, contexte, état, continuité et arbitrage sans transformer chaque information en réponse.",cols:[
+[["Entrées runtime","built","Voix, contexte récent, Kiroshi, wake et autres événements."],["Memory Selector","built","Sélection locale de souvenirs personnels pertinents."],["Knowledge Selector","built","Présélection documentaire locale avant fallback."]],
+[["Context Assembler","built","Assemble personnalité, mémoire, connaissance, perception, ambiance et continuité."],["Personality Construct","built","Identité stable, dispositions et biais d'expression."],["État interne","built","Curiosité, attention, activité, intentions et historique récent."]],
+[["BehaviorLoop","built","Perception → état → arbitrage local."],["InitiativePolicy","built","Permission de parler : cooldown, parole humaine, fraîcheur, répétition."]],
+[["LLM principal","built","Produit la réponse à partir du contexte autorisé."],["Model Adapter","proto","Contrat provider-agnostic isolé, pas encore greffé au runtime principal."]],
+[["TTS / Echo","built","Expression vocale asynchrone."],["Body Protocol","built","Émet STATE / EVENT / INTENT / CONTROL / TELEMETRY vers le corps."]]]},
+{key:"continuity",name:"CONTINUITÉ / SELF",desc:"Faire survivre les chantiers, questions et changements de N.O.X. au-delà d'un seul tour de conversation.",cols:[
+[["Lifecycle Manager","built","BOOT / RUNNING / SHUTDOWN et snapshot de session."],["Wake Observer","built","Compare le Git entre extinction et réveil."]],
+[["Wake Interpreter","built","Transforme les changements en événements de continuité."],["Self Observer","built","Compare des capacités/éléments d'architecture explicites et estime la magnitude du changement."]],
+[["Continuity Manager","built","Conserve fils ouverts, questions, faits et statuts."],["Thread Matcher","proto","Préfiltre local des fils plausiblement concernés par un message."]],
+[["Semantic Evaluator","proto","Contrat d'évaluation RELATED/DIRECT et compréhension; appel modèle non greffé."],["Context Assembler","built","Expose les fils actifs au contexte runtime."]],
+[["Question / reprise","proto","N.O.X. peut retrouver un chantier; initiative autonome dépend toujours de la policy."],["Knowledge candidate","future","Promotion éventuelle d'un apprentissage stabilisé vers une connaissance durable."]]]},
+{key:"ideas",name:"IDÉATION / PROPOSALS",desc:"Permettre à N.O.X. d'envisager une idée sans la confondre avec une mémoire, une décision ou une prise de parole.",cols:[
+[["Observation","proto","Une anomalie, un couplage ou une piste peut déclencher une intuition."],["Code Observer","future","Lecture contrôlée du repo et analyses statiques; concept non implémenté."]],
+[["CANDIDATE","built","Intuition stockée silencieusement dans ProposalRegistry."],["COMMENT","built","Alexy peut intervenir avant formulation."],["DISMISS","built","Fausse piste fermée avec raison traçable."]],
+[["PROMOTE","built","Demande humaine de creuser l'idée."],["DRAFT","built","Proposition formulée mais pas encore présentée."]],
+[["PROPOSED","built","Idée effectivement soumise au NoxLab."],["NEEDS_WORK / DEFERRED","built","La proposition reste vivante sans être validée."]],
+[["ACCEPTED / REJECTED","built","Décision explicite avec historique."],["Implémentation","future","Une acceptation n'accorde jamais automatiquement le droit d'écrire du code."]]]},
+{key:"body",name:"BODY / EMBODIMENT",desc:"Donner à N.O.X. un corps ou une présence dans un environnement sans confondre intention et action technique.",cols:[
+[["N.O.X. Core","built","Produit états, événements et intentions contrôlés."]],
+[["Body Protocol V0","built","JSON UTF-8 versionné sur UDP localhost."],["Bridge desktop","built","Pont runtime vers la présence Unreal."]],
+[["Unreal Receiver","built","Réception du protocole côté corps."],["Actor / Component Pawn","future","Greffe native autour du Pawn pour une incarnation in-game."]],
+[["Expression / mouvement","proto","Présence procédurale, regard, réactions et signaux visuels."],["Interaction joueur","future","Réagir aux événements du Pawn via un adapter contrôlé."]],
+[["Action Policy","future","Frontière dédiée avant toute action réelle."],["Human authority","built","Le corps n'accorde pas à N.O.X. l'autorité de modifier son propre système."]]]},
+{key:"visual",name:"PRÉSENCE VISUELLE",desc:"Pipeline temps réel du noyau visuel jusqu'à l'overlay desktop et au broadcast.",cols:[
+[["Noyau / orbital","built","Assets Unreal/Niagara de la présence N.O.X."],["Langage de filaments","proto","Gaze, audio et signaux procéduraux."]],
+[["Unreal Render","built","Composition canonique rendue côté Nox_desktop."],["RGBA / alpha","built","Pipeline avec transparence réelle, sans chroma key."]],
+[["Spout DX12","built","Transport GPU du sender NOX_RGBA."],["Composite shader","built","Chemin de composition dédié."]],
+[["NoxOverlay","built","Receiver Win32/DirectComposition GPU-only."],["Desktop presence","proto","Fenêtre borderless transparente; interaction desktop encore limitée."]],
+[["OBS / Stream","built","Réutilisation de la présence dans la mise en scène."],["Starting / transitions","proto","Présence narrative du NoxLab autour du live."]]]},
+{key:"voice",name:"VOIX / INTERACTION",desc:"De la parole captée à la réponse vocale, avec routage, contexte et sortie asynchrone.",cols:[
+[["Microphone","built","Capture locale et détection de parole."],["End-of-turn","built","Seuils acoustiques instrumentés; pas un endpointing sémantique."]],
+[["Transcription","built","STT français."],["Routage","built","NOX / À_PROPOS_DE_NOX / PASSIF avec raccourcis locaux."]],
+[["Contexte récent","built","Fenêtre bornée et enrichissement ciblé."],["Bibliothèque / mémoire","built","Récupération seulement quand pertinente."]],
+[["Réponse GPT","built","Streaming texte."],["Segmentation TTS","built","Découpage dynamique et queues asynchrones."]],
+[["Echo / audio","built","TTS PCM et lecture prébufferisée."],["Expression visuelle","proto","Canal sémantique séparé; dette historique sur didascalies/Markdown."]]]}
+];
+const tabs=document.getElementById("tabs"),maps=document.getElementById("maps");
+systems.forEach((s,i)=>{
+ const b=document.createElement("button");b.textContent=s.name;b.className=i?"":"active";b.onclick=()=>show(s.key,b);tabs.appendChild(b);
+ const sec=document.createElement("section");sec.className="map "+(i?"":"active");sec.dataset.key=s.key;
+ sec.innerHTML='<div class="map-head"><div><div class="preview">SOUS-MAP</div><h2>'+s.name+'</h2></div><p>'+s.desc+'</p></div><div class="canvas"><div class="flow">'+s.cols.map(col=>'<div class="column">'+col.map(n=>'<div class="node" data-state="'+n[1]+'" data-title="'+n[0].replaceAll('"','&quot;')+'" data-desc="'+n[2].replaceAll('"','&quot;')+'"><small>'+({built:"GREFFÉ / VALIDÉ",proto:"PROTOTYPE",future:"DIRECTION"}[n[1]])+'</small><b>'+n[0]+'</b><span>'+n[2]+'</span></div>').join("")+'</div>').join("")+'</div><aside class="detail"><button>×</button><div class="preview">MODULE</div><h3></h3><p></p></aside></div>';
+ maps.appendChild(sec);
+});
+function show(k,b){document.querySelectorAll(".map").forEach(x=>x.classList.toggle("active",x.dataset.key===k));document.querySelectorAll("#tabs button").forEach(x=>x.classList.remove("active"));b.classList.add("active")}
+document.addEventListener("click",e=>{const n=e.target.closest(".node");if(n){const c=n.closest(".canvas"),d=c.querySelector(".detail");c.querySelectorAll(".node").forEach(x=>x.classList.remove("selected"));n.classList.add("selected");d.querySelector("h3").textContent=n.dataset.title;d.querySelector("p").textContent=n.dataset.desc;d.classList.add("open")}if(e.target.matches(".detail button"))e.target.closest(".detail").classList.remove("open")});
+</script>
+</body></html>
