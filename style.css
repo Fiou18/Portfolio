@@ -6371,9 +6371,11 @@ header {
 }
 .v2-contact-intro{align-self:start;padding-top:26px}
 .v2-contact h2{
-  max-width:780px;
-  font-size:clamp(2.7rem,5.6vw,5.7rem);
+  max-width:none;
+  font-size:clamp(2.35rem,3.35vw,4rem);
   line-height:.96;
+  letter-spacing:-.035em;
+  white-space:nowrap;
   margin:20px 0 26px;
 }
 .v2-contact-intro>p:last-child{
