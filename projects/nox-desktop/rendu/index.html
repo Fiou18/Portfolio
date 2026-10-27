@@ -27,7 +27,12 @@ body{background:#07070b;color:#f2f2f5}
 .flow b{color:var(--axis)}
 .media{margin:18px 0 42px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .media figure{margin:0;background:#0b0b10;border:1px solid #292934;overflow:hidden}
-.media img,.media video{display:block;width:100%}
+.media img,.media video{display:block;width:100%}.media video{cursor:zoom-in}
+.video-lightbox{position:fixed;inset:0;z-index:9999;display:none;background:rgba(2,2,7,.97)}
+.video-lightbox.open{display:flex;align-items:center;justify-content:center}
+.video-lightbox video{display:block;max-width:calc(100vw - 28px);max-height:calc(100vh - 110px);width:auto;height:auto}
+.video-lightbox-close{position:fixed;right:18px;top:18px;z-index:10001;width:42px;height:42px;border:1px solid #6b6074;background:#0b0b10;color:#fff;font-size:24px;line-height:1;cursor:pointer}
+.video-lightbox-hint{position:fixed;left:18px;top:28px;z-index:10001;color:#9b8ca7;font-size:.58rem;font-weight:700;letter-spacing:.14em;pointer-events:none}
 .media figcaption{padding:11px 13px;color:#777783;font-size:.62rem;font-weight:700;letter-spacing:1.2px}
 .media .wide{grid-column:1/-1}
 .placeholder{min-height:230px;display:flex;align-items:center;justify-content:center;padding:30px;border:1px dashed #494956;background:linear-gradient(135deg,#0b0b10,#101018);text-align:center;color:#6f6f7c;font-size:.68rem;font-weight:700;letter-spacing:1.5px;line-height:1.8}
@@ -127,6 +132,13 @@ body{background:#07070b;color:#f2f2f5}
 <div class="proof"><b>RÉSULTAT</b><br>La forme n'est plus le résultat final du pipeline. Elle devient la sortie visible d'un ensemble de systèmes temps réel — une base nécessaire pour relier ensuite cognition, perception et présence.</div>
 </section>
 
-</main>
-</body>
+</main><div class="video-lightbox" id="videoLightbox" aria-hidden="true"><span class="video-lightbox-hint">CLIQUEZ HORS DE LA VIDÉO POUR FERMER</span><button class="video-lightbox-close" type="button" aria-label="Fermer">×</button><video autoplay muted loop playsinline></video></div>
+<script>
+(()=>{const box=document.getElementById('videoLightbox'),full=box.querySelector('video'),close=box.querySelector('.video-lightbox-close');
+function open(v){const src=v.currentSrc||v.querySelector('source')?.src;if(!src)return;full.src=src;box.classList.add('open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';full.play().catch(()=>{})}
+function shut(){box.classList.remove('open');box.setAttribute('aria-hidden','true');document.body.style.overflow='';full.pause();full.removeAttribute('src');full.load()}
+document.querySelectorAll('.media video').forEach(v=>{v.setAttribute('tabindex','0');v.setAttribute('role','button');v.setAttribute('aria-label','Agrandir la vidéo');v.addEventListener('click',()=>open(v));v.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(v)}})});
+close.addEventListener('click',shut);box.addEventListener('click',e=>{if(e.target===box)shut()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open'))shut()});
+})();
+</script></body>
 </html>
