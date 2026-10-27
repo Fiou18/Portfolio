@@ -436,6 +436,8 @@ document.querySelectorAll(".k-card").forEach(card=>{const axis=card.dataset.axis
 
 const mapLabels={perception:"KIROSHI",core:"N.O.X. CORE",presence:"PRÉSENCE",action:"ACTION"};
 function openRecursive(key){document.querySelectorAll(".recursive-map").forEach(m=>m.classList.remove("active"));level0.classList.add("hidden");loop.classList.add("hidden");document.querySelector('[data-map="'+key+'"]')?.classList.add("active");crumb.textContent="N.O.X. / "+mapLabels[key]+" / LEVEL 1";window.scrollTo({top:0,behavior:"smooth"})}
+const hashMap={perception:"perception",kiroshi:"perception",core:"core",cognition:"core",presence:"presence",action:"action"};
+function openFromHash(){const key=hashMap[location.hash.slice(1).toLowerCase()];if(key)openRecursive(key)}
 document.querySelectorAll(".open-submap").forEach(el=>{const go=e=>{e.stopPropagation();openRecursive(el.dataset.open)};el.addEventListener("click",go);el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go(e)}})});
 document.querySelectorAll(".recursive-map .back-level").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".recursive-map").forEach(m=>m.classList.remove("active"));level0.classList.remove("hidden");loop.classList.remove("hidden");crumb.textContent="N.O.X. / SYSTEM MAP / LEVEL 0";window.scrollTo({top:0,behavior:"smooth"})}));
 
@@ -444,6 +446,7 @@ document.querySelectorAll(".recursive-map .k-card").forEach(card=>{
  const map=card.closest(".recursive-map"),mapCore=map.querySelector(".k-core"),line=map.querySelector('.k-links line[data-axis="'+card.dataset.axis+'"]');
  card.addEventListener("click",e=>{if(e.target.closest("a"))return;const flip=!card.classList.contains("flipped");mapCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave");void mapCore?.offsetWidth;mapCore?.classList.add("axis-pulse");line?.classList.add("click-wave");setTimeout(()=>{card.classList.toggle("flipped",flip);card.setAttribute("aria-pressed",flip)},140);setTimeout(()=>{mapCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave")},520)});
 });
+window.addEventListener("hashchange",openFromHash);openFromHash();
 </script>
 </body>
 </html>
