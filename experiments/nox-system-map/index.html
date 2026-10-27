@@ -143,10 +143,10 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 .recursive-map .k-core{border-color:var(--map-accent);box-shadow:0 0 24px var(--map-accent),0 0 90px color-mix(in srgb,var(--map-accent) 48%,transparent);--core-accent:var(--map-accent)}
 .recursive-map .k-core:before,.recursive-map .k-core:after{border-color:color-mix(in srgb,var(--map-accent) 50%,transparent);box-shadow:0 0 18px var(--map-accent)}
 .recursive-map .k-core b{font-size:1.65rem;color:color-mix(in srgb,var(--map-accent) 25%,white)}
-.recursive-map .card:nth-of-type(1){left:2%;top:14%}
-.recursive-map .card:nth-of-type(2){right:2%;top:14%}
-.recursive-map .card:nth-of-type(3){left:2%;bottom:15%}
-.recursive-map .card:nth-of-type(4){right:2%;bottom:15%}
+.recursive-map .card[data-axis="source"],.recursive-map .card[data-axis="context"],.recursive-map .card[data-axis="form"],.recursive-map .card[data-axis="intent"]{left:2%;top:14%}
+.recursive-map .card[data-axis="semantic"],.recursive-map .card[data-axis="personality"],.recursive-map .card[data-axis="render"],.recursive-map .card[data-axis="permission"]{right:2%;top:14%}
+.recursive-map .card[data-axis="scene"],.recursive-map .card[data-axis="behavior"],.recursive-map .card[data-axis="transport"],.recursive-map .card[data-axis="body"]{left:2%;bottom:15%}
+.recursive-map .card[data-axis="stimulus"],.recursive-map .card[data-axis="policy"],.recursive-map .card[data-axis="display"],.recursive-map .card[data-axis="human"]{right:2%;bottom:15%}
 .back-level{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:7;border:1px solid #16c9ff;background:#061016;color:#bfefff;padding:9px 14px;font-size:.58rem;letter-spacing:.16em;cursor:pointer}.back-level:hover{box-shadow:0 0 18px rgba(22,201,255,.35)}
 @media(max-width:900px){.recursive-map.active{display:flex}.previewbar{margin:10px 4px 12px}.level0 .card{height:285px;flex-basis:285px}.level0 .card .back{padding-bottom:58px}.level0 .card .explore{left:22px;bottom:22px;display:block;font-weight:700;font-size:.68rem;text-shadow:0 0 10px currentColor}.explore{left:22px}.kiroshi-map.active{display:flex}.back-level{position:relative;left:auto;bottom:auto;transform:none;align-self:center;margin-top:10px}}
 
