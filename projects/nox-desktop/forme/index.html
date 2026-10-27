@@ -63,4 +63,4 @@ document.querySelectorAll('.zoomable').forEach(img=>{img.addEventListener('click
 close.addEventListener('click',shut);box.addEventListener('click',e=>{if(e.target===box||e.target===viewer)shut()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open'))shut()});
 viewer.addEventListener('wheel',e=>{if(!box.classList.contains('open'))return;e.preventDefault();scale=Math.min(5,Math.max(1,scale+(e.deltaY<0?.25:-.25)));apply()},{passive:false});
 })();
-</script><div class="case-bottom-nav"><a href="../../index.html">← RETOUR AU PORTFOLIO</a></div></body></html>
+</script><div class="case-bottom-nav"><a href="../../experiments/nox-system-map/index.html#presence">← RETOUR AU LABO INTERACTIF</a><a href="../../index.html" style="margin-left:28px;opacity:.65">RETOUR AU PORTFOLIO</a></div></body></html>
