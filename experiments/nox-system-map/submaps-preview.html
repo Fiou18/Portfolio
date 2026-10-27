@@ -186,7 +186,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <li class="dev">Filtrage et priorisation</li>
 <li class="future">Contexte temps réel</li>
 </ul>
-<button class="explore" id="open-kiroshi">EXPLORER LE SYSTÈME →</button>
+<span class="explore" id="open-kiroshi" role="button" tabindex="0">EXPLORER LE SYSTÈME →</span>
 </span>
 </span>
 </button>
@@ -345,7 +345,7 @@ document.querySelectorAll(".card").forEach(card=>{
 });
 
 const level0=document.querySelector(".level0"),kiroshi=document.querySelector(".kiroshi-map"),loop=document.querySelector(".loop"),crumb=document.getElementById("crumb"),openK=document.getElementById("open-kiroshi");
-openK?.addEventListener("click",e=>{e.stopPropagation();core?.style.setProperty("--core-accent","#16c9ff");core?.classList.remove("axis-pulse");void core?.offsetWidth;core?.classList.add("axis-pulse");setTimeout(()=>{level0.classList.add("hidden");loop.classList.add("hidden");kiroshi.classList.add("active");crumb.textContent="N.O.X. / KIROSHI / LEVEL 1";window.scrollTo({top:0,behavior:"smooth"})},300)});
+const enterK=e=>{e.stopPropagation();core?.style.setProperty("--core-accent","#16c9ff");core?.classList.remove("axis-pulse");void core?.offsetWidth;core?.classList.add("axis-pulse");setTimeout(()=>{level0.classList.add("hidden");loop.classList.add("hidden");kiroshi.classList.add("active");crumb.textContent="N.O.X. / KIROSHI / LEVEL 1";window.scrollTo({top:0,behavior:"smooth"})},300)};\nopenK?.addEventListener("click",enterK);openK?.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();enterK(e)}});
 document.querySelector(".back-level")?.addEventListener("click",()=>{kiroshi.classList.remove("active");level0.classList.remove("hidden");loop.classList.remove("hidden");crumb.textContent="N.O.X. / SYSTEM MAP / LEVEL 0";window.scrollTo({top:0,behavior:"smooth"})});
 const kCore=document.querySelector(".k-core"),kColors={source:"#16c9ff",semantic:"#55ddff",scene:"#138fb4",stimulus:"#8ceaff"};
 document.querySelectorAll(".k-card").forEach(card=>{const axis=card.dataset.axis,line=document.querySelector('.k-links line[data-axis="'+axis+'"]');const on=()=>{line?.classList.add("active");kCore?.classList.add("hover-axis");kCore?.style.setProperty("--core-accent",kColors[axis])};const off=()=>{line?.classList.remove("active");kCore?.classList.remove("hover-axis");kCore?.style.setProperty("--core-accent","#16c9ff")};card.addEventListener("mouseenter",on);card.addEventListener("mouseleave",off);card.addEventListener("focus",on);card.addEventListener("blur",off);card.addEventListener("click",()=>{const flip=!card.classList.contains("flipped");kCore?.style.setProperty("--core-accent",kColors[axis]);kCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave");void kCore?.offsetWidth;kCore?.classList.add("axis-pulse");line?.classList.add("click-wave");setTimeout(()=>{card.classList.toggle("flipped",flip);card.setAttribute("aria-pressed",flip)},140);setTimeout(()=>{kCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave")},520)})});
