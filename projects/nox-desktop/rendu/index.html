@@ -140,5 +140,5 @@ function shut(){box.classList.remove('open');box.setAttribute('aria-hidden','tru
 document.querySelectorAll('.media video').forEach(v=>{v.setAttribute('tabindex','0');v.setAttribute('role','button');v.setAttribute('aria-label','Agrandir la vidéo');v.addEventListener('click',()=>open(v));v.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(v)}})});
 close.addEventListener('click',shut);box.addEventListener('click',e=>{if(e.target===box)shut()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open'))shut()});
 })();
-</script><div class="case-bottom-nav"><a href="../../index.html">← RETOUR AU PORTFOLIO</a></div></body>
+</script><div class="case-bottom-nav"><a href="../../experiments/nox-system-map/index.html#presence">← RETOUR AU LABO INTERACTIF</a><a href="../../index.html" style="margin-left:28px;opacity:.65">RETOUR AU PORTFOLIO</a></div></body>
 </html>
