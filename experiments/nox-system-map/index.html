@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>N.O.X. — System Map / Prototype</title>
+<title>N.O.X. — Kiroshi Recursive Map Preview</title>
 <style>
 :root{--bg:#03040a;--text:#f7f3ff;--muted:#b9aec7;--violet:#b23cff;--cyan:#16c9ff;--pink:#ff4cdd;--presence:#a94cff;--amber:#ffb02e}
 *{box-sizing:border-box}
@@ -135,7 +135,69 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 .card.flipped .inner{transform:none}
 .card.flipped .front{visibility:hidden}
 .card.flipped .back{transform:none}}
-</style>
+
+/* KIROSHI RECURSIVE PREVIEW */
+.previewbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:0 0 12px;font-size:.58rem;letter-spacing:.16em;color:#d8c4e9}.previewbar em{font-style:normal;border:1px solid #653487;padding:6px 9px;color:#e262ff}
+.explore{position:absolute;left:25px;bottom:18px;color:var(--accent);font-size:.63rem;letter-spacing:.08em;border:0;background:none;padding:0;cursor:pointer}.explore:hover{text-decoration:underline}
+.level0.hidden,.loop.hidden{display:none}.recursive-map{display:none}.recursive-map.active{display:block}.kiroshi-map{--k:#16c9ff}.recursive-map.map{border-color:var(--map-border);background:radial-gradient(circle at 50% 48%,color-mix(in srgb,var(--map-accent) 18%,transparent),transparent 23%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),rgba(2,3,9,.8);background-size:auto,42px 42px,42px 42px;box-shadow:inset 0 0 90px var(--map-shadow)}.kiroshi-map.map{--map-accent:#16c9ff;--map-border:#126c86;--map-shadow:#00131a;background:radial-gradient(circle at 50% 48%,rgba(22,201,255,.18),transparent 23%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),rgba(2,3,9,.8);background-size:auto,42px 42px,42px 42px;box-shadow:inset 0 0 90px #00131a;background:radial-gradient(circle at 50% 48%,rgba(22,201,255,.18),transparent 23%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),rgba(2,3,9,.8);background-size:auto,42px 42px,42px 42px;box-shadow:inset 0 0 90px #00131a}.kiroshi-map:before{content:"“ PERCEVOIR N'EST PAS ENCORE COMPRENDRE. ”";color:#bfefff}
+.recursive-map .k-core{border-color:var(--map-accent);box-shadow:0 0 24px var(--map-accent),0 0 90px color-mix(in srgb,var(--map-accent) 48%,transparent);--core-accent:var(--map-accent)}
+.recursive-map .k-core:before,.recursive-map .k-core:after{border-color:color-mix(in srgb,var(--map-accent) 50%,transparent);box-shadow:0 0 18px var(--map-accent)}
+.recursive-map .k-core b{font-size:1.65rem;color:color-mix(in srgb,var(--map-accent) 25%,white)}
+.recursive-map .card:nth-of-type(1){left:2%;top:14%}
+.recursive-map .card:nth-of-type(2){right:2%;top:14%}
+.recursive-map .card:nth-of-type(3){left:2%;bottom:15%}
+.recursive-map .card:nth-of-type(4){right:2%;bottom:15%}
+.back-level{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:7;border:1px solid #16c9ff;background:#061016;color:#bfefff;padding:9px 14px;font-size:.58rem;letter-spacing:.16em;cursor:pointer}.back-level:hover{box-shadow:0 0 18px rgba(22,201,255,.35)}
+@media(max-width:900px){.recursive-map.active{display:flex}.previewbar{margin:10px 4px 12px}.level0 .card{height:285px;flex-basis:285px}.level0 .card .back{padding-bottom:58px}.level0 .card .explore{left:22px;bottom:22px;display:block;font-weight:700;font-size:.68rem;text-shadow:0 0 10px currentColor}.explore{left:22px}.kiroshi-map.active{display:flex}.back-level{position:relative;left:auto;bottom:auto;transform:none;align-self:center;margin-top:10px}}
+
+.core-map{--map-accent:#ff4cdd;--map-border:#7b246d;--map-shadow:#1a0017}.presence-map{--map-accent:#a94cff;--map-border:#5f2a8e;--map-shadow:#10001d}.action-map{--map-accent:#ffb02e;--map-border:#865d17;--map-shadow:#1b1100}
+.recursive-map .r-core{border-color:var(--map-accent);box-shadow:0 0 24px var(--map-accent),0 0 90px color-mix(in srgb,var(--map-accent) 48%,transparent);--core-accent:var(--map-accent)}
+.recursive-map .r-core:before,.recursive-map .r-core:after{border-color:color-mix(in srgb,var(--map-accent) 55%,transparent);box-shadow:0 0 18px var(--map-accent)}
+.recursive-map .r-core b{font-size:1.5rem;color:color-mix(in srgb,var(--map-accent) 25%,white)}
+.recursive-map .back-level{border-color:var(--map-accent);color:color-mix(in srgb,var(--map-accent) 35%,white)}
+@media(max-width:900px){
+.recursive-map .card:nth-of-type(1),.recursive-map .card:nth-of-type(2),.recursive-map .card:nth-of-type(3),.recursive-map .card:nth-of-type(4){left:auto;right:auto;top:auto;bottom:auto}
+.recursive-map .card{width:100%;height:235px;flex:0 0 235px}
+.recursive-map .card .back{padding-bottom:48px}
+.recursive-map .card .study{left:22px;bottom:18px}
+}
+@media(max-width:900px){
+.level0 .card{height:320px;flex-basis:320px}
+.level0 .back{padding-bottom:64px}
+.level0 .back .question{line-height:1.4;margin-bottom:14px}
+.level0 .back .features{margin-top:0}
+.level0 .back .features li{line-height:1.3;margin-bottom:7px}
+.level0 .back .features li:last-child{margin-bottom:0}
+.level0 .back .explore{bottom:22px}
+}
+@media(max-width:900px){
+.level0 .card[data-axis="action"] .features{display:block}
+.level0 .card[data-axis="action"] .features li{line-height:1.3;margin-bottom:7px}
+.level0 .card[data-axis="action"] .features li:last-child{margin-bottom:0}
+}
+/* LEVEL 1 — grille interne commune à toutes les sous-cartes */
+@media(max-width:900px){
+.recursive-map .card{height:300px;flex-basis:300px}
+.recursive-map .card .back{
+  display:grid;
+  grid-template-rows:68px 58px 1fr 28px;
+  align-content:stretch;
+  padding:26px 22px 18px;
+  box-sizing:border-box;
+}
+.recursive-map .card .back h2{margin:0;align-self:start;line-height:1.05}
+.recursive-map .card .back h2 span{margin-top:7px;line-height:1.1}
+.recursive-map .card .back .question{margin:0;line-height:1.35;align-self:start}
+.recursive-map .card .back .features{margin:0;padding:0;align-self:start}
+.recursive-map .card .back .features li{margin:0 0 6px;line-height:1.25}
+.recursive-map .card .back .features li:last-child{margin-bottom:0}
+.recursive-map .card .back .study{
+  position:static;
+  align-self:end;
+  margin:0;
+  line-height:1;
+}
+}</style>
 </head>
 <body>
 <main class="shell">
@@ -144,7 +206,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 </div>
 <p class="intro">Observer, apprendre, agir. Quatre axes répondent à quatre questions distinctes et composent un même système.</p>
 </header>
-<section class="map" aria-label="Architecture interactive de N.O.X.">
+<div class="previewbar"><span id="crumb">N.O.X. / SYSTEM MAP / LEVEL 0</span><em>PREVIEW · KIROSHI</em></div>\n<section class="map level0" aria-label="Architecture interactive de N.O.X.">
 <div class="hint">CLIQUER SUR UNE CARTE POUR LA RETOURNER</div>
 <svg class="links" viewBox="0 0 1000 860" preserveAspectRatio="none" aria-hidden="true">
 <line data-axis="perception" x1="500" y1="420" x2="220" y2="230" style="stroke:#16c9ff"/>
@@ -177,7 +239,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <li class="dev">Filtrage et priorisation</li>
 <li class="future">Contexte temps réel</li>
 </ul>
-<a class="study" href="../../projects/kiroshi/index.html">ÉTUDE DE CAS →</a>
+<span class="explore" id="open-kiroshi" role="button" tabindex="0">EXPLORER LE SYSTÈME →</span>
 </span>
 </span>
 </button>
@@ -201,7 +263,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <li class="dev">Arbitrage : répondre / se taire</li>
 <li class="future">Cohérence et continuité</li>
 </ul>
-<a class="study" href="../../projects/nox/index.html">ÉTUDE DE CAS →</a>
+<span class="explore open-submap" data-open="core" role="button" tabindex="0">EXPLORER LE SYSTÈME →</span>
 </span>
 </span>
 </button>
@@ -223,7 +285,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <li class="dev">Intégration stream / OBS</li>
 <li class="future">Audio réactif</li>
 </ul>
-<a class="study" href="../../projects/nox-desktop/index.html">ÉTUDE DE CAS →</a>
+<span class="explore open-submap" data-open="presence" role="button" tabindex="0">EXPLORER LE SYSTÈME →</span>
 </span>
 </span>
 </button>
@@ -235,7 +297,7 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <strong>ACTION</strong>
 </span>
 <span class="face back">
-<h2>ACTION<span>INTERVENTION · OUTILS · SÉCURITÉ</span>
+<h2>ACTION<span>INTERVENTION · CONTRÔLE</span>
 </h2>
 <p class="question">Comment N.O.X. peut-il agir de manière contrôlée sur son environnement ?</p>
 <ul class="features">
@@ -245,12 +307,42 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 <li class="future">Validation utilisateur</li>
 <li class="future">Autonomie bornée et permissions</li>
 </ul>
-<span class="action-note">CONCEPT · PLUS TARD</span>
+<span class="explore open-submap" data-open="action" role="button" tabindex="0">EXPLORER LE SYSTÈME →</span>
 </span>
 </span>
 </button>
 </section>
-<div class="loop" aria-label="Boucle de fonctionnement de N.O.X.">
+<section class="map recursive-map kiroshi-map" data-map="perception" style="--map-accent:#16c9ff;--map-border:#126c86;--map-shadow:#00131a" aria-label="Architecture interactive de Kiroshi">
+<div class="hint">CLIQUER SUR UNE CARTE POUR LA RETOURNER</div>
+<svg class="links k-links" viewBox="0 0 1000 860" preserveAspectRatio="none" aria-hidden="true">
+<line data-axis="source" x1="500" y1="420" x2="220" y2="230" style="stroke:#16c9ff"/>
+<line data-axis="semantic" x1="500" y1="420" x2="780" y2="230" style="stroke:#55ddff"/>
+<line data-axis="scene" x1="500" y1="420" x2="220" y2="610" style="stroke:#138fb4"/>
+<line data-axis="stimulus" x1="500" y1="420" x2="780" y2="610" style="stroke:#8ceaff"/>
+</svg>
+<div class="core k-core"><div><b>KIROSHI</b><span>NOYAU DE PERCEPTION<br>CAPTER · TRADUIRE · CONSOLIDER</span></div></div>
+<button class="card k-card" data-axis="source" aria-pressed="false"><span class="inner"><span class="face front"><small>01 / ENTRÉE</small><span class="glyph">◉</span><strong>SOURCES</strong></span><span class="face back"><h2>CAPTURE<span>SOURCES DE PERCEPTION</span></h2><p class="question">Comment Kiroshi reçoit-il ce qui vient de se produire ?</p><ul class="features"><li>Événements gameplay UE4SS</li><li class="dev">Adaptateurs natifs</li><li>États joueur et environnement</li><li class="future">Nouvelles sources spécialisées</li></ul><a class="study" href="../../projects/kiroshi/index.html#sources">ÉTUDE DE CAS →</a></span></span></button>
+<button class="card k-card" data-axis="semantic" aria-pressed="false"><span class="inner"><span class="face front"><small>02 / TRADUCTION</small><span class="glyph">⌁</span><strong>SÉMANTIQUE</strong></span><span class="face back"><h2>RESOLVERS<span>DONNER DU SENS</span></h2><p class="question">Comment un signal technique devient-il une information exploitable ?</p><ul class="features"><li>RawGameplayEvent</li><li class="dev">Résolution d'événements</li><li>Normalisation des faits</li><li>Provenance conservée</li></ul><a class="study" href="../../projects/kiroshi/index.html#semantique">ÉTUDE DE CAS →</a></span></span></button>
+<button class="card k-card" data-axis="scene" aria-pressed="false"><span class="inner"><span class="face front"><small>03 / CONTEXTE</small><span class="glyph">◎</span><strong>SCÈNE</strong></span><span class="face back"><h2>SCENE SETTLER<span>CONSOLIDATION</span></h2><p class="question">Comment Kiroshi évite-t-il de traiter chaque signal comme un événement isolé ?</p><ul class="features"><li>Kiroshi Sequencer</li><li>Combat Context</li><li class="dev">Fenêtres temporelles courtes</li><li>PLAYER_DOMINANCE</li></ul><a class="study" href="../../projects/kiroshi/index.html#scene">ÉTUDE DE CAS →</a></span></span></button>
+<button class="card k-card" data-axis="stimulus" aria-pressed="false"><span class="inner"><span class="face front"><small>04 / SORTIE</small><span class="glyph">◇</span><strong>STIMULUS</strong></span><span class="face back"><h2>PERCEPTION STIMULUS<span>CONTRAT DE SORTIE</span></h2><p class="question">Que transmet réellement Kiroshi au reste de N.O.X. ?</p><ul class="features"><li>Source · type · sujet</li><li>Intensité · timestamp</li><li>Fait · provenance</li><li class="dev">Aucune permission de parler</li></ul><a class="study" href="../../projects/kiroshi/index.html#stimulus">ÉTUDE DE CAS →</a></span></span></button>
+<button class="back-level">← N.O.X. / LEVEL 0</button>
+</section>
+<section class="map recursive-map core-map" data-map="core" style="--map-accent:#ff4cdd">
+<div class="hint">CLIQUER SUR UNE CARTE POUR LA RETOURNER</div>
+<svg class="links k-links" viewBox="0 0 1000 860" preserveAspectRatio="none" aria-hidden="true"><line data-axis="context" x1="500" y1="420" x2="220" y2="230" style="stroke:#ff4cdd"/><line data-axis="personality" x1="500" y1="420" x2="780" y2="230" style="stroke:#ff7ae7"/><line data-axis="behavior" x1="500" y1="420" x2="220" y2="610" style="stroke:#c832aa"/><line data-axis="policy" x1="500" y1="420" x2="780" y2="610" style="stroke:#ff9bec"/></svg>
+<div class="core k-core"><div><b>N.O.X. CORE</b><span>COGNITION · CONTEXTE · ARBITRAGE</span></div></div>
+<button class="card k-card" data-axis="context" aria-pressed="false" style="--accent:#ff4cdd"><span class="inner"><span class="face front"><small>01 / ACTIF</small><span class="glyph">⌘</span><strong>CONTEXTE</strong></span><span class="face back"><h2>ASSEMBLER<span>CONSTRUIRE LE PRÉSENT</span></h2><p class="question">Que doit savoir N.O.X. au moment de répondre ?</p><ul class="features"><li>Mémoire sélectionnée</li><li>Connaissance pertinente</li><li class="dev">Perception et ambiance</li><li class="dev">Continuité active</li></ul><a class="study" href="../../projects/nox/index.html#contexte">ÉTUDE DE CAS →</a></span></span></button><button class="card k-card" data-axis="personality" aria-pressed="false" style="--accent:#ff7ae7"><span class="inner"><span class="face front"><small>02 / ACTIF</small><span class="glyph">◇</span><strong>PERSONNALITÉ</strong></span><span class="face back"><h2>CONSTRUCT<span>IDENTITÉ & BIAIS</span></h2><p class="question">Comment rester N.O.X. sans confondre personnalité et décision ?</p><ul class="features"><li>Identité et relation</li><li>Dispositions</li><li class="dev">Biais d’intérêt</li><li>Silence reste valide</li></ul><a class="study" href="../../projects/nox/index.html#personnalite">ÉTUDE DE CAS →</a></span></span></button><button class="card k-card" data-axis="behavior" aria-pressed="false" style="--accent:#c832aa"><span class="inner"><span class="face front"><small>03 / ACTIF</small><span class="glyph">◎</span><strong>COMPORTEMENT</strong></span><span class="face back"><h2>BEHAVIOR LOOP<span>ÉTAT & CANDIDAT</span></h2><p class="question">Quand un événement mérite-t-il seulement de devenir candidat ?</p><ul class="features"><li>État interne</li><li class="dev">Curiosité et attention</li><li>Décroissance temporelle</li><li>SILENCE / INITIATIVE_CANDIDATE</li></ul><a class="study" href="../../projects/nox/index.html#comportement">ÉTUDE DE CAS →</a></span></span></button><button class="card k-card" data-axis="policy" aria-pressed="false" style="--accent:#ff9bec"><span class="inner"><span class="face front"><small>04 / ACTIF</small><span class="glyph">⚖</span><strong>ARBITRAGE</strong></span><span class="face back"><h2>INITIATIVE POLICY<span>AUTORISER OU REFUSER</span></h2><p class="question">Même intéressant, N.O.X. est-il autorisé à intervenir ?</p><ul class="features"><li>Humain en train de parler</li><li>Cooldown et fraîcheur</li><li class="dev">Anti-répétition</li><li>ALLOW / DENY</li></ul><a class="study" href="../../projects/nox/index.html#arbitrage">ÉTUDE DE CAS →</a></span></span></button>
+<button class="back-level">← N.O.X. / LEVEL 0</button></section><section class="map recursive-map presence-map" data-map="presence" style="--map-accent:#a94cff">
+<div class="hint">CLIQUER SUR UNE CARTE POUR LA RETOURNER</div>
+<svg class="links k-links" viewBox="0 0 1000 860" preserveAspectRatio="none" aria-hidden="true"><line data-axis="form" x1="500" y1="420" x2="220" y2="230" style="stroke:#a94cff"/><line data-axis="render" x1="500" y1="420" x2="780" y2="230" style="stroke:#c678ff"/><line data-axis="transport" x1="500" y1="420" x2="220" y2="610" style="stroke:#8338c4"/><line data-axis="display" x1="500" y1="420" x2="780" y2="610" style="stroke:#d6a5ff"/></svg>
+<div class="core k-core"><div><b>PRÉSENCE</b><span>VISUEL · DESKTOP · STREAM</span></div></div>
+<button class="card k-card" data-axis="form" aria-pressed="false" style="--accent:#a94cff"><span class="inner"><span class="face front"><small>01 / VALIDÉ</small><span class="glyph">●</span><strong>FORME</strong></span><span class="face back"><h2>NOYAU<span>LANGAGE VISUEL</span></h2><p class="question">Comment représenter N.O.X. sans fabriquer un humain ?</p><ul class="features"><li>Singularité noire</li><li>Particules violettes</li><li class="dev">Expression non anthropomorphe</li><li>États visuels</li></ul><a class="study" href="../../projects/nox-desktop/forme/index.html">ÉTUDE DE CAS →</a></span></span></button><button class="card k-card" data-axis="render" aria-pressed="false" style="--accent:#c678ff"><span class="inner"><span class="face front"><small>02 / PROTO</small><span class="glyph">◇</span><strong>RENDU</strong></span><span class="face back"><h2>UNREAL<span>ANIMATION TEMPS RÉEL</span></h2><p class="question">Comment transformer ses états en présence animée ?</p><ul class="features"><li>Noyau et orbitales</li><li class="dev">Animations d’état</li><li>Filaments / particules</li><li>Rendu temps réel</li></ul><a class="study" href="../../projects/nox-desktop/rendu/index.html">ÉTUDE DE CAS →</a></span></span></button><button class="card k-card" data-axis="transport" aria-pressed="false" style="--accent:#8338c4"><span class="inner"><span class="face front"><small>03 / VALIDÉ</small><span class="glyph">⇢</span><strong>PIPELINE</strong></span><span class="face back"><h2>RGBA / SPOUT<span>TRANSPORT DU RENDU</span></h2><p class="question">Comment sortir N.O.X. d’Unreal sans perdre sa transparence ?</p><ul class="features"><li>Pipeline RGBA</li><li>Alpha validé</li><li class="dev">Spout DX12</li><li>Composite shader</li></ul><a class="study" href="../../projects/nox-desktop/pipeline/index.html">ÉTUDE DE CAS →</a></span></span></button><button class="card k-card" data-axis="display" aria-pressed="false" style="--accent:#d6a5ff"><span class="inner"><span class="face front"><small>04 / PROTO</small><span class="glyph">▣</span><strong>AFFICHAGE</strong></span><span class="face back"><h2>OVERLAY<span>DESKTOP & STREAM</span></h2><p class="question">Où cette présence doit-elle réellement exister ?</p><ul class="features"><li>NoxOverlay</li><li class="dev">Desktop transparent</li><li>OBS / scènes stream</li><li>Starting Soon / transitions</li></ul><a class="study" href="../../projects/nox-desktop/overlay/index.html">ÉTUDE DE CAS →</a></span></span></button>
+<button class="back-level">← N.O.X. / LEVEL 0</button></section><section class="map recursive-map action-map" data-map="action" style="--map-accent:#ffb02e">
+<div class="hint">CLIQUER SUR UNE CARTE POUR LA RETOURNER</div>
+<svg class="links k-links" viewBox="0 0 1000 860" preserveAspectRatio="none" aria-hidden="true"><line data-axis="intent" x1="500" y1="420" x2="220" y2="230" style="stroke:#ffb02e"/><line data-axis="permission" x1="500" y1="420" x2="780" y2="230" style="stroke:#ffd06e"/><line data-axis="body" x1="500" y1="420" x2="220" y2="610" style="stroke:#d88c12"/><line data-axis="human" x1="500" y1="420" x2="780" y2="610" style="stroke:#ffe0a0"/></svg>
+<div class="core k-core"><div><b>ACTION</b><span>INTENTION · PERMISSION · EXÉCUTION</span></div></div>
+<button class="card k-card" data-axis="intent" aria-pressed="false" style="--accent:#ffb02e"><span class="inner"><span class="face front"><small>01 / PROTO</small><span class="glyph">◇</span><strong>INTENTION</strong></span><span class="face back"><h2>PROPOSITION<span>VOULOIR N’EST PAS AGIR</span></h2><p class="question">Comment une idée devient-elle une intention explicite ?</p><ul class="features"><li>CANDIDATE</li><li class="dev">DRAFT</li><li>PROPOSED</li><li>Traçabilité</li></ul><a class="study" href="../../projects/nox/index.html#proposals">ÉTUDE DE CAS →</a></span></span></button><button class="card k-card" data-axis="permission" aria-pressed="false" style="--accent:#ffd06e"><span class="inner"><span class="face front"><small>02 / DIRECTION</small><span class="glyph">⚖</span><strong>PERMISSION</strong></span><span class="face back"><h2>AUTORITÉ<span>BORNER L’ACTION</span></h2><p class="question">Qui autorise quoi, dans quel contexte ?</p><ul class="features"><li>Capacité ≠ permission</li><li class="dev">Validation utilisateur</li><li>Périmètre d’outil</li><li>Refus explicite</li></ul><a class="study" href="../../projects/nox/index.html#action">ÉTUDE DE CAS →</a></span></span></button><button class="card k-card" data-axis="body" aria-pressed="false" style="--accent:#d88c12"><span class="inner"><span class="face front"><small>03 / PROTO</small><span class="glyph">⌁</span><strong>BODY</strong></span><span class="face back"><h2>BODY PROTOCOL<span>CANAL D’EXÉCUTION</span></h2><p class="question">Comment transmettre une intention à un corps ou un outil ?</p><ul class="features"><li>NOX_BODY V0</li><li class="dev">INTENT / CONTROL</li><li>UDP localhost</li><li>Télémétrie</li></ul><a class="study" href="../../projects/nox/index.html#body">ÉTUDE DE CAS →</a></span></span></button><button class="card k-card" data-axis="human" aria-pressed="false" style="--accent:#ffe0a0"><span class="inner"><span class="face front"><small>04 / PRINCIPE</small><span class="glyph">◎</span><strong>HUMAIN</strong></span><span class="face back"><h2>AUTORITÉ FINALE<span>CONTRÔLE & DÉCISION</span></h2><p class="question">Où s’arrête l’autonomie de N.O.X. ?</p><ul class="features"><li>READ / ANALYZE</li><li>QUESTION / PROPOSE</li><li class="dev">HUMAN → WRITE</li><li>Pas d’action implicite</li></ul><a class="study" href="../../projects/nox/index.html#autorite">ÉTUDE DE CAS →</a></span></span></button>
+<button class="back-level">← N.O.X. / LEVEL 0</button></section><div class="loop" aria-label="Boucle de fonctionnement de N.O.X.">
 <b>LA BOUCLE DE FONCTIONNEMENT</b>
 <div class="cycle">
 <div class="cycle-core">APPRENDRE<small>EN CONTINU</small>
@@ -316,7 +408,7 @@ document.querySelectorAll(".card").forEach(card=>{
   card.addEventListener("focus",activate);
   card.addEventListener("blur",deactivate);
   card.addEventListener("click",e=>{
-    if(e.target.closest("a"))return;
+    if(e.target.closest("a")||e.target.closest(".explore"))return;
     const willFlip=!card.classList.contains("flipped");
     core?.style.setProperty("--core-accent",axisColors[axis]);
     core?.classList.remove("axis-pulse");
@@ -333,6 +425,24 @@ document.querySelectorAll(".card").forEach(card=>{
       line?.classList.remove("click-wave");
     },520);
   });
+});
+
+const level0=document.querySelector(".level0"),kiroshi=document.querySelector(".kiroshi-map"),loop=document.querySelector(".loop"),crumb=document.getElementById("crumb"),openK=document.getElementById("open-kiroshi");
+const enterK=e=>{e.stopPropagation();core?.style.setProperty("--core-accent","#16c9ff");core?.classList.remove("axis-pulse");void core?.offsetWidth;core?.classList.add("axis-pulse");setTimeout(()=>{level0.classList.add("hidden");loop.classList.add("hidden");kiroshi.classList.add("active");crumb.textContent="N.O.X. / KIROSHI / LEVEL 1";window.scrollTo({top:0,behavior:"smooth"})},300)};
+openK?.addEventListener("click",enterK);openK?.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();enterK(e)}});
+document.querySelector(".back-level")?.addEventListener("click",()=>{kiroshi.classList.remove("active");level0.classList.remove("hidden");loop.classList.remove("hidden");crumb.textContent="N.O.X. / SYSTEM MAP / LEVEL 0";window.scrollTo({top:0,behavior:"smooth"})});
+const kCore=document.querySelector(".k-core"),kColors={source:"#16c9ff",semantic:"#55ddff",scene:"#138fb4",stimulus:"#8ceaff"};
+document.querySelectorAll(".k-card").forEach(card=>{const axis=card.dataset.axis,line=document.querySelector('.k-links line[data-axis="'+axis+'"]');const on=()=>{line?.classList.add("active");kCore?.classList.add("hover-axis");kCore?.style.setProperty("--core-accent",kColors[axis])};const off=()=>{line?.classList.remove("active");kCore?.classList.remove("hover-axis");kCore?.style.setProperty("--core-accent","#16c9ff")};card.addEventListener("mouseenter",on);card.addEventListener("mouseleave",off);card.addEventListener("focus",on);card.addEventListener("blur",off);card.addEventListener("click",e=>{if(e.target.closest("a"))return;const flip=!card.classList.contains("flipped");kCore?.style.setProperty("--core-accent",kColors[axis]);kCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave");void kCore?.offsetWidth;kCore?.classList.add("axis-pulse");line?.classList.add("click-wave");setTimeout(()=>{card.classList.toggle("flipped",flip);card.setAttribute("aria-pressed",flip)},140);setTimeout(()=>{kCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave")},520)})});
+
+const mapLabels={perception:"KIROSHI",core:"N.O.X. CORE",presence:"PRÉSENCE",action:"ACTION"};
+function openRecursive(key){document.querySelectorAll(".recursive-map").forEach(m=>m.classList.remove("active"));level0.classList.add("hidden");loop.classList.add("hidden");document.querySelector('[data-map="'+key+'"]')?.classList.add("active");crumb.textContent="N.O.X. / "+mapLabels[key]+" / LEVEL 1";window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll(".open-submap").forEach(el=>{const go=e=>{e.stopPropagation();openRecursive(el.dataset.open)};el.addEventListener("click",go);el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go(e)}})});
+document.querySelectorAll(".recursive-map .back-level").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".recursive-map").forEach(m=>m.classList.remove("active"));level0.classList.remove("hidden");loop.classList.remove("hidden");crumb.textContent="N.O.X. / SYSTEM MAP / LEVEL 0";window.scrollTo({top:0,behavior:"smooth"})}));
+
+document.querySelectorAll(".recursive-map .k-card").forEach(card=>{
+ if(card.dataset.unified==="1")return; card.dataset.unified="1";
+ const map=card.closest(".recursive-map"),mapCore=map.querySelector(".k-core"),line=map.querySelector('.k-links line[data-axis="'+card.dataset.axis+'"]');
+ card.addEventListener("click",e=>{if(e.target.closest("a"))return;const flip=!card.classList.contains("flipped");mapCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave");void mapCore?.offsetWidth;mapCore?.classList.add("axis-pulse");line?.classList.add("click-wave");setTimeout(()=>{card.classList.toggle("flipped",flip);card.setAttribute("aria-pressed",flip)},140);setTimeout(()=>{mapCore?.classList.remove("axis-pulse");line?.classList.remove("click-wave")},520)});
 });
 </script>
 </body>
