@@ -148,6 +148,21 @@ body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,sans-serif;ba
 .recursive-map .card:nth-of-type(3){left:2%;bottom:15%}
 .recursive-map .card:nth-of-type(4){right:2%;bottom:15%}
 .back-level{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:7;border:1px solid #16c9ff;background:#061016;color:#bfefff;padding:9px 14px;font-size:.58rem;letter-spacing:.16em;cursor:pointer}.back-level:hover{box-shadow:0 0 18px rgba(22,201,255,.35)}
+@media(min-width:901px) and (max-height:900px){
+.shell{padding:16px 28px}
+.top{margin-bottom:10px}
+.brand{font-size:clamp(1.8rem,3vw,3.2rem)}
+.intro{font-size:.88rem;line-height:1.35}
+.previewbar{margin-bottom:8px}
+.recursive-map.map{min-height:0;height:calc(100vh - 155px);min-height:610px}
+.recursive-map .card{height:190px}
+.recursive-map .card:nth-of-type(1),.recursive-map .card:nth-of-type(2){top:12%}
+.recursive-map .card:nth-of-type(3),.recursive-map .card:nth-of-type(4){bottom:12%}
+.recursive-map .core{width:190px}
+.recursive-map .k-core b,.recursive-map .r-core b{font-size:1.35rem}
+.recursive-map .back-level{bottom:14px}
+.recursive-map.map:before{top:14px;font-size:.55rem}
+}
 @media(max-width:900px){.recursive-map.active{display:flex}.previewbar{margin:10px 4px 12px}.level0 .card{height:285px;flex-basis:285px}.level0 .card .back{padding-bottom:58px}.level0 .card .explore{left:22px;bottom:22px;display:block;font-weight:700;font-size:.68rem;text-shadow:0 0 10px currentColor}.explore{left:22px}.kiroshi-map.active{display:flex}.back-level{position:relative;left:auto;bottom:auto;transform:none;align-self:center;margin-top:10px}}
 
 .core-map{--map-accent:#ff4cdd;--map-border:#7b246d;--map-shadow:#1a0017}.presence-map{--map-accent:#a94cff;--map-border:#5f2a8e;--map-shadow:#10001d}.action-map{--map-accent:#ffb02e;--map-border:#865d17;--map-shadow:#1b1100}
